@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ARASAKA Personnel Database</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fontes futuristas -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- TELA DE BOOT -->
+    <div class="boot-screen" id="boot-screen">
+      <div class="boot-logo">
+        <img src="img/arasaka/arasaka-boot.png" alt="Arasaka Boot" />
+      </div>
+      <div class="boot-text">PERSONNEL DATABASE // INITIALIZING...</div>
+      <div class="boot-bar"></div>
+    </div>
+
+    <!-- APP -->
+    <div class="app-shell" id="app-shell">
+      <div class="app-frame">
+        <div class="scanline"></div>
+
+        <header>
+          <div class="header-left">
+            <div class="logo-mark">
+              <img src="img/arasaka/arasaka-logo.png" alt="Arasaka Logo" />
+            </div>
+            <div class="header-title-block">
+              <div class="corp-name">ARASAKA CORPORATE DIVISION</div>
+              <div class="system-name">PERSONNEL DATABASE SYSTEM</div>
+            </div>
+          </div>
+
+          <div class="header-right">
+            <div class="status-pill">
+              <div class="status-dot"></div>
+              <span>CLEARANCE-9</span>
+            </div>
+            <div class="status-pill secure">
+              <div class="status-dot"></div>
+              <span>SECURE</span>
+            </div>
+            <div class="datetime-display" id="system-datetime">
+              --/--/---- --:--:--
+            </div>
+          </div>
+        </header>
+
+        <main>
+          <!-- TELA DE SELEÇÃO -->
+          <section id="selection-screen">
+            <div class="section-header">
+              <div class="section-title-block">
+                <div class="section-label">Personnel Records</div>
+                <div class="section-title">ACTIVE SUBJECT DATABASE</div>
+                <div class="section-subtitle">
+                  Selecione um perfil para acessar o dossiê completo, incluindo
+                  histórico operacional e avaliação de risco.
+                </div>
+              </div>
+              <div class="section-meta">
+                <span>ACCESS LEVEL: OMEGA / INTERNAL ONLY</span>
+                <span>LOGGED NODE: NC-ARSK-SERVER-09</span>
+              </div>
+            </div>
+
+            <div id="character-grid"></div>
+          </section>
+
+          <!-- TELA DE PERFIL -->
+          <section id="profile-screen">
+            <button class="back-button" onclick="voltarParaSelecao()">
+              ← Return to Database
+            </button>
+
+            <div class="profile-container">
+              <div id="profile-content">
+                <!-- Preenchido dinamicamente -->
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <!-- MODAL DE RELAÇÃO -->
+    <div class="modal" id="relation-modal">
+      <div class="modal-content">
+        <button
+          class="modal-close-btn modal-top-left"
+          onclick="fecharRelacao()"
+        >
+          ← CLOSE
+        </button>
+
+        <div class="modal-title" id="relation-title">ANÁLISE DE RELAÇÃO</div>
+
+        <div class="modal-body">
+          <!-- Avatares dos dois personagens -->
+          <div class="relation-avatars">
+            <div class="relation-avatar-block">
+              <div class="relation-avatar" id="relation-avatar-a"></div>
+              <div class="relation-avatar-name" id="relation-name-a"></div>
+            </div>
+
+            <!-- Ícone entre os dois personagens -->
+            <div class="relation-icon">↔</div>
+
+            <div class="relation-avatar-block">
+              <div class="relation-avatar" id="relation-avatar-b"></div>
+              <div class="relation-avatar-name" id="relation-name-b"></div>
+            </div>
+          </div>
+
+          <!-- Tipo de relação -->
+          <div class="relation-type-row">
+            <span class="relation-type-label">Tipo de relação</span>
+            <span class="relation-type-value" id="relation-type">-</span>
+          </div>
+
+          <!-- Descrição da relação -->
+          <div class="relation-description" id="relation-text">
+            <!-- Texto da relação -->
+          </div>
+        </div>
+
+        <div class="modal-footer"></div>
+      </div>
+    </div>
+
+    <!-- MODAL DE ITEM / PERTENCE IMPORTANTE -->
+    <div class="modal" id="item-modal">
+      <div class="modal-content item-modal-content">
+        <button class="modal-close-btn modal-top-left" onclick="fecharItem()">
+          ← CLOSE
+        </button>
+
+        <div class="modal-title" id="item-modal-name">ITEM REGISTRADO</div>
+
+        <div class="item-modal-body">
+          <div class="item-modal-image-wrapper">
+            <img id="item-modal-img" src="" alt="Item Image" />
+          </div>
+          <div class="item-modal-description" id="item-modal-description"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL DE IMPLANTE CIBERNÉTICO -->
+    <div class="modal" id="implant-modal">
+  <div class="modal-content">
+    <button class="modal-close-btn modal-top-left" onclick="fecharImplante()">
+      ← CLOSE
+    </button>
+
+    <div class="modal-title" id="implant-modal-name">IMPLANTE REGISTRADO</div>
+    <div class="relation-description" id="implant-modal-description"></div>
+  </div>
+</div>
+
+    <!-- MODAL DE IMAGEM DO PERFIL -->
+    <div class="modal" id="image-modal">
+      <div class="image-modal-content">
+        <button class="image-modal-close" onclick="fecharImagemPerfil()">
+          ← CLOSE
+        </button>
+
+        <img id="image-modal-img" src="" alt="Subject Image" />
+        <div class="image-modal-caption" id="image-modal-caption">
+          <!-- Nome / ID do personagem -->
+        </div>
+      </div>
+    </div>
+
+    <!-- SCRIPT -->
+    <script src="personagens.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
