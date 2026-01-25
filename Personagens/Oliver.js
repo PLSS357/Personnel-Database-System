@@ -4,8 +4,7 @@
 personagens.oliver = {
   // Identificação básica
   nome: 'Oliver "Viole" Miller',
-  funcao:
-    "Fixer | Fundador e Líder dos Dandelions | Ex-Organização XIII (Rank VI)",
+  funcao: "Fixer | Fundador e Líder dos Dandelions | Ex-Organização XIII (Rank VI)",
   id: "38-4647-48",
   foto: "img/Personagens/Oliver.png",
   ativo: true, // (true = ativo, false = inativo, null = desconhecido)
@@ -18,7 +17,7 @@ personagens.oliver = {
   peso: "73 kg",
 
   // Citação e objetivo
-  citacao: '"Se suas falas não impedem balas, você precisa melhorar."',
+  citacao: "“Se suas falas não impedem balas, você precisa melhorar.”",
   objetivoVida:
     "Transformar sua história marcada por violência em um novo caminho, criando oportunidades e proteção para aqueles que fogem da sombra das corporações.",
 
@@ -50,7 +49,7 @@ personagens.oliver = {
   ],
   pessoaMaisImportante:
     "Tessia Amberine — parceira de vida e apoio emocional inabalável.",
-  tragediaFamiliar: [
+  tragedia: [
     "Em 2079, durante confronto entre gangues causado pelos Laminares, sua irmã Emily foi morta acidentalmente por seu próprio pai, Derek.",
     "O evento resultou no suicídio do pai diante de Oliver.",
     "O trauma o marcou permanentemente, levando à introspecção e ao desejo de criar algo que substituísse a “família” que perdeu.",
@@ -78,9 +77,9 @@ personagens.oliver = {
   relacoes: {
     "Tessia Amberine": {
       tipo: "romantic",
-      foto: "img/Tessia.png",
+      foto: "img/Personagens/Tessia.png",
       descricao:
-        "Tessia é a pessoa mais importante da vida de Oliver. Com Tessia, ele não precisa fingir força, nem esconder as rachaduras. Ela é a única presença que o faz sentir que existe um lar possível, mesmo num mundo que tentou quebrá-lo tantas vezes.",
+        "Tessia é a pessoa mais importante da vida de Oliver. Com Tessia, ele não precisa fingir força, nem esconder as rachaduras. Ela é a única presença que o faz sentir que existe um lar possível, mesmo num mundo que tentou quebrá-lo tantas vezes. Ele está disposto a fazer qualquer coisa para protegê-la.",
     },
 
     "Kimber Destaro": {
@@ -182,24 +181,52 @@ personagens.oliver = {
     },
 
     "Kane Graves": {
-      tipo: "friend",
+      tipo: "family",
       foto: "img/Personagens/Kane.png",
       descricao:
         "Kane foi tudo o que Oliver precisava na adolescência: mentor, guia, modelo de disciplina e a figura mais próxima de um irmão mais velho. A morte dele é o segundo maior arrependimento da vida de Viole.",
+    },
+
+    "Ivy Naranjo": {
+      tipo: "ex",
+      foto: "img/Personagens/Ivy.png",
+      descricao:
+        "Ivy e Oliver tiveram um relacionamento intenso quando estavam na Organização XIII. Ivy era ambiciosa e determinada, e Oliver se sentia atraído por sua força de vontade. No entanto, ela desejava sair de Night City para buscar uma vida diferente, enquanto Oliver ainda se via preso à cidade e às suas responsabilidades. Eles tiveram suas discussões, e eventualmente decidiram terminar o relacionamento de forma amigável, reconhecendo que seus caminhos estavam se separando.",
     },
 
     "Emily Miller": {
       tipo: "family",
       foto: "img/Personagens/Emily.png",
       descricao:
-        "Emily é a ferida eternamente aberta. Sua irmã era tudo para ele, o motivo pelo qual entrou na Organização XIII, o motivo pelo qual permaneceu vivo na época. A forma como ela morreu destruiu Oliver, e a culpa de não tê-la protegido nunca desapareceu.",
+        "Emily é a ferida eternamente aberta. Sua irmã era tudo para ele, o motivo pelo qual entrou na Organização XIII, o motivo pelo qual permaneceu vivo na época. A forma como ela morreu destruiu Oliver, e a culpa de não tê-la protegido nunca desapareceu. Ele carrega a memória dela como um lembrete constante do que perdeu e do que precisa proteger nos outros.",
     },
 
     "Raze Lambert": {
       tipo: "enemy",
       foto: "img/Personagens/Raze.png",
       descricao:
-        "No passado, eles eram parceiros na Organização XIII. Raze era alguém em quem Oliver confiava o suficiente para entrar em operações de alto risco ao lado dele. Porém, tudo ruiu quando Raze traiu Oliver durante uma missão, o que levou a morte de Kane Graves e deixou Oliver gravemente ferido. Desde então, Raze se tornou não apenas um inimigo, mas a personificação da maior ferida e quebra de confiança na vida de Oliver",
+        "No passado, eles eram parceiros na Organização XIII. Raze era alguém em quem Oliver confiava o suficiente para entrar em operações de alto risco ao lado dele. Porém, tudo ruiu quando Raze traiu Oliver durante uma missão, o que levou a morte de Kane Graves e deixou Oliver gravemente ferido. Desde então, Raze se tornou não apenas um inimigo, mas a personificação da maior ferida e quebra de confiança na vida de Oliver.",
+    },
+
+    "Dakota Veyriss": {
+      tipo: "enemy",
+      foto: "img/Personagens/Dakota.png",
+      descricao:
+        "Dakota foi o motivo pelo qual Oliver abandonou a Organização XIII. Ela era uma Solo implacável, e sua ambição desmedida colocou Oliver para assassinar crianças à sangue frio. A dependência dela pelos implantes a tornavam cada dia mais instável, e Oliver não podia mais fazer parte daquilo. Ele a vê como um símbolo do que ele rejeita: a perda de humanidade em troca de poder.",
+    },
+
+    Arasaka: {
+      tipo: "enemy",
+      foto: "img/arasaka/arasaka-logo.png",
+      descricao:
+        "Oliver vê a Arasaka como a materialização da maldade corporativa. A ambição, os métodos brutais e a falta de ética da Arasaka causaram sofrimento incalculável a ele e a muitos outros. Ele está determinado a desmantelar suas operações sempre que possível, vendo isso como uma forma de justiça para as vítimas da corporação. E mesmo sabendo que existem outras corporações igualmente perigosas, a Arasaka representa para Oliver o inimigo número um a ser combatido.",
+    },
+
+    "Nathaniel Amberine": {
+      tipo: "enemy",
+      foto: "img/Personagens/Nathaniel.png",
+      descricao:
+        "O pai de quem Oliver mais ama, e ao mesmo tempo, o símbolo máximo daquilo que ele odeia. Nathaniel representa a corrupção, a ganância e a crueldade que a Arasaka tenta esconder. Oliver o vê como um inimigo pessoal, não apenas por suas ações como executivo da Arasaka, mas também pelo jeito que tratou Tessia. Ele está determinado a derrubar Nathaniel, não apenas como um ato de vingança, mas como uma forma de proteger aqueles que ama.",
     },
   },
 
@@ -250,7 +277,7 @@ personagens.oliver = {
         "H.U.S.H ou Harmonic Ultrasound Spatial Harness, era uma máscara de ferro, criada por Elliot Murphy para Oliver. Essa máscara tinha um sistema chamado de 'Hollow Voice', um sistema de modulação vocal com três canais que sobrepõem ecos e reverberações leves, criando uma voz múltipla. Serve tanto para intimidação quanto para ocultação de identidade. Contudo, o uso prolongado aquecia demais o módulo de som, o que obrigava Oliver a desligar o sistema. Devido a esses problemas, Oliver a substituiu pela máscara Red Skull.",
     },
 
-    "Traje de Combate Danificada: Traje Red Skull": {
+    "Traje de Combate Danificado: Traje Red Skull": {
       imagem: "img/itens/Red Skull - Desgastada.png",
       descricao:
         "Criado por Kimber Destaro, o Traje Red Skull abandonava a abordagem acústica da H.U.S.H. para focar totalmente em combate. Equipado com o DGS (Double Gear System), permitia a Oliver acionar picos breves de força (Power Gear) ou acelerar seus movimentos (Speed Gear). O uso, porém, exigia demais do corpo, drenando suas energias rapidamente. Em sua última missão, Oliver forçou ambos os Gears simultaneamente, causando danos irreversíveis ao traje e à unidade DGS, tornando-o inutilizável. Devido a esses danos, Oliver substituiu o Red Skull pela máscara Eclipse.",
@@ -286,13 +313,73 @@ personagens.oliver = {
   // --------------------------------------------------------------------
 
   implantes: {
-    "Kiroshi Optics MK3": {
+    "Amplified Hearing": {
       descricao:
-        "Conjunto de aprimoramentos visuais com zoom digital, HUD tático e leitura biométrica.",
+        "Módulo avançado de aprimoramento auditivo projetado para expandir a sensibilidade e a precisão da percepção sonora. O sistema filtra ruídos irrelevantes e amplifica frequências críticas, permitindo identificação clara de sons sutis em ambientes urbanos, industriais ou táticos. Integrável a sistemas de áudio cibernéticos corporativos.",
     },
+
+    "Cyberaudio Suite": {
+      descricao:
+        "Plataforma auditiva cibernética centralizada que serve como base para múltiplos módulos sensoriais e de comunicação. Otimiza captação, processamento e distribuição de áudio, funcionando como núcleo para implantes sonoros avançados.",
+    },
+
+    Cybereye: {
+      descricao:
+        "Substituto ocular artificial de alta precisão, projetado para restaurar e expandir capacidades visuais humanas. Funciona como plataforma modular para sistemas ópticos avançados, interfaces de dados e sobreposições informacionais em tempo real.",
+    },
+
+    "Image Enhance": {
+      descricao:
+        "Pacote de aprimoramento óptico que amplia a capacidade de análise visual detalhada, reconhecimento facial e leitura labial. Projetado para investigação, inteligência corporativa e operações de observação avançada.",
+    },
+
+    "Internal Agent": {
+      descricao:
+        "Assistente digital totalmente integrado ao corpo do usuário, oferecendo comunicação, processamento de dados e acesso a redes corporativas sem necessidade de dispositivos externos. Pode operar de forma auditiva ou visual conforme integração disponível.",
+    },
+
+    "Light Tattoo": {
+      descricao:
+        "Implantes subdérmicos fotoluminescentes capazes de projetar padrões visuais diretamente sob a pele. Combina expressão estética avançada com identidade visual personalizada para ambientes sociais, corporativos ou artísticos.",
+    },
+
+    "Low Light / Infrared / UV": {
+      descricao:
+        "Conjunto óptico multiespectral que amplia drasticamente a capacidade de percepção visual em condições adversas. Permite leitura precisa do ambiente em cenários de baixa luminosidade, interferência atmosférica ou espectros invisíveis ao olho humano.",
+    },
+
+    "Nasal Filters": {
+      descricao:
+        "Sistema de filtragem respiratória interna que neutraliza partículas tóxicas, gases industriais e contaminantes atmosféricos. Essencial para ambientes poluídos, laboratórios e zonas de risco químico.",
+    },
+
+    Neuroport: {
+      descricao:
+        "O Neuroport é um sistema integrado de controle cibernético e conectividade neural que se tornou o padrão moderno para integração entre humanos e tecnologia, sendo amplamente adotado desde a infância por estar associado a melhores resultados educacionais, profissionais e financeiros ao longo da vida. O pacote inclui componentes como o Neural Link (sistema nervoso artificial para comunicação cérebro-implantes), Holophone (comunicação por comandos mentais), Biomonitor (monitoramento de sinais vitais), Virtuality (interface para ambientes virtuais), HUD/Chyron (projeção visual de informações contextuais), Shard Slots (para módulos cognitivos) e Interface Plug (conexão direta com sistemas externos). Sua disseminação é tão ampla que existem diversos modelos de financiamento e aquisição, enquanto indivíduos não integrados enfrentam desvantagens competitivas significativas em ambientes tecnológicos avançados, consolidando o Neuroport como infraestrutura essencial da sociedade contemporânea.",
+    },
+
+    "Sandevistan Speedware": {
+      descricao:
+        "Sistema de aceleração neural temporária que amplia drasticamente a percepção do tempo e a velocidade de resposta do usuário. Projetado para operações críticas de curta duração.",
+    },
+
+    "Shift Tacts": {
+      descricao:
+        "Lentes ópticas inteligentes implantadas que ajustam dinamicamente coloração e tonalidade visual. Utilizadas tanto para adaptação ambiental quanto para personalização estética ou padronização visual corporativa.",
+    },
+
     "Subdermal Armor": {
       descricao:
-        "Camada de blindagem interna reforçada, oferecendo +25% de resistência a balística leve.",
+        "Sistema avançado de blindagem subcutânea distribuída por todo o corpo, utilizando materiais de alta densidade e absorção de impacto. Projetado para ambientes de risco elevado, oferecendo proteção superior sem comprometer a ergonomia.",
+    },
+
+    "Targeting Scope": {
+      descricao:
+        "Sistema óptico de assistência visual que otimiza a aquisição e o foco em alvos específicos. Amplamente utilizado em contextos de segurança, aplicação da lei e operações de precisão.",
+    },
+    Techhair: {
+      descricao:
+        "Implante capilar sintético com emissão controlada de luz e cor. Desenvolvido para personalização estética avançada, identidade visual corporativa e expressão individual em ambientes urbanos de alta tecnologia.",
     },
   },
 

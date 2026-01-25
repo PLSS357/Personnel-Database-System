@@ -1,5 +1,28 @@
 let currentPersonagemKey = null;
 
+// Helpers para evitar problemas com aspas / caracteres especiais em atributos HTML
+function encodeData(v) {
+  return encodeURIComponent(String(v ?? ""));
+}
+
+function decodeData(v) {
+  try {
+    return decodeURIComponent(String(v ?? ""));
+  } catch {
+    return String(v ?? "");
+  }
+}
+
+function escapeHtml(str) {
+  return String(str ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+
 // Tenta localizar um personagem pelo nome usado na relação
 function encontrarPersonagemPorNomeExibido(nomeAlvo) {
   if (!nomeAlvo) return null;
@@ -122,6 +145,11 @@ function mostrarPerfil(personagemKey) {
               <span>ID: ${personagem.id || "UNREG"}</span>
               <span>BORN: ${formatDataNascimento(personagem)}</span>
               <span>PLACE OF BIRTH: ${personagem.localNascimento || "??"}</span>
+            ${
+              personagem.dataMorte && String(personagem.dataMorte).trim()
+                ? `<span class="death-tag">Falecido em: ${personagem.dataMorte}</span>`
+                : ""
+            }
               <span>AGE: ${personagem.idade || "??"} YRS</span>
               <span>HEIGHT: ${personagem.altura || "??"}</span>
               <span>WEIGHT: ${personagem.peso || "??"}</span>
@@ -167,25 +195,34 @@ function mostrarPerfil(personagemKey) {
           <div class="data-block">
             <h3>Histórico Familiar</h3>
             <p><strong>Antecedentes:</strong></p>
-            ${Array.isArray(personagem.antecedentesFamiliares)
-              ? personagem.antecedentesFamiliares.map(paragrafo => `<p>${paragrafo}</p>`).join('<br>')
-              : `<p>${personagem.antecedentesFamiliares || "-"}</p>`
+            ${
+              Array.isArray(personagem.antecedentesFamiliares)
+                ? personagem.antecedentesFamiliares
+                    .map((paragrafo) => `<p>${paragrafo}</p>`)
+                    .join("<br>")
+                : `<p>${personagem.antecedentesFamiliares || "-"}</p>`
             }<br>
             <p><strong>Pessoa mais importante:</strong> ${
               personagem.pessoaMaisImportante || "-"
             }</p><br>
-            <p><strong>Antecedentes:</strong></p>
-            ${Array.isArray(personagem.tragediaFamiliar)
-              ? personagem.tragediaFamiliar.map(paragrafo => `<p>${paragrafo}</p>`).join('<br>')
-              : `<p>${personagem.tragediaFamiliar || "-"}</p>`
+            <p><strong>Tragédia:</strong></p>
+            ${
+              Array.isArray(personagem.tragedia)
+                ? personagem.tragedia
+                    .map((paragrafo) => `<p>${paragrafo}</p>`)
+                    .join("<br>")
+                : `<p>${personagem.tragedia || "-"}</p>`
             }<br>
           </div>
 
           <div class="data-block">
             <h3>Histórico Pessoal</h3>
-            ${Array.isArray(personagem.historicoPessoal)
-              ? personagem.historicoPessoal.map(paragrafo => `<p>${paragrafo}</p>`).join('<br>')
-              : `<p>${personagem.historicoPessoal || "-"}</p>`
+            ${
+              Array.isArray(personagem.historicoPessoal)
+                ? personagem.historicoPessoal
+                    .map((paragrafo) => `<p>${paragrafo}</p>`)
+                    .join("<br>")
+                : `<p>${personagem.historicoPessoal || "-"}</p>`
             }
           </div>
 
@@ -257,18 +294,28 @@ function formatDataNascimento(personagem) {
 function renderRelacoesChips(personagemKey, relacoesObj = {}) {
   const nomes = Object.keys(relacoesObj);
   if (!nomes.length) return "";
+
+  const pk = encodeData(personagemKey);
+
   return nomes
     .map((nome) => {
       const relacao = relacoesObj[nome];
-      const tipo = typeof relacao === "object" ? relacao.tipo : "neutral";
-      const encodedNome = nome.replace(/"/g, "&quot;");
-      return `<button class="relation-chip ${tipo}" onclick="mostrarRelacao('${personagemKey}', '${encodedNome}')">${nome}</button>`;
+      const tipo =
+        typeof relacao === "object" && relacao !== null ? relacao.tipo : "neutral";
+
+      // usa data-attributes + event delegation (sem onclick inline)
+      return `<button class="relation-chip ${tipo}"
+        data-personagem="${pk}"
+        data-pessoa="${encodeData(nome)}">${escapeHtml(nome)}</button>`;
     })
     .join("");
 }
 
+
 function renderPertences(personagemKey, pertences) {
   if (!pertences) return "<p>-</p>";
+
+  const pk = encodeData(personagemKey);
 
   // Caso seja um ARRAY: [{ nome, imagem, descricao }, ...]
   if (Array.isArray(pertences)) {
@@ -277,14 +324,13 @@ function renderPertences(personagemKey, pertences) {
       <div class="chip-container">
         ${pertences
           .map((item, idx) => {
-            const nome = (item.nome || `ITEM ${idx + 1}`).replace(
-              /"/g,
-              "&quot;"
-            );
+            const nome = item?.nome || `ITEM ${idx + 1}`;
             return `
               <button class="item-chip"
-                onclick="mostrarItem('${personagemKey}', ${idx})">
-                ${nome}
+                data-action="item"
+                data-personagem="${pk}"
+                data-ref="${idx}">
+                ${escapeHtml(nome)}
               </button>
             `;
           })
@@ -301,11 +347,12 @@ function renderPertences(personagemKey, pertences) {
       <div class="chip-container">
         ${nomes
           .map((nome) => {
-            const safe = nome.replace(/"/g, "&quot;");
             return `
               <button class="item-chip"
-                onclick="mostrarItem('${personagemKey}', '${safe}')">
-                ${safe}
+                data-action="item"
+                data-personagem="${pk}"
+                data-ref="${encodeData(nome)}">
+                ${escapeHtml(nome)}
               </button>
             `;
           })
@@ -315,22 +362,24 @@ function renderPertences(personagemKey, pertences) {
   }
 
   // Caso seja uma STRING com vírgulas
-  const partes = pertences
+  const partes = String(pertences)
     .split(",")
     .map((s) => s.trim())
     .filter(Boolean);
 
-  if (!partes.length) return `<p>${pertences}</p>`;
+  if (!partes.length) return `<p>${escapeHtml(pertences)}</p>`;
 
   return `
     <ul class="item-list">
-      ${partes.map((t) => `<li>${t}</li>`).join("")}
+      ${partes.map((t) => `<li>${escapeHtml(t)}</li>`).join("")}
     </ul>
   `;
 }
 
 function renderImplantes(personagemKey, implantes) {
   if (!implantes) return "<p>-</p>";
+
+  const pk = encodeData(personagemKey);
 
   // Caso seja OBJETO
   if (typeof implantes === "object" && !Array.isArray(implantes)) {
@@ -339,14 +388,17 @@ function renderImplantes(personagemKey, implantes) {
 
     return `
       <div class="chip-container">
-        ${nomes.map(nome => {
-          const safe = nome.replace(/"/g, "&quot;");
-          return `
+        ${nomes
+          .map((nome) => {
+            return `
             <button class="item-chip"
-              onclick="mostrarImplante('${personagemKey}', '${safe}')">
-              ${safe}
+              data-action="implant"
+              data-personagem="${pk}"
+              data-ref="${encodeData(nome)}">
+              ${escapeHtml(nome)}
             </button>`;
-        }).join("")}
+          })
+          .join("")}
       </div>
     `;
   }
@@ -357,14 +409,18 @@ function renderImplantes(personagemKey, implantes) {
 
     return `
       <div class="chip-container">
-        ${implantes.map((item, idx) => {
-          const nome = (item.nome || `Implante ${idx+1}`).replace(/"/g, "&quot;");
-          return `
+        ${implantes
+          .map((item, idx) => {
+            const nome = item?.nome || `Implante ${idx + 1}`;
+            return `
             <button class="item-chip"
-              onclick="mostrarImplante('${personagemKey}', ${idx})">
-              ${nome}
+              data-action="implant"
+              data-personagem="${pk}"
+              data-ref="${idx}">
+              ${escapeHtml(nome)}
             </button>`;
-        }).join("")}
+          })
+          .join("")}
       </div>
     `;
   }
@@ -432,9 +488,9 @@ function mostrarRelacao(personagemKey, pessoa) {
   const tipoCampo = document.getElementById("relation-type");
 
   // Título no topo do modal
-  title.innerHTML = `ANÁLISE DE RELAÇÃO`;
+  title.innerHTML = `ANÁLISE DE RELAÇÃO // ${tipoTitulo}`;
 
-    // Avatares e nomes
+  // Avatares e nomes
   if (avatarA) {
     const fotoA = personagem.foto || null;
 
@@ -509,11 +565,15 @@ function fecharRelacao() {
 }
 
 // fechar modal clicando fora
-document.getElementById("relation-modal").addEventListener("click", (e) => {
-  if (e.target.id === "relation-modal") {
-    fecharRelacao();
-  }
-});
+// fechar modal clicando fora
+const __relation_modal = document.getElementById("relation-modal");
+if (__relation_modal) {
+  __relation_modal.addEventListener("click", (e) => {
+    if (e.target.id === "relation-modal") {
+      fecharRelacao();
+    }
+  });
+}
 
 // ======= MODAL IMAGEM PERFIL =======
 
@@ -542,11 +602,15 @@ function fecharImagemPerfil() {
   modal.classList.remove("open");
 }
 
-document.getElementById("image-modal").addEventListener("click", (e) => {
-  if (e.target.id === "image-modal") {
-    fecharImagemPerfil();
-  }
-});
+// fechar modal clicando fora
+const __image_modal = document.getElementById("image-modal");
+if (__image_modal) {
+  __image_modal.addEventListener("click", (e) => {
+    if (e.target.id === "image-modal") {
+      fecharImagemPerfil();
+    }
+  });
+}
 
 function mostrarItem(personagemKey, itemRef) {
   const personagem = personagens[personagemKey];
@@ -621,7 +685,7 @@ function mostrarImplante(personagemKey, implanteRef) {
   const descEl = document.getElementById("implant-modal-description");
 
   nomeEl.textContent = nome;
-  descEl.textContent = typeof item === "string" ? item : (item.descricao || "-");
+  descEl.textContent = typeof item === "string" ? item : item.descricao || "-";
 
   modal.classList.add("open");
 }
@@ -630,9 +694,15 @@ function fecharImplante() {
   document.getElementById("implant-modal").classList.remove("open");
 }
 
-document.getElementById("implant-modal").addEventListener("click", e => {
-  if (e.target.id === "implant-modal") fecharImplante();
-});
+// fechar modal clicando fora
+const __implant_modal = document.getElementById("implant-modal");
+if (__implant_modal) {
+  __implant_modal.addEventListener("click", (e) => {
+    if (e.target.id === "implant-modal") {
+      fecharImplante();
+    }
+  });
+}
 
 function fecharItem() {
   const modal = document.getElementById("item-modal");
@@ -641,41 +711,60 @@ function fecharItem() {
 }
 
 // fechar modal clicando fora
-document.getElementById("item-modal").addEventListener("click", (e) => {
-  if (e.target.id === "item-modal") {
-    fecharItem();
+// fechar modal clicando fora
+const __item_modal = document.getElementById("item-modal");
+if (__item_modal) {
+  __item_modal.addEventListener("click", (e) => {
+    if (e.target.id === "item-modal") {
+      fecharItem();
+    }
+  });
+}
+
+// ======= EVENT DELEGATION (chips dinâmicos) =======
+document.addEventListener("click", (e) => {
+  const relBtn = e.target.closest && e.target.closest(".relation-chip");
+  if (relBtn && relBtn.dataset) {
+    const personagemKey = decodeData(relBtn.dataset.personagem);
+    const pessoa = decodeData(relBtn.dataset.pessoa);
+    mostrarRelacao(personagemKey, pessoa);
+    return;
+  }
+
+  const actionBtn =
+    e.target.closest && e.target.closest(".item-chip[data-action]");
+  if (actionBtn && actionBtn.dataset) {
+    const personagemKey = decodeData(actionBtn.dataset.personagem);
+    const refRaw = actionBtn.dataset.ref;
+    const action = actionBtn.dataset.action;
+
+    const ref = /^[0-9]+$/.test(refRaw) ? Number(refRaw) : decodeData(refRaw);
+
+    if (action === "item") {
+      mostrarItem(personagemKey, ref);
+      return;
+    }
+
+    if (action === "implant") {
+      mostrarImplante(personagemKey, ref);
+      return;
+    }
   }
 });
 
-function abrirImagemPerfil(src, nome) {
-  if (!src) return;
+// ======= TECLA ESC PARA FECHAR MODAIS =======
+document.addEventListener("keydown", (e) => {
+  if (e.key !== "Escape") return;
 
-  const modal = document.getElementById("image-modal");
-  const img = document.getElementById("image-modal-img");
-  const caption = document.getElementById("image-modal-caption");
+  const relation = document.getElementById("relation-modal");
+  const item = document.getElementById("item-modal");
+  const implant = document.getElementById("implant-modal");
+  const image = document.getElementById("image-modal");
 
-  if (!modal || !img) return;
-
-  img.src = src;
-  img.alt = nome || "Subject Image";
-
-  if (caption) {
-    caption.textContent = nome || "";
-  }
-
-  modal.classList.add("open");
-}
-
-function fecharImagemPerfil() {
-  const modal = document.getElementById("image-modal");
-  if (!modal) return;
-  modal.classList.remove("open");
-}
-
-document.getElementById("image-modal").addEventListener("click", (e) => {
-  if (e.target.id === "image-modal") {
-    fecharImagemPerfil();
-  }
+  if (image?.classList.contains("open")) return fecharImagemPerfil();
+  if (relation?.classList.contains("open")) return fecharRelacao();
+  if (item?.classList.contains("open")) return fecharItem();
+  if (implant?.classList.contains("open")) return fecharImplante();
 });
 
 // ======= ZOOM GENÉRICO PARA TODAS AS <img> =======

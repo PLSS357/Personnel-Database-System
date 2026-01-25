@@ -4,22 +4,20 @@
 personagens.raze = {
   // Identificação básica
   nome: "Raze Lambert",
-  funcao:
-    "Netrunner | Ex-membro da XIII (Rank XI) | Atual conselheiro da Arasaka",
+  funcao: "Netrunner | Ex-Organização XIII (Rank XI) | Atual conselheiro da Arasaka",
   id: "50-8583-78",
   foto: "img/Personagens/Raze.png",
   ativo: true, // (true = ativo, false = inativo, null = desconhecido)
 
   // Dados vitais
-  localNascimento: "Charter Hill, Westbrook, Night City",
+  localNascimento: "Westbrook, Night City",
   dataNascimento: "22/MAR/2063",
   idade: 28,
   altura: "1,83 m",
   peso: "67 kg",
 
   // Citação e objetivo
-  citacao:
-    '"A verdade sobre esse mundo… é que nada de bom acontece com heróis."',
+  citacao: "“Nesse mundo… nada de bom acontece com heróis.”",
   objetivoVida:
     "Ganhar poder suficiente para que nunca mais precise “se misturar com lixo de rua”. Vê a Arasaka como ferramenta — não como mestre.",
 
@@ -49,7 +47,7 @@ personagens.raze = {
   ],
   pessoaMaisImportante:
     "Ele mesmo — ninguém mais merece sua lealdade ou confiança.",
-  tragediaFamiliar: [
+  tragedia: [
     "Aos 16 anos, a mãe de Raze foi morta em um assalto causado por um viciado desesperado. Quando viu sua mãe morta, Raze não sentiu nada, apenas entendeu que o mundo não tem sentido, justiça ou propósito. A única salvação é assumir controle absoluto da própria vida, não importa o preço que tiver que pagar.",
   ],
 
@@ -169,6 +167,12 @@ personagens.raze = {
       descricao:
         "Duas adagas de combate corpo a corpo, uma chamada 'Wahrheit' (Verdade) e a outra 'Falschheit' (Falsidade). Raze as utiliza em situações onde o combate físico é inevitável.",
     },
+
+    "Machado “Belial”": {
+      imagem: "img/itens/machado-belial.png",
+      descricao:
+        "O machado de combate corpo a corpo com lâmina dupla com aparência demoniaca que Kane utilizava em combates próximos. Raze o roubou após a morte de Kane, como um troféu.",
+    },
   },
 
   // --------------------------------------------------------------------
@@ -176,16 +180,63 @@ personagens.raze = {
   // --------------------------------------------------------------------
 
   implantes: {
-    "Kiroshi Optics MK3": {
+    "Anti-Dazzle": {
       descricao:
-        "Conjunto de aprimoramentos visuais com zoom digital, HUD tático e leitura biométrica.",
+        "Sistema óptico defensivo desenvolvido para neutralizar interferências visuais causadas por flashes intensos, explosões luminosas ou ataques de luz direcionada. Garante estabilidade visual contínua e preserva a capacidade operacional do usuário em cenários de alto risco.",
     },
-    "Subdermal Armor": {
+    Cyberarm: {
       descricao:
-        "Camada de blindagem interna reforçada, oferecendo +25% de resistência a balística leve.",
+        "Prótese cibernética de membro superior desenvolvida para substituição total do braço orgânico. Oferece estrutura modular interna para integração de múltiplos sistemas especializados, mantendo ergonomia, força e controle refinado. Projetada para aplicações civis, industriais e táticas.",
+    },
+    Cyberdeck: {
+      descricao:
+        "Unidade de processamento cibernético integrada diretamente a uma prótese de braço. Permite acesso direto a sistemas digitais, redes e ambientes virtuais com latência mínima, eliminando a necessidade de dispositivos externos portáteis.",
+    },
+    Cybereye: {
+      descricao:
+        "Substituto ocular artificial de alta precisão, projetado para restaurar e expandir capacidades visuais humanas. Funciona como plataforma modular para sistemas ópticos avançados, interfaces de dados e sobreposições informacionais em tempo real.",
+    },
+    "Enhanced Antibodies": {
+      descricao:
+        "Tratamento biocibernético focado no fortalecimento do sistema imunológico e nos processos naturais de recuperação corporal. Aumenta significativamente a eficiência da regeneração fisiológica após esforço extremo, ferimentos ou intervenções cirúrgicas.",
+    },
+    "Internal Agent": {
+      descricao:
+        "Assistente digital totalmente integrado ao corpo do usuário, oferecendo comunicação, processamento de dados e acesso a redes corporativas sem necessidade de dispositivos externos. Pode operar de forma auditiva ou visual conforme integração disponível.",
+    },
+    "Low Light / Infrared / UV": {
+      descricao:
+        "Conjunto óptico multiespectral que amplia drasticamente a capacidade de percepção visual em condições adversas. Permite leitura precisa do ambiente em cenários de baixa luminosidade, interferência atmosférica ou espectros invisíveis ao olho humano.",
+    },
+    "Nasal Filters": {
+      descricao:
+        "Sistema de filtragem respiratória interna que neutraliza partículas tóxicas, gases industriais e contaminantes atmosféricos. Essencial para ambientes poluídos, laboratórios e zonas de risco químico.",
+    },
+    Neuroport: {
+      descricao:
+        "O Neuroport é um sistema integrado de controle cibernético e conectividade neural que se tornou o padrão moderno para integração entre humanos e tecnologia, sendo amplamente adotado desde a infância por estar associado a melhores resultados educacionais, profissionais e financeiros ao longo da vida. O pacote inclui componentes como o Neural Link (sistema nervoso artificial para comunicação cérebro-implantes), Holophone (comunicação por comandos mentais), Biomonitor (monitoramento de sinais vitais), Virtuality (interface para ambientes virtuais), HUD/Chyron (projeção visual de informações contextuais), Shard Slots (para módulos cognitivos) e Interface Plug (conexão direta com sistemas externos). Sua disseminação é tão ampla que existem diversos modelos de financiamento e aquisição, enquanto indivíduos não integrados enfrentam desvantagens competitivas significativas em ambientes tecnológicos avançados, consolidando o Neuroport como infraestrutura essencial da sociedade contemporânea.",
+    },
+    "Neuroport Cyberdeck Port": {
+      descricao:
+        "Porta de conexão cervical dedicada que integra diretamente um cyberdeck ao sistema neural do usuário. Proporciona alcance ampliado, maior estabilidade de sinal e resposta mais eficiente em operações de alta complexidade digital.",
+    },
+    "Pain Editor": {
+      descricao:
+        "Módulo de controle neural da dor que regula a percepção de estímulos nocivos. Desenvolvido para garantir continuidade operacional mesmo sob condições físicas extremas, respeitando limites fisiológicos seguros.",
+    },
+    "Self-ICE": {
+      descricao:
+        "Sistema interno de contramedidas digitais projetado para proteger a mente do usuário contra intrusões eletrônicas e ataques de interferência neural. Atua de forma autônoma, reforçando a integridade cognitiva em ambientes hostis ou altamente conectados.",
+    },
+    "Skin Weave": {
+      descricao:
+        "Reforço subdérmico distribuído por todo o corpo, composto por fibras sintéticas de alta resistência entrelaçadas aos tecidos naturais. Proporciona proteção passiva contínua sem interferir na mobilidade ou exigir equipamentos externos.",
+    },
+    "Subdermal Grip": {
+      descricao:
+        "Implante neuromuscular que otimiza a interface entre o sistema nervoso e dispositivos empunhados. Permite controle preciso e responsivo de armamentos e ferramentas inteligentes sem a necessidade de conexões externas visíveis.",
     },
   },
-
   // --------------------------------------------------------------------
   // PERFIL PROFISSIONAL
   // --------------------------------------------------------------------

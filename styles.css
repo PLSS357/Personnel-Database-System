@@ -271,8 +271,22 @@ main {
 /* Grid de personagens */
 #character-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(3, minmax(260px, 1fr));
   gap: 1.2rem;
+}
+
+/* Até ~1024px: 2 por linha */
+@media (max-width: 1024px) {
+  #character-grid {
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+  }
+}
+
+/* Até ~768px: 1 por linha (você já tem algo parecido) */
+@media (max-width: 768px) {
+  #character-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .character-card {
@@ -820,8 +834,7 @@ main {
   cursor: pointer;
   border: 1px solid rgba(230, 0, 0, 0.8);
   background: rgba(40, 10, 10, 0.96);
-  transition: background 0.2s ease, border-color 0.2s ease,
-    box-shadow 0.2s ease;
+  transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .item-chip:hover {
@@ -1012,16 +1025,6 @@ main {
     text-align: left;
     max-width: 100%;
   }
-
-  #character-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 768px) {
-  .data-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 /* MODAL DE IMAGEM DE PERFIL */
@@ -1077,4 +1080,43 @@ main {
   color: #ffd6d6;
   text-align: center;
   opacity: 0.9;
+}
+
+.death-tag {
+  color: #ff4b4b;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* =========================
+   ANIMAÇÃO: MODAL DE IMAGEM
+   ========================= */
+
+/* sobrescreve só o modal de imagem (sem afetar outros modais) */
+#image-modal {
+  display: flex;               /* mantém no layout pra poder animar */
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 180ms ease, visibility 0s linear 180ms;
+}
+
+/* quando abre */
+#image-modal.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: opacity 180ms ease, visibility 0s linear 0s;
+}
+
+/* anima o "cartão" do modal (zoom + leve subida) */
+#image-modal .image-modal-content {
+  opacity: 0;
+  transform: translateY(10px) scale(0.96);
+  transition: transform 180ms ease, opacity 180ms ease;
+}
+
+#image-modal.open .image-modal-content {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
