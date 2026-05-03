@@ -4,9 +4,9 @@
 personagens.kimber = {
   // Identificação básica
   nome: "Kimber Destaro",
-  funcao: "Tech | Co-fundadora dos Dandelions | Ex-Organização XIII (Rank V)",
+  funcao: "Tech | Co-fundadora dos Dandelions | Ex-Organização XIII (Rank IV)",
   id: "46-5623-70",
-  foto: "img/Personagens/Kimber.png",
+  foto: "img/Personagens/Kimber/Kimber Destaro.png",
   ativo: true, // (true = ativo, false = inativo, null = desconhecido)
 
   // Dados vitais
@@ -37,23 +37,6 @@ personagens.kimber = {
   oQueValoriza: "A honra e os companheiros de gangue.",
 
   // --------------------------------------------------------------------
-  // HISTÓRICO FAMILIAR
-  // --------------------------------------------------------------------
-
-  antecedentesFamiliares: [
-    "Mãe: Elaine Destaro, operária de fábrica; suicidou-se em 2076 após muitos anos de depressão.",
-    "Pai: Marcus Destaro, ex-policial local, subornado pelos Prescott. Tentou proteger Kimber, mas foi morto pelos homens de Prescott quando se recusou a cooperar.",
-    "Mãe Biológica: Desconhecida.",
-    "Pai Biológico: Killian Klery — Antigo xerife de Doverly. Morto em 2081 por Graham Walker.",
-  ],
-  pessoaMaisImportante:
-    "Seus companheiros de gangue — especialmente Oliver “Viole” Miller, a quem vê como um irmão mais novo.",
-  tragedia: [
-    "Após o suicídio da mãe, Kimber foi vendida por seu pai a Harold Prescott, sob o pretexto de “garantia de futuro”. Descobriu tarde demais que se tornara parte do ciclo criminoso da cidade.",
-    "Resgatada por seus dois melhores amigos, Jake Harvey e Daniel Tanner, viu ambos morrerem em uma emboscada montada pelos Prescott. Sozinha, fugiu de Doverly dirigindo sem destino até chegar em Night City.",
-  ],
-
-  // --------------------------------------------------------------------
   // HISTÓRICO PESSOAL
   // --------------------------------------------------------------------
 
@@ -65,155 +48,251 @@ personagens.kimber = {
   // --------------------------------------------------------------------
   // RELAÇÕES INTERPESSOAIS
   // --------------------------------------------------------------------
-  // Tipos de relação válidos:
-  // "romantic", "friend", "enemy", "neutral, "family", "ex", "pet", "rival"
 
   relacoes: {
+    // Aliado Incondicional
     "Oliver Miller": {
-      tipo: "friend",
-      foto: "img/Personagens/Oliver.png",
+      tipo: "Aliado Incondicional",
+      status: "Vivo",
+      foto: "img/Personagens/Oliver/Oliver Miller.png",
       descricao:
-        "Seu elo mais profundo atualmente. Ela o viu crescer, cuidou de seus implantes, o ajudou a se reerguer após a Organização XIII e o protege como uma irmã mais velha faria. Viole é um dos poucos que a faz sorrir genuinamente.",
-    },
-
-    "Tessia Amberine": {
-      tipo: "friend",
-      foto: "img/Personagens/Tessia.png",
-      descricao:
-        "Kimber a vê como “cunhada honorária”. Conversam sobre tudo — Tessia é uma das poucas pessoas capazes de fazê-la baixar a guarda.",
+        "É o elo mais profundo dela atualmente. Kimber o protege como família, cuidou de seus implantes e o ajudou a se reerguer.",
     },
 
     "Kane Graves": {
-      tipo: "family",
-      foto: "img/Personagens/Kane.png",
+      tipo: "Aliado Incondicional",
+      status: "Morto",
+      foto: "img/Personagens/Kane/Kane Graves.png",
       descricao:
-        "Um dos poucos que Kimber verdadeiramente chamou de amigo. Kane foi alguém em quem ela confiou sem reservas. A morte dele marcou Kimber: desde então, ela nunca mais permitiu que alguém se aproximasse no mesmo nível.",
-    },
-
-    "Murphy Elliot": {
-      tipo: "friend",
-      foto: "img/Personagens/Murphy.png",
-      descricao:
-        "Quando Kimber se juntou à organização XIII, Murphy ainda era um de seus membros ativos — e foi ele quem a treinou no começo, funcionando como uma espécie de mentor informal.",
-    },
-
-    "Ivy Naranjo": {
-      tipo: "rival",
-      foto: "img/Personagens/Ivy.png",
-      descricao:
-        "Kimber nunca gostou de Ivy. Enxergava nela uma presença incômoda, alguém que atraía atenção indesejada. Apesar disso, Ivy nunca se importou com Kimber, o que só aumentava a animosidade entre as duas.",
-    },
-
-    "Aiden Fowler": {
-      tipo: "friend",
-      foto: "img/Personagens/Aiden.png",
-      descricao:
-        "Amigo. Irritante, mas útil. Confia nele tecnicamente, mas não emocionalmente. Costuma gritar com ele por entupir a rede elétrica da base com downloads.",
-    },
-
-    Cypher: {
-      tipo: "friend",
-      foto: "img/Personagens/Cypher.png",
-      descricao:
-        "Ela o acha estranho, mas gosta dele. Mas finge que não, claro. Odeia quando ele canta na oficina — mas criou um capacete de coelho holográfico pra ele, o que denuncia seu carinho.",
-    },
-
-    Nyx: {
-      tipo: "neutral",
-      foto: "img/Personagens/Nyx.png",
-      descricao:
-        "Admira sua força e presença. Frequentemente cria equipamentos para suas performances. A respeita por não fingir quem é.",
-    },
-
-    Shinigami: {
-      tipo: "neutral",
-      foto: "img/Personagens/Shinigami.png",
-      descricao:
-        "Enigmático. Respeita seu código e eficiência. Sente um certo medo silencioso dele, mas jamais admitiria.",
-    },
-
-    "Serena Ashbourne": {
-      tipo: "friend",
-      foto: "img/Personagens/Serena.png",
-      descricao:
-        "Amiga improvável. Kimber acha seu estilo teatral exaustivo, mas a admira pela inteligência. Trabalham bem juntas, principalmente quando Serena financia materiais caros.",
-    },
-
-    Ninvega: {
-      tipo: "neutral",
-      foto: "img/Personagens/Ninvega.png",
-      descricao:
-        "Respeito mútuo. Ela o trata como igual — não como máquina. Ele, em troca, a chama de “engenheira da alma”.",
-    },
-
-    "Dominic D. V. Chier": {
-      tipo: "neutral",
-      foto: "img/Personagens/Dominic.png",
-      descricao:
-        "Enigmático. Respeita seu código e eficiência. Sente um certo medo silencioso dele, mas jamais admitiria.",
-    },
-
-    Lyra: {
-      tipo: "neutral",
-      foto: "img/Personagens/Lyra.png",
-      descricao:
-        "Admira sua empatia e curiosidade. A ajuda frequentemente com manutenção de sensores.",
-    },
-
-    "Priya Ellison": {
-      tipo: "friend",
-      foto: "img/Personagens/Priya.png",
-      descricao:
-        "Companheira de confiança. Compartilham uma mentalidade de “fazer o que for preciso”.",
-    },
-
-    "Ícaro Barbosa": {
-      tipo: "friend",
-      foto: "img/Personagens/Ícaro.png",
-      descricao:
-        "Acha ele caótico, mas divertido. Costuma reclamar do barulho do Uno, mas vive pedindo peças pra ele. Acha reconfortante a leveza que ele traz.",
-    },
-
-    "Kleber Junior": {
-      tipo: "neutral",
-      foto: "img/Personagens/Kleber.png",
-      descricao:
-        "Evita. Acha excêntrico e desconfortável, mas reconhece que ele tem talento em negociações.",
+        "Foi um dos poucos amigos em quem Kimber confiou sem reservas. A morte dele deixou uma marca permanente nela.",
     },
 
     Mirai: {
-      tipo: "pet",
-      foto: "img/Personagens/Mirai.png",
+      tipo: "Aliado Incondicional",
+      status: "Vivo",
+      foto: "img/Personagens/Mirai/Mirai.png",
       descricao:
-        "Considera uma mascote. Tem carinho genuíno, e se algo o danificar, ela destrói quem for responsável.",
+        "Tem carinho genuíno por Mirai. Para Kimber, ele é uma mascote da gangue; se alguém o danificar, ela provavelmente não perdoa.",
     },
 
-    "Raze Lambert": {
-      tipo: "enemy",
-      foto: "img/Personagens/Raze.png",
+    // Muito positivo
+    "Tessia Amberine": {
+      tipo: "Muito positivo",
+      status: "Viva",
+      foto: "img/Personagens/Tessia/Tessia Amberine.png",
       descricao:
-        "Ex-colega na Organização XIII. Matou Kane Graves, um dos poucos que Kimber considerava amigo, e deixou Viole em coma. A inimizade é pessoal e irreversível.",
+        "Uma das poucas pessoas que faz Kimber baixar a guarda. Ela a respeita, confia nela e a vê como parte do círculo íntimo de Oliver.",
+    },
+
+    "Jake Harvey": {
+      tipo: "Muito positivo",
+      status: "Morto",
+      foto: "img/Personagens/Kimber/Jake Harvey.png",
+      descricao:
+        "Um dos dois amigos que resgataram Kimber de Doverly. Sua morte virou uma ferida central na memória dela.",
+    },
+
+    "Daniel Tanner": {
+      tipo: "Muito positivo",
+      status: "Morto",
+      foto: "img/Personagens/Kimber/Daniel Tanner.png",
+      descricao:
+        "Assim como Jake, foi essencial para salvar Kimber. Ela o associa a lealdade, perda e sobrevivência.",
+    },
+
+    "Priya Ellison": {
+      tipo: "Muito positivo",
+      status: "Viva",
+      foto: "img/Personagens/Priya/Priya Ellison.png",
+      descricao:
+        "Kimber vê Priya como alguém prática, firme e confiável. As duas compartilham a mentalidade de fazer o necessário para sobreviver.",
+    },
+
+    "Elaine Destaro": {
+      tipo: "Muito positivo",
+      status: "Morta",
+      foto: "img/Personagens/Kimber/Elaine Destaro.png",
+      descricao:
+        "Mãe de Kimber. Sua morte e sua carta de despedida são lembranças dolorosas, ligadas a afeto, culpa e perda.",
+    },
+
+    // Positivo
+    Ciel: {
+      tipo: "Positivo",
+      status: "Viva",
+      foto: "img/Personagens/Tessia/Ciel.png",
+      descricao:
+        "Kimber a vê como parte indireta da família. Por isso tende a tratá-la com muito cuidado e proteção.",
+    },
+
+    "Murphy Elliot": {
+      tipo: "Positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Kane/XIII/Murphy Elliot.png",
+      descricao:
+        "Treinou Kimber no começo da Organização XIII. Ela o respeita como alguém que ajudou a moldar sua experiência técnica e prática.",
+    },
+
+    "Thomas Reeve Elliot": {
+      tipo: "Positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Kane/Thomas Elliot.png",
+      descricao:
+        "Kimber mantém uma postura educada e protetiva, mas sem uma relação muito desenvolvida.",
+    },
+
+    "Jesse Reeve Elliot": {
+      tipo: "Positivo",
+      status: "Viva",
+      foto: "img/Personagens/Kane/Jesse Elliot.png",
+      descricao:
+        "Por ser filha mais nova de Murphy, Kimber tende a vê-la com certo cuidado, talvez até com uma proteção discreta, mesmo que não haja muita convivência direta.",
+    },
+
+    "Aiden Fowler": {
+      tipo: "Positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Aiden/Aiden Fowler.png",
+      descricao:
+        "Às vezes é irritante, mas útil. Kimber confia nele tecnicamente, embora não emocionalmente; vive reclamando dos exageros dele na rede elétrica da base.",
+    },
+
+    Cypher: {
+      tipo: "Positivo",
+      status: "Morto",
+      foto: "img/Personagens/Cypher.png",
+      descricao:
+        "Acha ele esquisito e finge não gostar, mas tem carinho real por ele. O capacete de coelho holográfico que ela criou denuncia esse afeto.",
+    },
+
+    "Serena Ashbourne": {
+      tipo: "Positivo",
+      status: "Viva",
+      foto: "img/Personagens/Serena/Serena Ashbourne.png",
+      descricao:
+        "Acha Serena teatral e cansativa, mas admira sua inteligência. Trabalham bem juntas, especialmente quando Serena financia materiais caros.",
+    },
+
+    "Ícaro Barbosa": {
+      tipo: "Positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Ícaro/Ícaro Barbosa.png",
+      descricao:
+        "Acha Ícaro caótico, barulhento e divertido. Reclama dele, mas também se beneficia da leveza e das peças que ele traz.",
+    },
+
+    Nyx: {
+      tipo: "Positivo",
+      status: "Morta",
+      foto: "img/Personagens/Nyx.png",
+      descricao:
+        "Kimber admira sua força, presença e autenticidade. Costuma criar equipamentos para suas performances.",
+    },
+
+    // Neutro/positivo
+    "Hazel Reeve": {
+      tipo: "Neutro/positivo",
+      status: "Viva",
+      foto: "img/Personagens/Kane/Hazel Reeve.png",
+      descricao:
+        "Por ser esposa de Murphy, Kimber a reconhece como alguém ligada ao círculo familiar de seu antigo mentor. A relação parece respeitosa.",
+    },
+
+    Shinigami: {
+      tipo: "Neutro/positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Shinigami.png",
+      descricao:
+        "Respeita seu código e eficiência. Sente certo medo silencioso dele, mas jamais admitiria.",
+    },
+
+    Ninvega: {
+      tipo: "Neutro/positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Ninvega/Ninvega.png",
+      descricao:
+        "Há respeito mútuo. Kimber o trata como igual, não como máquina; ele reconhece nela uma “engenheira da alma”.",
+    },
+
+    "Dominic Don Von Chier": {
+      tipo: "Neutro/positivo",
+      status: "Morto",
+      foto: "img/Personagens/Dominic Don Von Chier.png",
+      descricao:
+        "Enigmático. Kimber respeita sua eficiência e postura, mas mantém distância emocional e certa cautela.",
+    },
+
+    Lyra: {
+      tipo: "Neutro/positivo",
+      status: "Viva",
+      foto: "img/Personagens/Lyra/Lyra.png",
+      descricao:
+        "Kimber admira sua empatia e curiosidade. Ajuda Lyra com manutenção de sensores e parece vê-la como alguém em desenvolvimento.",
+    },
+
+    // Neutro
+    // Nenhum personagem nesta categoria.
+
+    // Neutro/negativo
+    "Marcus Destaro": {
+      tipo: "Neutro/negativo",
+      status: "Desconhecido",
+      foto: "img/Personagens/Kimber/Marcus Destaro.png",
+      descricao:
+        "Figura contraditória: tentou protegê-la em algum momento, mas também está ligado à traição que levou Kimber às mãos dos Prescott.",
+    },
+
+    "Kleber Junior": {
+      tipo: "Neutro/negativo",
+      status: "Vivo",
+      foto: "img/Personagens/Kleber Junior.png",
+      descricao:
+        "Kimber evita muito contato. Acha Kleber excêntrico e desconfortável, mas reconhece seu talento em negociações.",
+    },
+
+    // Negativo
+    "Ivy Naranjo": {
+      tipo: "Negativo",
+      status: "Desconhecido",
+      foto: "img/Personagens/Ivy/Ivy Naranjo.png",
+      descricao:
+        "Kimber nunca gostou dela. Vê Ivy como uma presença incômoda e provocadora, embora Ivy pareça não se importar com essa antipatia.",
+    },
+
+    // Muito negativo
+    // Nenhum personagem nesta categoria.
+
+    // Inimigo jurado
+    "Raze Lambert": {
+      tipo: "Inimigo jurado",
+      status: "Vivo",
+      foto: "img/Personagens/Raze/Raze Lambert.png",
+      descricao:
+        "Ex-colega da Organização XIII. Matou Kane e deixou Oliver em coma; para Kimber, a inimizade é pessoal e irreversível.",
     },
 
     "Harold Prescott": {
-      tipo: "enemy",
-      foto: "img/Personagens/Prescott.png",
+      tipo: "Inimigo jurado",
+      status: "Morto",
+      foto: "img/Personagens/Kimber/Harold Prescott.png",
       descricao:
-        "Líder da família que controlava Doverly. Responsável direto pela destruição de sua família e pela morte de Jake e Daniel. Morto em 2091.",
+        "Responsável direto pela destruição da vida dela em Doverly e pela morte de Jake e Daniel. É uma figura ligada ao trauma central de Kimber.",
     },
 
     "Graham Walker": {
-      tipo: "enemy",
-      foto: "img/Personagens/Prescott.png",
+      tipo: "Inimigo jurado",
+      status: "Morto",
+      foto: "img/Personagens/Kimber/Graham Walker.png",
       descricao:
-        "Ex-policial transferido de St. Louis, Missouri, Graham Walker assumiu o posto de vice-xerife em Doverly em 2070 após envolvimento em múltiplos escândalos abafados por instâncias superiores. Com a morte de Killian Klery em 2081, Walker foi promovido a xerife, consolidando o controle total da rede de tráfico humano da cidade sob uma fachada de legalidade. Diversos vazamentos pós-morte revelaram que sua transferência para Doverly ocorreu como medida de contenção institucional após condutas graves envolvendo menores de idade, padrão de comportamento que se repetiu de forma silenciosa durante seu mandato. Kimber Destaro esteve sob sua autoridade direta durante um curto período crítico de sua adolescência. Walker foi eliminado em 2091 durante a operação extraoficial de um grupo nomeado “Dandelions” que culminou na queda de Doverly.",
+        "Representa a corrupção e o abuso de poder de Doverly. Kimber o associa ao sistema criminoso que destruiu sua adolescência.",
     },
 
     "Killian Klery": {
-      tipo: "enemy",
-      foto: "img/Personagens/Prescott.png",
+      tipo: "Inimigo jurado",
+      status: "Morto",
+      foto: "img/Personagens/Kimber/Killian Klery.png",
       descricao:
-        "Antigo xerife de Doverly, Killian Klery ocupou o cargo por mais de uma década, período marcado por estabilidade institucional aparente e atividades ilícitas sistemáticas ligadas ao tráfico humano local. Em julho de 2081, Klery foi dado como desaparecido; seu corpo foi localizado em avançado estado de decomposição em 13/08/2081, em uma vala próxima à estrada das montanhas. A causa oficial da morte nunca foi conclusiva, sendo atribuída tanto a acidente quanto a possível eliminação interna.",
+        "Antigo xerife de Doverly e parte do sistema corrupto local. Também aparece ligado à família biológica de Kimber, o que torna a relação ainda mais amarga.",
     },
   },
 
@@ -223,22 +302,22 @@ personagens.kimber = {
 
   // Pertences importantes
   pertencesImportantes: {
-    "Brinco Triangular": {
-      imagem: "img/itens/Brinco_Triangular.png",
-      descricao:
-        "Um brinco triangular cromado na orelha esquerda, funciona como receptor de dados.",
-    },
-
     "Pingente de Engrenagem": {
-      imagem: "img/itens/Pingente_Engrenagem.png",
+      imagem: "img/itens/Kimber/Pingente de Engrenagem.png",
       descricao:
-        "Pingente metálico em forma de engrenagem, presente de sua mãe. Contém um fragmento de dados criptografados que ela nunca decifrou— talvez por medo do que descobriria.",
+        "Um pequeno pingente metálico em forma de engrenagem, presente de sua mãe. Apesar da aparência simples, carrega um fragmento de dados criptografados que Kimber nunca conseguiu decifrar completamente — talvez por falta de tempo, talvez por medo do que a mensagem ainda possa revelar. Para ela, é uma lembrança silenciosa de origem, perda e de tudo aquilo que ainda ficou inacabado.",
     },
 
-    "Carta de despedida": {
-      imagem: "img/itens/Carta_Despedida.png",
+    "Carta de Despedida da Mãe": {
+      imagem: "img/itens/Kimber/Carta de Despedida da Mãe.png",
       descricao:
-        "Carta escrita por sua mãe pouco antes do suicídio. Nela, Elaine pede perdão por não ter conseguido protegê-la e expressa esperança de que Kimber encontre felicidade longe de Doverly.",
+        "Uma carta antiga escrita por Elaine antes de morrer, pedindo perdão por não ter conseguido proteger Kimber. O papel está gasto, dobrado muitas vezes e guardado com cuidado quase ritual. É um objeto frágil, mas devastador: a prova física de um amor que chegou tarde demais para salvá-la de Doverly, mas forte o bastante para continuar guiando suas escolhas.",
+    },
+
+    "Plano de Construção Grand Nuage": {
+      imagem: "img/itens/Kimber/Plano de Construção Grand Nuage.png",
+      descricao:
+        "Um conjunto de plantas técnicas, cálculos estruturais e anotações obsessivas sobre o Grand Nuage, o gigantesco veículo aéreo que Kimber sonha transformar em base dos Dandelions. Mais do que um projeto de engenharia, é sua ideia de lar: uma fortaleza móvel nos céus, construída para proteger aqueles que ainda tentam escapar do alcance dos deuses corporativos.",
     },
   },
 
@@ -272,16 +351,4 @@ personagens.kimber = {
         "Interface visual imersiva que sobrepõe dados e ambientes digitais diretamente à percepção do mundo físico. Permite navegação em sistemas virtuais sem perda de consciência situacional do ambiente real.",
     },
   },
-  // --------------------------------------------------------------------
-  // PERFIL PROFISSIONAL
-  // --------------------------------------------------------------------
-
-  tipoTrabalho:
-    "Multiespecialista. Atua em mecânica, cibernética, armas, engenharia de drones e criptografia.",
-  modoTrabalho:
-    "Sozinha. Não confia em ninguém dentro da oficina sem supervisão — mas deixa Mirai e Viole entrarem.",
-  espacoTrabalho:
-    "Organizado por cores, cabos e chips, mas caótico para qualquer outro ser humano. Ela sabe onde tudo está. Sempre.",
-  clientes:
-    "Os Dandelions, Fixers independentes e raramente corporações (sob pseudônimo).",
 };

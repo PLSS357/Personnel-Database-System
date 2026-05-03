@@ -4,9 +4,10 @@
 personagens.raze = {
   // Identificação básica
   nome: "Raze Lambert",
-  funcao: "Netrunner | Ex-Organização XIII (Rank XI) | Atual conselheiro da Arasaka",
+  funcao:
+    "Netrunner | Ex-Organização XIII (Rank XI) | Atual conselheiro da Arasaka",
   id: "50-8583-78",
-  foto: "img/Personagens/Raze.png",
+  foto: "img/Personagens/Raze/Raze Lambert.png",
   ativo: true, // (true = ativo, false = inativo, null = desconhecido)
 
   // Dados vitais
@@ -38,20 +39,6 @@ personagens.raze = {
   oQueValoriza: "Controle. Informação. Vantagem antecipada.",
 
   // --------------------------------------------------------------------
-  // HISTÓRICO FAMILIAR
-  // --------------------------------------------------------------------
-
-  antecedentesFamiliares: [
-    "Mãe: Elaine Lambert, técnica de manutenção de infraestrutura predial. Trabalhou em empregos precários para sustentar a família. Faleceu de overdose em 2077.",
-    "Pai: Donovan Lambert, técnico corporativo de nível baixo na Continental Brands. Após perder o emprego, se afundou em dívidas. Abandonou Raze e a mãe quando ele tinha 7 anos.",
-  ],
-  pessoaMaisImportante:
-    "Ele mesmo — ninguém mais merece sua lealdade ou confiança.",
-  tragedia: [
-    "Aos 16 anos, a mãe de Raze foi morta em um assalto causado por um viciado desesperado. Quando viu sua mãe morta, Raze não sentiu nada, apenas entendeu que o mundo não tem sentido, justiça ou propósito. A única salvação é assumir controle absoluto da própria vida, não importa o preço que tiver que pagar.",
-  ],
-
-  // --------------------------------------------------------------------
   // HISTÓRICO PESSOAL
   // --------------------------------------------------------------------
 
@@ -62,43 +49,85 @@ personagens.raze = {
   // --------------------------------------------------------------------
   // RELAÇÕES INTERPESSOAIS
   // --------------------------------------------------------------------
-  // Tipos de relação válidos:
-  // "romantic", "friend", "enemy", "neutral, "family", "ex", "pet", "rival"
 
   relacoes: {
-    "Oliver Miller": {
-      tipo: "enemy",
-      foto: "img/Personagens/Oliver.png",
+    // Aliado Incondicional
+    // Nenhum personagem nesta categoria.
+
+    // Muito positivo
+    // Nenhum personagem nesta categoria.
+
+    // Positivo
+    Arasaka: {
+      tipo: "Positivo",
+      status: "Ativa",
+      foto: "img/Arasaka/Arasaka.png",
       descricao:
-        "Para Raze, Oliver era, e ainda é, um objeto de fascínio. Ele não via Oliver como um amigo, mas sim um experimento. O fato de Oliver ter sobrevivido é irritante. Para Raze, destruir aquilo que admira é a forma mais íntima de posse. Ele quer ver Oliver quebrado, porque isso o faria sentir que tem controle sobre algo que nunca pôde possuir.",
+        "Raze vê a Arasaka como uma ferramenta de ascensão, proteção e influência. Não a trata como “mestre”, mas como estrutura útil para chegar ao topo. Trabalha para ela porque a corporação dá acesso a poder, redes, recursos e segurança.",
     },
 
-    "Kane Graves": {
-      tipo: "neutral",
-      foto: "img/Personagens/Kane.png",
+    // Neutro/positivo
+    "Elaine Lambert": {
+      tipo: "Neutro/positivo",
+      status: "Morta",
+      foto: "img/Personagens/Elaine Lambert.png",
       descricao:
-        "Kane incomodava Raze. Ele era capaz de enxergar além de sua máscara. Kane via nele potencial, mas também desequilíbrio. Kane tentou guiá-lo, e mesmo que fingisse, Raze odiava isso. quando Raze o traiu, foi uma forma de se libertar da influência que ele nunca quis.",
+        "Elaine foi sua mãe e sustentou a família em condições precárias. A morte dela marcou Raze não pelo luto comum, mas pela conclusão fria de que o mundo não tem justiça nem sentido. Ele não parece guardar afeto aberto por ela; guarda a lembrança como prova de que depender dos outros é fraqueza.",
+    },
+
+    // Neutro
+    Faraday: {
+      tipo: "Neutro",
+      status: "Vivo",
+      foto: "img/Personagens/Faraday.png",
+      descricao:
+        "Raze demorou a descobrir a identidade de seu pai, mas não gosta dele. Para Raze, Faraday representa ausência e uma origem que ele prefere rejeitar. Mesmo sem saber muito sobre ele, Raze o associa a fraqueza, dívida emocional e algo que não merece respeito.",
+    },
+
+    // Neutro/negativo
+    // Nenhum personagem nesta categoria.
+
+    // Negativo
+    "Aiden Fowler": {
+      tipo: "Negativo",
+      status: "Vivo",
+      foto: "img/Personagens/Aiden Fowler.png",
+      descricao:
+        "Raze despreza Aiden. Reconhece que ele é talentoso como netrunner, mas o considera fraco por ser emocional, impulsivo e instável. Para Raze, Aiden representa tudo que ele despreza em pessoas brilhantes que ainda se deixam guiar por afeto, culpa ou moral.",
     },
 
     Ivy: {
-      tipo: "neutral",
+      tipo: "Negativo",
+      status: "Desconhecido",
       foto: "img/Personagens/Ivy.png",
       descricao:
-        "Raze a desprezava desde o primeiro momento. Para ele, Ivy era fraca. Mas o verdadeiro motivo por trás desse desprezo era outro: Ivy tirou Oliver da órbita dele. O fim do relacionamento dela com Oliver foi, para Raze, apenas “a ordem natural das coisas”.",
+        "Raze desprezava Ivy e a via como fraca. O desprezo, porém, tem fundo pessoal: ela tirou Oliver da órbita dele. Para Raze, o fim do relacionamento dela com Oliver foi apenas a “ordem natural das coisas”, como se Ivy nunca tivesse sido digna de permanecer perto dele.",
+    },
+
+    // Muito negativo
+    "Kane Graves": {
+      tipo: "Muito negativo",
+      status: "Morto",
+      foto: "img/Personagens/Kane Graves.png",
+      descricao:
+        "Kane incomodava Raze porque conseguia enxergar além da máscara dele. Via seu potencial, mas também sua escuridão, e tentou guiá-lo. Raze odiava essa influência. Traí-lo foi, para ele, uma forma de cortar o último laço moral que ainda tentava segurá-lo.",
     },
 
     "Kimber Destaro": {
-      tipo: "enemy",
-      foto: "img/Personagens/Kimber.png",
+      tipo: "Muito negativo",
+      status: "Viva",
+      foto: "img/Personagens/Kimber Destaro.png",
       descricao:
-        "Kimber sempre foi um problema para Raze. Ela era um incômodo persistente. Kimber nunca confiou nele, e ele nunca tentou mudar isso. Ele respeita a inteligência dela, e reconhece que ela é capaz de matá-lo. E isso o diverte.",
+        "Kimber sempre foi um problema para Raze. Ela nunca confiou nele, e ele nunca tentou convencê-la do contrário. Apesar disso, respeita sua inteligência e sabe que ela é perigosa o bastante para matá-lo. Esse risco não o assusta: o diverte.",
     },
 
-    "Aiden Fowler": {
-      tipo: "enemy",
-      foto: "img/Personagens/Aiden.png",
+    // Inimigo jurado
+    "Oliver Miller": {
+      tipo: "Inimigo jurado",
+      status: "Vivo",
+      foto: "img/Personagens/Oliver Miller.png",
       descricao:
-        "Aiden despertava desprezo sincero em Raze. Não pela habilidade, Aiden é talentoso, mas é um netrunner fraco: emocional, instável e impulsivo demais. Tudo o que Raze mais despreza na espécie humana.",
+        "Oliver é uma obsessão para Raze. Ele não o vê como amigo, mas como algo que deseja estudar, possuir e quebrar. A sobrevivência de Oliver o irrita porque representa algo que escapou ao seu controle. Para Raze, destruir Oliver seria provar domínio sobre alguém que ele admira de forma doentia.",
     },
   },
 
@@ -108,70 +137,40 @@ personagens.raze = {
 
   // Pertences importantes
   pertencesImportantes: {
-    "Velhas Baquetas Quebradas": {
-      imagem: "img/itens/baquetas-quebradas.png",
+    "Cyberdeck Personalizado": {
+      imagem: "img/itens/Raze/Cyberdeck Personalizado.png",
       descricao:
-        "Suas primeiras baquetas, usadas durante os shows da Ghouls ’n Ghosts. Estão desgastadas e com lascas, mas Raze as guarda, mesmo que diga que não se importa com o passado.",
+        "Um cyberdeck de última geração, modificado por Raze para invasões digitais de alto nível. É otimizado para velocidade, sigilo e controle, equipado com programas agressivos capazes de atravessar defesas corporativas, manipular sistemas e apagar rastros em segundos. Para Raze, não é apenas uma ferramenta: é uma extensão de sua mente fria, calculista e traidora.",
     },
 
-    "Antiga jaqueta da XIII de Oliver": {
-      imagem: "img/itens/jaqueta-oliver.png",
+    "Jaqueta da XIII de Oliver": {
+      imagem: "img/itens/Raze/Jaqueta da XIII de Oliver.png",
       descricao:
-        "Jaqueta de couro preta com detalhes vermelhos, originalmente pertencente a Oliver. Raze a roubou após a traição à XIII como um troféu simbólico.",
+        "Uma jaqueta de couro preta com detalhes vermelhos, originalmente pertencente a Oliver e marcada pela identidade da Organização XIII. Raze a roubou após sua traição como um troféu pessoal, transformando uma peça carregada de memória, irmandade e pertencimento em uma provocação cruel. Para Oliver, ela representa perda; para Raze, vitória.",
     },
 
-    "Foto do Grupo (com um detalhe estranho)": {
-      imagem: "img/itens/foto-estranha.png",
+    "Foto do Grupo Riscada": {
+      imagem: "img/itens/Raze/Foto do Grupo Riscada.png",
       descricao:
-        "Uma foto de Oliver, Kane e Raze no palco do Rusted Note, mas o rosto de Kane está completamente riscado.",
+        "Uma foto antiga de Oliver, Kane e Raze juntos no Rusted Note, tirada antes da queda da XIII. O rosto de Kane foi riscado com violência, como se Raze tentasse apagar sua presença sem destruir completamente a lembrança. É um objeto perturbador, pois revela que, mesmo após a traição, Raze ainda carrega fragmentos distorcidos do passado que abandonou.",
     },
 
-    "Pulseira neural proprietária da Arasaka": {
-      imagem: "img/itens/pulseira-arasaka.png",
+    "Pulseira Neural Arasaka": {
+      imagem: "img/itens/Raze/Pulseira Neural Arasaka.png",
       descricao:
-        "Uma pulseira neural de última geração fornecida pela Arasaka. Permite acesso seguro a redes corporativas e proteção contra invasões externas.",
+        "Uma pulseira neural proprietária da Arasaka, usada para acesso seguro a redes corporativas, autenticação de alto nível e proteção contra invasões externas. Elegante, discreta e absurdamente cara, ela simboliza o pacto de Raze com o poder corporativo. Para ele, é uma ferramenta de ascensão — uma prova de que traição também pode ser investimento.",
     },
 
-    "Luvas de feedback tátil usadas": {
-      imagem: "img/itens/luvas-feedback.png",
+    "Adagas “Wahrheit” e “Falschheit”": {
+      imagem: "img/itens/Raze/Adagas “Wahrheit” e “Falschheit”.png",
       descricao:
-        "Luvas especializadas que proporcionam feedback tátil aprimorado durante a execução de quickhacks, aumentando a precisão e eficiência de Raze em ambientes virtuais hostis.",
-    },
-
-    "Óculos de Análise de Frequência": {
-      imagem: "img/itens/oculos-frequencia.png",
-      descricao:
-        "Óculos equipados com tecnologia avançada de análise de frequência, permitindo a Raze detectar sinais digitais e identificar vulnerabilidades em sistemas de segurança com facilidade.",
-    },
-
-    "Brinco preto": {
-      imagem: "img/itens/brinco-preto.png",
-      descricao:
-        "Um brinco preto simples que Raze usa como um lembrete silencioso de sua identidade e independência. Embora pareça trivial, ele o valoriza como um símbolo pessoal.",
-    },
-
-    "Cyberdeck personalizado": {
-      imagem: "img/itens/cyberdeck-Raze.png",
-      descricao:
-        "Um cyberdeck de última geração modificado por Raze para maximizar sua eficiência em invasões digitais. Equipado com software exclusivo e hardware otimizado para suas necessidades específicas.",
-    },
-
-    "Arquivo de Registros de Transcrições Comportamentais": {
-      imagem: "img/itens/registros-comportamentais.png",
-      descricao:
-        "Um conjunto de arquivos digitais contendo transcrições detalhadas de interações e comportamentos observados em alvos anteriores.",
-    },
-
-    "Adagas Gêmeas “Wahrheit” e “Falschheit”": {
-      imagem: "img/itens/adagas-gemeas.png",
-      descricao:
-        "Duas adagas de combate corpo a corpo, uma chamada 'Wahrheit' (Verdade) e a outra 'Falschheit' (Falsidade). Raze as utiliza em situações onde o combate físico é inevitável.",
+        "Duas adagas gêmeas chamadas “Wahrheit” e “Falschheit”, verdade e falsidade. Apesar de formarem um par, possuem designs opostos: uma é direta, limpa e precisa; a outra é agressiva, tortuosa e feita para confundir. Juntas, representam a forma como Raze luta e pensa — uma lâmina revela, a outra engana, mas ambas cortam quando a distância digital deixa de ser suficiente.",
     },
 
     "Machado “Belial”": {
-      imagem: "img/itens/machado-belial.png",
+      imagem: "img/itens/Kane/Machado “Belial”.png",
       descricao:
-        "O machado de combate corpo a corpo com lâmina dupla com aparência demoniaca que Kane utilizava em combates próximos. Raze o roubou após a morte de Kane, como um troféu.",
+        "O machado de combate de Kane, roubado por Raze após sua morte. Antes, era símbolo de força, proteção e resistência dentro da XIII; nas mãos de Raze, tornou-se um troféu profanado, carregado como lembrança física da traição que ele escolheu cometer. Seu peso não vem apenas do metal, mas de tudo que foi quebrado para que ele pudesse possuí-lo.",
     },
   },
 
@@ -237,15 +236,4 @@ personagens.raze = {
         "Implante neuromuscular que otimiza a interface entre o sistema nervoso e dispositivos empunhados. Permite controle preciso e responsivo de armamentos e ferramentas inteligentes sem a necessidade de conexões externas visíveis.",
     },
   },
-  // --------------------------------------------------------------------
-  // PERFIL PROFISSIONAL
-  // --------------------------------------------------------------------
-
-  tipoTrabalho:
-    "Especialista em invasão neural, coleta de dados, engenharia reversa de black ICE e ataques silenciosos.",
-  modoTrabalho:
-    "Silencioso, eficiente, sem confrontos desnecessários. Evita combate físico. Controla territórios digitais enquanto terceiriza o trabalho sujo.",
-  espacoTrabalho:
-    "Escritório blindado da Arasaka em Night City. Local físico minimalista; ambiente virtual extremamente agressivo.",
-  clientes: "Arasaka. Trabalha exclusivamente para a corporação.",
 };

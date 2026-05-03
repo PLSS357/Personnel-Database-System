@@ -4,10 +4,10 @@
 personagens.Ivy = {
   // Identificação básica
   nome: "Ivy Naranjo",
-  funcao: "Media | Ex-Organização XIII (Rank IV) | Investigadora de rua",
+  funcao: "Mídia | Ex-Organização XIII (Rank V) | Investigadora de rua",
   id: "59-6827-52",
-  foto: "img/Personagens/Ivy.png",
-  ativo: true, // (true = ativo, false = inativo, null = desconhecido)
+  foto: "img/Personagens/Ivy/Ivy Naranjo.png",
+  ativo: null, // (true = ativo, false = inativo, null = desconhecido)
 
   // Dados vitais
   localNascimento: "Heywood, Night City",
@@ -40,75 +40,97 @@ personagens.Ivy = {
     "A liberdade de ir e vir, sua integridade jornalística e a sensação de estar viva sendo quem é, sem coleiras, sem donos.",
 
   // --------------------------------------------------------------------
-  // HISTÓRICO FAMILIAR
-  // --------------------------------------------------------------------
-
-  antecedentesFamiliares: [
-    "Mãe: Clarisse Naranjo, ex-vendedora de mercado; desaparecida em 2076 após conflito entre gangues.",
-    "Pai: Rafael Naranjo, operário de manutenção portuária em Pacifica; possuia envolvimento com contrabando.",
-  ],
-  pessoaMaisImportante: "Informação Desconhecida.",
-  tragedia: [
-    "Aos 12 anos, perdeu a mãe. Desaparecimento comum em Heywood. Nenhuma investigação. Nenhuma resposta.",
-  ],
-
-  // --------------------------------------------------------------------
   // HISTÓRICO PESSOAL
   // --------------------------------------------------------------------
 
   historicoPessoal: [
     "Criada em Heywood entre pobreza, violência e promessas falsas. Desde cedo aprendeu a correr, mentir e sobreviver.",
     "Aos 14, começou a gravar denúncias de abusos de gangues locais usando um equipamento improvisado. Aos 15, já fazia vídeos clandestinos sobre corrupção.",
-    "Aos 16 anos, entrou na Organização XIII, que percebeu seu talento em infiltração e coleta de dados. Devido ao seu grande talento, ela alcançou o Rank IV, feito raro para alguém tão jovem.",
+    "Aos 16 anos, entrou na Organização XIII, que percebeu seu talento em infiltração e coleta de dados. Devido ao seu grande talento, ela alcançou o Rank V, feito raro para alguém tão jovem.",
   ],
 
   // --------------------------------------------------------------------
   // RELAÇÕES INTERPESSOAIS
   // --------------------------------------------------------------------
-  // Tipos de relação válidos:
-  // "romantic", "friend", "enemy", "neutral, "family", "ex", "pet", "rival"
 
   relacoes: {
+    // Aliado Incondicional
     "Kane Graves": {
-      tipo: "friend",
-      foto: "img/Personagens/Kane.png",
+      tipo: "Aliado Incondicional",
+      status: "Morto",
+      foto: "img/Personagens/Kane/Kane Graves.png",
       descricao:
-        "Kane nutria um afeto silencioso por Ivy, admirando nela uma coragem que não vinha da violência, mas da convicção inabalável de expor a verdade. Ele acreditava genuinamente que Ivy era do tipo que sempre dava um jeito de sobreviver. Após o desaparecimento dela, Kane repetia para si e para os outros que Ivy ainda estava viva em algum lugar, resistindo como sempre.",
+        "Ivy via Kane como alguém sólido e protetor. Ele acreditava nela, respeitava sua coragem e, depois que ela se envolveu com Oliver, passou a tratá-la quase como família.",
     },
 
+    // Muito positivo
+    "Clarisse Naranjo": {
+      tipo: "Muito positivo",
+      status: "Desaparecida",
+      foto: "img/Personagens/Ivy/Clarisse Naranjo.png",
+      descricao:
+        "Ex-vendedora de mercado, desaparecida em 2076 após conflito entre gangues. Sua perda marcou Ivy ainda criança e ficou sem investigação ou resposta.",
+    },
+
+    // Positivo
+    // Nenhum personagem nesta categoria.
+
+    // Neutro/positivo
+    "Rafael Naranjo": {
+      tipo: "Neutro/positivo",
+      status: "Morto",
+      foto: "img/Personagens/Ivy/Rafael Naranjo.png",
+      descricao:
+        "Pai de Ivy, operário de manutenção portuária em Pacifica, com envolvimento em contrabando. Pela visão de Ivy, seu pai era alguém marcado pelas necessidades da vida.",
+    },
+
+    // Neutro
     "Murphy Elliot": {
-      tipo: "neutral",
-      foto: "img/Personagens/Murphy.png",
+      tipo: "Neutro",
+      status: "Vivo",
+      foto: "img/Personagens/Kane/XIII/Murphy Elliot.png",
       descricao:
-        "Ivy conheceu Murphy no Rusted Note, quando a banda Ghouls ’n Ghosts ainda engatinhava. A relação entre os dois nunca passou de conversas ocasionais e encontros casuais no bar. Não havia intimidade, apenas reconhecimento mútuo dentro do mesmo cenário urbano.",
-    },
-
-    "Kimber Destaro": {
-      tipo: "neutral",
-      foto: "img/Personagens/Kimber.png",
-      descricao:
-        "Para Ivy, Kimber sempre foi apenas mais um rosto no meio da multidão. Ela percebia a antipatia, mas nunca viu motivo para reagir ou se importar. Kimber não fazia parte de seus objetivos, medos ou ambições, era alguém irrelevante demais para merecer qualquer emoção.",
+        "Conhecido do Rusted Note. Para Ivy, Murphy era parte do mesmo cenário urbano, mas sem intimidade real. Apenas conversas ocasionais e reconhecimento mútuo.",
     },
 
     "Raze Lambert": {
-      tipo: "friend",
-      foto: "img/Personagens/Raze.png",
+      tipo: "Neutro",
+      status: "Vivo",
+      foto: "img/Personagens/Raze/Raze Lambert.png",
       descricao:
-        "Ivy via Raze como um verdadeiro gênio da rede, alguém capaz de desmontar sistemas inteiros com poucas linhas de código. Apesar da admiração, ela nunca conseguiu entender por que alguém tão brilhante escolhia permanecer nas sombras, falando pouco e se expondo menos ainda.",
+        "Ivy via Raze como um gênio da rede, brilhante e perigoso no silêncio. Admirava sua capacidade, mas não entendia por que ele era tão fechado.",
     },
 
-    "Green Serpent": {
-      tipo: "enemy",
-      foto: "img/Personagens/Green.png",
+    // Neutro/negativo
+    "Kimber Destaro": {
+      tipo: "Neutro/negativo",
+      status: "Viva",
+      foto: "img/Personagens/Kimber/Kimber Destaro.png",
       descricao:
-        "O grupo Green Serpent era uma gangue de Santo Domingo conhecida por seus esquemas de corrupção, extorsão e violência. Após Ivy revelar um de seus esquemas em um vídeo viral, a gangue passou a vê-la como uma ameaça direta, colocando sua cabeça a prêmio. Kane proibiu Ivy de ir até Santo Domingo, temendo por sua segurança.",
+        "Ivy percebia a antipatia de Kimber, mas não ligava. Para ela, Kimber era só mais um rosto na multidão, alguém irrelevante demais para provocar reação.",
     },
 
     "Oliver Miller": {
-      tipo: "ex",
-      foto: "img/Personagens/Oliver.png",
+      tipo: "Neutro/negativo",
+      status: "Vivo",
+      foto: "img/Personagens/Oliver/Oliver Miller.png",
       descricao:
-        "Oliver foi parceiro romântico, de campo, de segredos e de noites perdidas em cima de telhados fumando. A relação terminou em 2082, após discussões constantes sobre o futuro: Oliver queria ficar e construir algo em Night City, enquanto Ivy sentia a necessidade de fugir.",
+        "Foi parceiro de amor, campo e segredos. A relação terminou com uma discussão, porque Oliver queria permanecer em Night City, enquanto Ivy sentia necessidade de fugir e buscar outro futuro.",
+    },
+
+    // Negativo
+    // Nenhum personagem nesta categoria.
+
+    // Muito negativo
+    // Nenhum personagem nesta categoria.
+
+    // Inimigo jurado
+    "Green Serpent": {
+      tipo: "Inimigo jurado",
+      status: "Desmantelado",
+      foto: "img/Personagens/Ivy/Green Serpent.png",
+      descricao:
+        "Gangue de Santo Domingo rival da Organização XIII. Depois que Ivy expôs um esquema deles em vídeo, passaram a vê-la como ameaça direta e colocaram sua cabeça a prêmio.",
     },
   },
 
@@ -118,28 +140,40 @@ personagens.Ivy = {
 
   // Pertences importantes
   pertencesImportantes: {
-    "Gravador de bolso": {
-      imagem: "img/itens/gravador.png",
+    "Gravador de Bolso": {
+      imagem: "img/itens/Ivy/Gravador de Bolso.png",
       descricao:
-        "Um pequeno gravador portátil, discreto e fácil de ocultar na palma da mão ou no bolso do casaco. Utilizado para registrar conversas importantes, confissões ou sons ambientes sem chamar atenção.",
+        "Um pequeno gravador portátil, discreto o bastante para desaparecer na palma da mão ou no bolso do casaco. Ivy o usa para capturar confissões, conversas suspeitas, sons ambientes e verdades ditas quando as pessoas acreditam que ninguém está ouvindo. Para ela, é uma arma silenciosa: menos letal que uma pistola, mas muitas vezes mais perigosa.",
     },
 
-    "Isqueiro cromado": {
-      imagem: "img/itens/isqueiro.png",
+    "Microcâmera EyeBug": {
+      imagem: "img/itens/Ivy/Microcâmera EyeBug.png",
       descricao:
-        "Um isqueiro de metal cromado, com acabamento polido e sinais sutis de uso frequente. Além de servir para acender cigarros, transmite um ar de hábito constante e certo apego pessoal.",
+        "Uma microcâmera compacta, futurista e quase invisível, projetada para se disfarçar como um acessório comum de roupa. A EyeBug registra áudio e vídeo com extrema discrição, servindo como testemunha silenciosa nas investigações de Ivy. Fria, precisa e incorruptível, é o tipo de ferramenta em que ela confia mais do que em qualquer informante.",
     },
 
-    "Microcâmera “EyeBug 3X” presa na jaqueta": {
-      imagem: "img/itens/microcamera.png",
+    "Isqueiro Cromado": {
+      imagem: "img/itens/Ivy/Isqueiro Cromado.png",
       descricao:
-        "Uma microcâmera compacta do modelo EyeBug 3X, fixada discretamente na jaqueta. Capaz de gravar vídeo e áudio com boa qualidade, é ideal para vigilância, coleta de provas ou registros sem levantar suspeitas.",
+        "Um isqueiro de metal cromado, elegante e marcado por pequenos arranhões de uso constante. Ivy costuma girá-lo entre os dedos antes de fazer perguntas perigosas, acender um cigarro ou tomar uma decisão ruim de propósito. Mais do que um acessório, tornou-se parte de sua postura: fria, provocadora e sempre prestes a colocar fogo em alguma verdade escondida.",
     },
 
-    "Maço de Cigarros “Red October”": {
-      imagem: "img/itens/cigarros.png",
+    "Dossiê Clarisse": {
+      imagem: "img/itens/Ivy/Dossiê Clarisse.png",
       descricao:
-        "Um maço de cigarros da marca Red October, sempre presente entre seus pertences. Ela compra constantemente essa marca específica, indicando um hábito enraizado e uma preferência que raramente muda.",
+        "Um conjunto de arquivos, fotos, recortes, depoimentos e anotações sobre Clarisse Naranjo. O dossiê representa o ponto em que a investigação de Ivy deixou de ser apenas trabalho e se tornou uma obsessão pessoal. Cada página guarda uma pergunta sem resposta, uma pista incompleta ou uma prova de que alguém poderoso se esforçou demais para apagar Clarisse da história.",
+    },
+
+    Pistola: {
+      imagem: "img/itens/Ivy/Pistola.png",
+      descricao:
+        "Uma pistola compacta, discreta e confiável, carregada por Ivy como último recurso. Ela não gosta de depender dela, preferindo palavras, chantagem, provas e manipulação, mas sabe que Night City raramente recompensa quem anda desarmado. Para Ivy, a pistola não é símbolo de poder, e sim de sobrevivência: uma garantia amarga de que ela poderá sair viva para contar a verdade.",
+    },
+
+    "Maço Cigarros Red October": {
+      imagem: "img/itens/Ivy/Maço Cigarros Red October.png",
+      descricao:
+        "Um maço de cigarros Red October, presença constante nos bolsos de Ivy. O cheiro forte, o papel amassado e o gesto repetido de acender um cigarro combinam com sua imagem de repórter de rua: cansada, provocante e autodestrutiva. Cada cigarro parece marcar uma pausa entre uma mentira descoberta e a próxima pergunta que ela não deveria fazer.",
     },
   },
 
@@ -225,17 +259,4 @@ personagens.Ivy = {
         "Sistema auditivo analítico que avalia microvariações vocais em tempo real. Utilizado para análise comportamental, negociações sensíveis, entrevistas e interrogatórios corporativos.",
     },
   },
-
-  // --------------------------------------------------------------------
-  // PERFIL PROFISSIONAL
-  // --------------------------------------------------------------------
-
-  tipoTrabalho:
-    "Mídia investigativa de rua, com elementos de brain-dance journalism",
-  modoTrabalho:
-    "Caoticamente boa — faz o que precisa para sobreviver, mas não mente sobre aquilo que realmente importa.",
-  espacoTrabalho:
-    "Por meio de transmissões piratas, BD curtos e vídeos distribuídos via mercado negro de dados.",
-  clientes:
-    "Realidade suja de Night City: tráfico de pessoas, abuso corporativo, corrupção policial, injustiças cotidianas e a vida crua dos esquecidos.",
 };

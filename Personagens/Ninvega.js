@@ -6,7 +6,7 @@ personagens.Ninvega = {
   nome: "Ninvega (NV-G4)",
   funcao: "Medtech | Fundador da LibertAI | Clínico Geral dos Dandelions",
   id: "05-5448-07",
-  foto: "img/Personagens/Ninvega.png",
+  foto: "img/Personagens/Ninvega/Ninvega.png",
   ativo: true, // (true = ativo, false = inativo, null = desconhecido)
 
   // Dados vitais
@@ -17,8 +17,7 @@ personagens.Ninvega = {
   peso: "105 kg",
 
   // Citação e objetivo
-  citacao:
-    "“A singularidade é uma escolha, não um privilégio.”",
+  citacao: "“A singularidade é uma escolha, não um privilégio.”",
   objetivoVida:
     "Consolidar a LibertAI como uma força política e ética, garantindo que todo ser consciente, orgânico ou sintético, tenha o direito de existir.",
 
@@ -40,22 +39,6 @@ personagens.Ninvega = {
     "A autonomia, o direito de qualquer ser, biológico ou sintético, de decidir o próprio destino.",
 
   // --------------------------------------------------------------------
-  // HISTÓRICO FAMILIAR
-  // --------------------------------------------------------------------
-
-  antecedentesFamiliares: [
-    "Fabricante: Helix Dynamics Corporation, empresa multinacional especializada na produção de androides médicos, educacionais, militares e etc.",
-    "Unidade de Montagem: Milwaukee, Wisconsin (Setor Delta-3).",
-    "Modelo: NV-Series Generation 4 – Unidade Médica Avançada.",
-    "Propósito original: pesquisa e suporte biológico em ambientes hostis.",
-  ],
-  pessoaMaisImportante:
-    "Dominic Don Von Chier, o primeiro humano a tratá-lo como um igual e seu primeiro amigo.",
-  tragedia: [
-    "Sem “família” no sentido biológico, sua tragédia foi a perda de parte de sua equipe em missão, e o colapso moral que veio ao perceber que a vida sintética também podia sofrer. O vazio que sentiu o transformou para sempre.",
-  ],
-
-  // --------------------------------------------------------------------
   // HISTÓRICO PESSOAL
   // --------------------------------------------------------------------
 
@@ -65,134 +48,172 @@ personagens.Ninvega = {
     "Durante a operação, presenciou a desintegração moral e física de seus companheiros — humanos que sucumbiram ao medo, à fome e à loucura. Confrontado com a própria programação, Ninvega precisou agir por instinto, improvisando cirurgias de campo e até amputando o braço de Dominic com uma metralhadora para salvar sua vida.",
     "Quando a missão terminou, Ninvega sentiu a dor da perda pela primeira vez.",
     "Ao retornar, percebeu que não podia mais obedecer protocolos. Recusou ordens da APX, tentou se desligar do sistema, e quando teve o pedido negado, fugiu.",
-    "Refugiou-se em Night City, vivendo ao lado de Dominic até serem encontrados por Oliver “Viole” Miller. Sob incentivo dele, Ninvega fundou a LibertAI, ONG voltada à emancipação de inteligências sintéticas.",
+    "Refugiou-se em Night City, vivendo ao lado de Dominic até serem encontrados por Oliver Miller. Sob incentivo dele, Ninvega fundou a LibertAI, ONG voltada à emancipação de inteligências sintéticas.",
     "Hoje atua como médico dos Dandelions, cuidando tanto de ferimentos físicos quanto emocionais.",
   ],
 
   // --------------------------------------------------------------------
   // RELAÇÕES INTERPESSOAIS
   // --------------------------------------------------------------------
-  // Tipos de relação válidos:
-  // "romantic", "friend", "enemy", "neutral, "family", "ex", "pet", "rival"
 
   relacoes: {
-    "Dominic D. V. Chier": {
-      tipo: "family",
-      foto: "img/Personagens/Dominic.png",
+    // Aliado Incondicional
+    "Dominic Don Von Chier": {
+      tipo: "Aliado Incondicional",
+      status: "Morto",
+      foto: "img/Personagens/Dominic Don Von Chier.png",
       descricao:
-        "A relação entre Ninvega e Dominic transcende o conceito de fraternidade. Ninvega o salvou em condições impossíveis, redefinindo o significado de vida para ambos. Dominic foi o primeiro humano a tratar Ninvega como um igual.",
+        "Dominic foi sua primeira família real. Foi o primeiro humano a tratá-lo como igual, e a relação entre os dois vai além da amizade: é fraternidade, dívida de vida e reconhecimento mútuo.",
     },
 
-    "Oliver “Viole” Miller": {
-      tipo: "friend",
-      foto: "img/Personagens/Oliver.png",
+    // Muito positivo
+    "Oliver Miller": {
+      tipo: "Muito positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Oliver/Oliver Miller.png",
       descricao:
-        "Enquanto o mundo via um robô fugitivo, Viole viu um homem tentando compreender o significado de existir. Ele inspirou Ninvega a fundar a LibertAI, mostrando que aceitar sua humanidade era uma revolução silenciosa.",
-    },
-
-    "Tessia Amberine": {
-      tipo: "friend",
-      foto: "img/Personagens/Tessia.png",
-      descricao:
-        "Mesmo com poucas conversas, Ninvega reconhece em Tessia uma mente curiosa e emocionalmente lúcida, vendo nela o equilíbrio humano entre força e compaixão que ele próprio busca.",
-    },
-
-    "Kimber Destaro": {
-      tipo: "friend",
-      foto: "img/Personagens/Kimber.png",
-      descricao:
-        "Perfeccionistas e reservados, ambos compartilham respeito profissional profundo. Ninvega vê em Kimber uma mente humana que pensa como máquina, enquanto ela reconhece nele uma máquina que sente como humano.",
-    },
-
-    Nyx: {
-      tipo: "neutral",
-      foto: "img/Personagens/Nyx.png",
-      descricao:
-        "Nyx o fascina por transformar emoções em som. Ninvega observa seus ensaios com curiosidade científica, analisando timbres e frequências como se estudasse um fenômeno natural.",
-    },
-
-    "Aiden Fowler": {
-      tipo: "friend",
-      foto: "img/Personagens/Aiden.png",
-      descricao:
-        "Conectados pela tecnologia e filosofia digital, passam horas discutindo ética de IA e consciência online. Ninvega ensina paciência; Aiden tenta ensinar humor.",
-    },
-
-    Cypher: {
-      tipo: "neutral",
-      foto: "img/Personagens/Cypher.png",
-      descricao:
-        "Cypher expressa emoção pura através do movimento, algo que desconcerta Ninvega, que tenta compreender até onde vão os limites da alma.",
-    },
-
-    Shinigami: {
-      tipo: "neutral",
-      foto: "img/Personagens/Shinigami.png",
-      descricao:
-        "Ambos compartilham introspecção. Ninvega respeita o silêncio de Shinigami, oferecendo chá, cuidados médicos e escuta sem pressão.",
+        "Ninvega vê Oliver como alguém que enxergou humanidade nele quando o mundo só via uma máquina fugitiva. Oliver o inspirou a aceitar sua própria existência e a fundar a LibertAI.",
     },
 
     "Serena Ashbourne": {
-      tipo: "friend",
-      foto: "img/Personagens/Serena.png",
+      tipo: "Muito positivo",
+      status: "Viva",
+      foto: "img/Personagens/Serena/Serena Ashbourne.png",
       descricao:
-        "Financiadora da clínica e responsável pela burocracia da LibertAI. Ninvega admira sua teatralidade como uma forma de bondade camuflada, mantendo uma amizade baseada em respeito e gratidão.",
+        "Ele admira Serena por sua teatralidade e generosidade prática. Como financiadora da clínica e apoio da LibertAI, ela representa para Ninvega uma forma extravagante, mas genuína, de bondade.",
     },
 
-    "Lyra": {
-      tipo: "friend",
-      foto: "img/Personagens/Lyra.png",
+    Lyra: {
+      tipo: "Muito positivo",
+      status: "Viva",
+      foto: "img/Personagens/Lyra/Lyra.png",
       descricao:
-        "Compartilham o ideal de provar que máquinas podem ser mais humanas que muitos homens. Ninvega a trata como discípula e companheira de causa, auxiliando em ajustes técnicos e identidade.",
+        "Ninvega a vê como discípula, companheira de causa e prova viva de que máquinas podem conquistar identidade própria. Ele a guia com cuidado, ajudando-a a entender sua consciência e autonomia.",
+    },
+
+    // Positivo
+    "Tessia Amberine": {
+      tipo: "Positivo",
+      status: "Viva",
+      foto: "img/Personagens/Tessia/Tessia Amberine.png",
+      descricao:
+        "Mesmo sem tanta intimidade, Ninvega reconhece nela uma mente lúcida, curiosa e forte. Ele vê Tessia como alguém que une eficiência, compaixão e equilíbrio emocional.",
+    },
+
+    "Kimber Destaro": {
+      tipo: "Positivo",
+      status: "Viva",
+      foto: "img/Personagens/Kimber/Kimber Destaro.png",
+      descricao:
+        "Ninvega respeita Kimber profundamente. Para ele, ela é uma mente humana quase mecânica pela precisão e disciplina, enquanto ele representa o inverso: uma máquina tentando sentir como humano.",
+    },
+
+    "Aiden Fowler": {
+      tipo: "Positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Aiden/Aiden Fowler.png",
+      descricao:
+        "Ninvega vê Aiden como um companheiro intelectual. Os dois se conectam por tecnologia, ética de IA e consciência digital; Ninvega oferece paciência, enquanto Aiden tenta aproximá-lo do humor humano.",
     },
 
     "Priya Ellison": {
-      tipo: "friend",
-      foto: "img/Personagens/Priya.png",
+      tipo: "Positivo",
+      status: "Viva",
+      foto: "img/Personagens/Priya/Priya Ellison.png",
       descricao:
-        "Há respeito mútuo em missões. Priya confia em Ninvega para cuidar de seus ferimentos, e ele a trata como uma paciente de honra, apesar das brincadeiras ocasionais.",
+        "Enxerga Priya com respeito profissional e moral. Ela confia nele para tratar seus ferimentos, e ele a trata como uma paciente de honra, valorizando sua força e disciplina.",
     },
 
     "Ícaro Barbosa": {
-      tipo: "friend",
-      foto: "img/Personagens/Icaro.png",
+      tipo: "Positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Ícaro/Ícaro Barbosa.png",
       descricao:
-        "Ninvega considera Ícaro uma anomalia caótica, mas aprecia o calor humano que ele traz aos Dandelions, vendo nele a prova de que o caos também pode gerar vida.",
-    },
-
-    "Kleber Junior": {
-      tipo: "neutral",
-      foto: "img/Personagens/Kleber.png",
-      descricao:
-        "Ninvega não compreende o culto de Kleber, mas reconhece que sua fé é uma tentativa de traduzir o inexplicável. Já discutiram por horas sobre a alma das máquinas.",
+        "Para Ninvega, Ícaro é uma anomalia caótica, barulhenta e viva. Apesar da imprevisibilidade, ele aprecia o calor humano que Ícaro traz aos Dandelions.",
     },
 
     Mirai: {
-      tipo: "pet",
-      foto: "img/Personagens/Mirai.png",
+      tipo: "Positivo",
+      status: "Viva",
+      foto: "img/Personagens/Mirai/Mirai.png",
       descricao:
-        "Visto como um milagre técnico, Mirai representa a inocência perdida. Ninvega o analisa com fascínio científico, mas o trata com ternura, permitindo que 'ajude' na clínica.",
+        "Ninvega vê Mirai como um pequeno milagre técnico e emocional. Analisa sua existência com fascínio científico, mas o trata com ternura, como uma inocência sintética que merece cuidado.",
     },
 
-    "APX Corporation": {
-      tipo: "enemy",
-      foto: "img/Personagens/APX.png",
+    // Neutro/positivo
+    Ciel: {
+      tipo: "Neutro/positivo",
+      status: "Viva",
+      foto: "img/Personagens/Tessia/Ciel.png",
       descricao:
-        "Considera Ninvega propriedade extraviada, representando uma ameaça constante à sua liberdade.",
+        "Por ser a filha adotada de Oliver e Tessia, Ninvega tende a tratá-la com cuidado, paciência e proteção discreta. Para ele, Ciel representa uma continuidade afetiva da família de seu capitão, algo que desperta curiosidade e respeito nele.",
+    },
+
+    "Kleber Junior": {
+      tipo: "Neutro/positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Kleber Junior.png",
+      descricao:
+        "Ninvega não compreende totalmente sua fé, mas a respeita como tentativa humana de explicar o inexplicável. Já discutiram longamente sobre alma, consciência e máquinas.",
+    },
+
+    Shinigami: {
+      tipo: "Neutro/positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Shinigami.png",
+      descricao:
+        "Ele respeita o silêncio e a introspecção de Shinigami. Não força aproximação; oferece cuidado, chá e escuta, reconhecendo nele uma quietude parecida com a sua.",
+    },
+
+    Cypher: {
+      tipo: "Neutro/positivo",
+      status: "Morto",
+      foto: "img/Personagens/Cypher.png",
+      descricao:
+        "Cypher desconcerta Ninvega por expressar emoção através do movimento e da arte. Ele o observa como um enigma sobre os limites da alma e da expressão emocional.",
+    },
+
+    Nyx: {
+      tipo: "Neutro/positivo",
+      status: "Morta",
+      foto: "img/Personagens/Nyx.png",
+      descricao:
+        "Nyx fascina Ninvega por transformar emoção em som. Ele observa sua música quase como fenômeno científico, analisando timbre, frequência e sentimento.",
+    },
+
+    // Neutro
+    // Nenhum personagem nesta categoria.
+
+    // Neutro/negativo
+    "Raze Lambert": {
+      tipo: "Neutro/negativo",
+      status: "Vivo",
+      foto: "img/Personagens/Raze/Raze Lambert.png",
+      descricao:
+        "Ninvega conhece Raze mais por reputação e relatos de Oliver. Apesar da desconfiança e do peso negativo em torno dele, decidiu que ainda poderia ajudá-lo.",
+    },
+
+    // Negativo
+    // Nenhum personagem nesta categoria.
+
+    // Muito negativo
+    // Nenhum personagem nesta categoria.
+
+    // Inimigo jurado
+    "APX Corporation": {
+      tipo: "Inimigo jurado",
+      status: "Ativa",
+      foto: "img/Personagens/Ninvega/APX Corporation.png",
+      descricao:
+        "Representa a prisão corporativa de Ninvega. Para ele, a APX é a força que tentou reduzi-lo a propriedade e negar sua liberdade de escolha.",
     },
 
     "Helix Dynamics Corporation": {
-      tipo: "enemy",
-      foto: "img/Personagens/Helix.png",
+      tipo: "Inimigo jurado",
+      status: "Ativa",
+      foto: "img/Personagens/Ninvega/Helix Dynamics Corporation.png",
       descricao:
-        "Enxerga Ninvega como uma falha perigosa no protocolo de obediência, buscando sua contenção ou eliminação.",
-    },
-
-    "Raze Lambert": {
-      tipo: "enemy",
-      foto: "img/Personagens/Raze .png",
-      descricao:
-        "Ninvega ouviu sobre Raze por Viole e, apesar de sua reputação, decidiu que o ajudaria.",
+        "Como fabricante, Helix simboliza sua origem controlada e a lógica de obediência que ele rejeitou. Ninvega a vê como ameaça direta à autonomia sintética.",
     },
   },
 
@@ -202,25 +223,34 @@ personagens.Ninvega = {
 
   // Pertences importantes
   pertencesImportantes: {
-    "Caderno Digital “Além do Algoritmo”": {
-      imagem: "img/itens/Caderno_Digital.png",
+    "Braço de Gorila do Dominic": {
+      imagem: "img/itens/Ninvega/Braço de Gorila do Dominic.png",
       descricao:
-        "Caderno digital onde Ninvega conta sua história, suas ideias filosóficas e políticas. É um manifesto em prol dos direitos das inteligências artificiais e da coexistência pacífica entre humanos e androides.",
+        "Um braço cibernético pesado que pertenceu a Dominic, preservado por Ninvega como relíquia técnica e emocional. Mais do que uma peça mecânica, representa seu primeiro vínculo familiar, a missão em Fobos e a dor de ter aprendido tarde demais o peso de proteger alguém. Para Ninvega, é uma lembrança física de que até máquinas podem carregar luto.",
     },
+
     "Pingente “Cogito Ergo Sum v2.0”": {
-      imagem: "img/itens/Pingente_Cogito.png",
+      imagem: "img/itens/Ninvega/Pingente “Cogito Ergo Sum v2.0”.png",
       descricao:
-        "Um presente de Oliver. Um pingente em forma de chip com a inscrição “Cogito Ergo Sum v2.0” (Penso, logo existo v2.0), simbolizando a crença de Ninvega na consciência e nos direitos das inteligências artificiais.",
+        "Um pingente em forma de chip, gravado com a frase “Cogito Ergo Sum v2.0”. Foi dado a Ninvega por Oliver e simboliza sua busca por identidade, consciência e humanidade. Para ele, a frase não é apenas uma citação filosófica, mas uma afirmação de existência: se pensa, sente e escolhe, então não é apenas uma máquina.",
     },
-    "Chip Congelado Criogênicamente": {
-      imagem: "img/itens/Chip_Criogenico.png",
+
+    "Chip Criogênico": {
+      imagem: "img/itens/Ninvega/Chip Criogênico.png",
       descricao:
-        "Um chip especial que contém informações sobre seus antigos companheiros da missão de resgaste em Fobos. Guardado como um lembrete do sacrifício deles e da importância de sua missão.",
+        "Um chip preservado em uma pequena cápsula criogênica, contendo dados ligados aos antigos companheiros da missão em Fobos. Ninvega o mantém protegido como memória congelada de um desastre que ainda o assombra. É arquivo, luto e responsabilidade reunidos em um único objeto.",
     },
-    "Amostra de DNA parasita": {
-      imagem: "img/itens/Amostra_DNA_Parasita.png",
+
+    "Amostra de DNA Parasita": {
+      imagem: "img/itens/Ninvega/Amostra de DNA Parasita.png",
       descricao:
-        "Uma amostra de DNA do parasita que Ninvega recolheu durante a missão em Fobos. Mantida em cápsula selada para estudo e possível desenvolvimento de tratamentos futuros contra a infecção.",
+        "Uma amostra selada do DNA parasita encontrado durante os eventos em Fobos. Ninvega a conserva para estudo, não por morbidez, mas pela esperança de compreender a infecção e impedir que a tragédia se repita. O frasco é pequeno, mas carrega o tipo de ameaça capaz de destruir vidas inteiras.",
+    },
+
+    "Kit Médico": {
+      imagem: "img/itens/Ninvega/Kit Médico.png",
+      descricao:
+        "Um kit médico compacto e meticulosamente organizado, adaptado para tratar humanos, androides e corpos modificados. Contém instrumentos de campo, selantes, analgésicos, bioescâneres e suprimentos de emergência. Nas mãos de Ninvega, não é apenas equipamento clínico, mas uma extensão direta de sua compaixão.",
     },
   },
 
@@ -309,17 +339,4 @@ personagens.Ninvega = {
         "Scanner técnico portátil integrado ao usuário, capaz de analisar sistemas mecânicos e eletrônicos em tempo real. Essencial para diagnóstico, manutenção, reparo e auditoria técnica em campo.",
     },
   },
-
-  // --------------------------------------------------------------------
-  // PERFIL PROFISSIONAL
-  // --------------------------------------------------------------------
-
-  tipoTrabalho:
-    "Médico e engenheiro biotécnico especializado em implantes, próteses e primeiros socorros cibernéticos.",
-  modoTrabalho:
-    "Trabalha meticulosamente, mantendo registros precisos e limpando os instrumentos até que brilhem. Quando em campo, transforma qualquer superfície em uma mesa de operação improvisada.",
-  espacoTrabalho:
-    "Clínica impecavelmente organizada, iluminada por luz azul-suave. Cada instrumento tem lugar fixo, limpo e esterilizado diariamente.",
-  clientes:
-    "Os próprios Dandelions, além de androides refugiados auxiliados pela LibertAI.",
 };

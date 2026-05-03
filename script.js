@@ -22,6 +22,129 @@ function escapeHtml(str) {
     .replace(/'/g, "&#39;");
 }
 
+// ======= ESCALA DE RELAÇÃO =======
+const RELACOES_ESCALA = {
+  "aliado-incondicional": {
+    label: "Aliado Incondicional",
+    className: "rel-aliado-incondicional",
+  },
+  "muito-positivo": {
+    label: "Muito positivo",
+    className: "rel-muito-positivo",
+  },
+  positivo: {
+    label: "Positivo",
+    className: "rel-positivo",
+  },
+  "neutro-positivo": {
+    label: "Neutro/positivo",
+    className: "rel-neutro-positivo",
+  },
+  neutro: {
+    label: "Neutro",
+    className: "rel-neutro",
+  },
+  "neutro-negativo": {
+    label: "Neutro/negativo",
+    className: "rel-neutro-negativo",
+  },
+  negativo: {
+    label: "Negativo",
+    className: "rel-negativo",
+  },
+  "muito-negativo": {
+    label: "Muito negativo",
+    className: "rel-muito-negativo",
+  },
+  "inimigo-jurado": {
+    label: "Inimigo jurado",
+    className: "rel-inimigo-jurado",
+  },
+};
+
+// Compatibilidade com as tags antigas, caso alguma ficha ainda use esses nomes.
+const RELACOES_ALIASES = {
+  romantic: "muito-positivo",
+  friend: "positivo",
+  family: "muito-positivo",
+  pet: "aliado-incondicional",
+  neutral: "neutro",
+  ex: "neutro-negativo",
+  rival: "negativo",
+  enemy: "inimigo-jurado",
+};
+
+function normalizarTipoRelacao(tipo) {
+  return String(tipo || "Neutro")
+    .trim()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/\s*\/\s*/g, "-")
+    .replace(/[\s_]+/g, "-")
+    .replace(/[^a-z0-9-]/g, "")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
+function obterDadosRelacao(tipo) {
+  const chave = normalizarTipoRelacao(tipo);
+  const chaveFinal = RELACOES_ESCALA[chave] ? chave : RELACOES_ALIASES[chave];
+
+  return RELACOES_ESCALA[chaveFinal] || RELACOES_ESCALA.neutro;
+}
+
+// Converte descrição (string ou array) em HTML com múltiplos parágrafos.
+// - Array: cada item vira um <p>
+// - String: quebra em parágrafos por linha em branco ("\n\n")
+// - Quebras simples ("\n") dentro do mesmo parágrafo viram <br>
+function descricaoParaHtmlParagrafos(descricao) {
+  const vazio = "Nenhum dado registrado para esta relação.";
+
+  // Normaliza em lista de parágrafos
+  let paragrafos = [];
+
+  if (Array.isArray(descricao)) {
+    paragrafos = descricao
+      .map((p) => String(p ?? "").trim())
+      .filter(Boolean);
+  } else {
+    const raw = String(descricao ?? "").trim();
+    if (raw) {
+      paragrafos = raw
+        .split(/\n\s*\n+/g)
+        .map((p) => p.trim())
+        .filter(Boolean);
+    }
+  }
+
+  if (!paragrafos.length) {
+    paragrafos = [vazio];
+  }
+
+  return paragrafos
+    .map((p) => `<p>${escapeHtml(p).replace(/\n/g, "<br>")}</p>`)
+    .join("");
+}
+
+// Infere status da pessoa referida (se não vier explícito na relação)
+function inferirStatusPessoa(personagem) {
+  if (!personagem) return null;
+
+  // campos "livres" suportados
+  const livre = personagem.status || personagem.estado || personagem.situacao;
+  if (livre) return String(livre);
+
+  // heurísticas comuns
+  if (personagem.dataMorte && String(personagem.dataMorte).trim()) {
+    return `MORTO (Falecido em: ${personagem.dataMorte})`;
+  }
+  if (personagem.vivo === true) return "VIVO";
+  if (personagem.vivo === false) return "MORTO";
+  if (personagem.desaparecido === true) return "DESAPARECIDO";
+
+  return "DESCONHECIDO";
+}
 
 // Tenta localizar um personagem pelo nome usado na relação
 function encontrarPersonagemPorNomeExibido(nomeAlvo) {
@@ -93,8 +216,8 @@ function initCharacterGrid() {
               <div class="card-role">${p.funcao || ""}</div>
               <div class="card-meta">
                 ${p.localNascimento ? p.localNascimento + " · " : ""}${
-      p.idade ? p.idade + " anos" : ""
-    }
+                  p.idade ? p.idade + " anos" : ""
+                }
               </div>
             </div>
           </div>
@@ -107,8 +230,8 @@ function initCharacterGrid() {
     p.ativo === true
       ? "PERFIL ATIVO"
       : p.ativo === false
-      ? "PERFIL INATIVO"
-      : "PERFIL DESCONHECIDO"
+        ? "PERFIL INATIVO"
+        : "PERFIL DESCONHECIDO"
   }
 </span>
             <span class="chip">ID: ${p.id || "UNREG"}</span>
@@ -143,16 +266,16 @@ function mostrarPerfil(personagemKey) {
             <div class="profile-role">${personagem.funcao || ""}</div>
             <div class="profile-id-row">
               <span>ID: ${personagem.id || "UNREG"}</span>
-              <span>BORN: ${formatDataNascimento(personagem)}</span>
-              <span>PLACE OF BIRTH: ${personagem.localNascimento || "??"}</span>
+              <span>NASC.: ${formatDataNascimento(personagem)}</span>
+              <span>LOCAL NASC.: ${personagem.localNascimento || "??"}</span>
             ${
               personagem.dataMorte && String(personagem.dataMorte).trim()
                 ? `<span class="death-tag">Falecido em: ${personagem.dataMorte}</span>`
                 : ""
             }
-              <span>AGE: ${personagem.idade || "??"} YRS</span>
-              <span>HEIGHT: ${personagem.altura || "??"}</span>
-              <span>WEIGHT: ${personagem.peso || "??"}</span>
+              <span>IDADE: ${personagem.idade || "??"} ANOS</span>
+              <span>ALTURA: ${personagem.altura || "??"}</span>
+              <span>PESO: ${personagem.peso || "??"}</span>
             </div>
             ${
               personagem.citacao
@@ -167,6 +290,26 @@ function mostrarPerfil(personagemKey) {
           <div class="life-goal-text">
             ${personagem.objetivoVida || "-"}
           </div>
+        </div>
+
+        <div class="data-block full-width">
+          <h3>Histórico Pessoal</h3>
+          ${
+            Array.isArray(personagem.historicoPessoal)
+              ? personagem.historicoPessoal
+                  .map((paragrafo) => `<p>${paragrafo}</p>`)
+                  .join("<br>")
+              : `<p>${personagem.historicoPessoal || "-"}</p>`
+          }
+        </div>
+
+        <div class="data-block full-width">
+          <h3>Relações Interpessoais</h3>
+          ${
+            relacoesChips
+              ? `<div class="chip-container">${relacoesChips}</div>`
+              : "<p>Nenhuma relação registrada.</p>"
+          }
         </div>
 
         <div class="data-grid">
@@ -192,75 +335,19 @@ function mostrarPerfil(personagemKey) {
             }</p>
           </div>
 
-          <div class="data-block">
-            <h3>Histórico Familiar</h3>
-            <p><strong>Antecedentes:</strong></p>
-            ${
-              Array.isArray(personagem.antecedentesFamiliares)
-                ? personagem.antecedentesFamiliares
-                    .map((paragrafo) => `<p>${paragrafo}</p>`)
-                    .join("<br>")
-                : `<p>${personagem.antecedentesFamiliares || "-"}</p>`
-            }<br>
-            <p><strong>Pessoa mais importante:</strong> ${
-              personagem.pessoaMaisImportante || "-"
-            }</p><br>
-            <p><strong>Tragédia:</strong></p>
-            ${
-              Array.isArray(personagem.tragedia)
-                ? personagem.tragedia
-                    .map((paragrafo) => `<p>${paragrafo}</p>`)
-                    .join("<br>")
-                : `<p>${personagem.tragedia || "-"}</p>`
-            }<br>
-          </div>
-
-          <div class="data-block">
-            <h3>Histórico Pessoal</h3>
-            ${
-              Array.isArray(personagem.historicoPessoal)
-                ? personagem.historicoPessoal
-                    .map((paragrafo) => `<p>${paragrafo}</p>`)
-                    .join("<br>")
-                : `<p>${personagem.historicoPessoal || "-"}</p>`
-            }
-          </div>
-
-          <div class="data-block">
-            <h3>Relações Interpessoais</h3>
-            ${
-              relacoesChips
-                ? `<div class="chip-container">${relacoesChips}</div>`
-                : "<p>Nenhuma relação registrada.</p>"
-            }
-          </div>
+        </div>
 
           <div class="data-block">
           <h3>Pertences Importantes</h3> ${renderPertences(
             personagemKey,
-            personagem.pertencesImportantes
+            personagem.pertencesImportantes,
           )}</div>
 
           <div class="data-block">
           <h3>Implantes Cibernéticos</h3> ${renderImplantes(
             personagemKey,
-            personagem.implantes
+            personagem.implantes,
           )}</div>
-
-          <div class="data-block">
-            <h3>Perfil Profissional</h3>
-            <p><strong>Tipo de trabalho:</strong> ${
-              personagem.tipoTrabalho || "-"
-            }</p><br>
-            <p><strong>Modo de trabalho:</strong> ${
-              personagem.modoTrabalho || "-"
-            }</p><br>
-            <p><strong>Espaço de trabalho:</strong> ${
-              personagem.espacoTrabalho || "-"
-            }</p><br>
-            <p><strong>Clientes:</strong> ${personagem.clientes || "-"}</p>
-          </div>
-        </div>
       `;
   habilitarZoomImagemPerfil(personagem);
 }
@@ -300,18 +387,19 @@ function renderRelacoesChips(personagemKey, relacoesObj = {}) {
   return nomes
     .map((nome) => {
       const relacao = relacoesObj[nome];
-      const tipo =
-        typeof relacao === "object" && relacao !== null ? relacao.tipo : "neutral";
+      const tipoRaw =
+        typeof relacao === "object" && relacao !== null
+          ? relacao.tipo
+          : "Neutro";
+      const tipoDados = obterDadosRelacao(tipoRaw);
 
       // usa data-attributes + event delegation (sem onclick inline)
-      return `<button class="relation-chip ${tipo}"
+      return `<button class="relation-chip ${tipoDados.className}"
         data-personagem="${pk}"
         data-pessoa="${encodeData(nome)}">${escapeHtml(nome)}</button>`;
     })
     .join("");
 }
-
-
 function renderPertences(personagemKey, pertences) {
   if (!pertences) return "<p>-</p>";
 
@@ -443,37 +531,12 @@ function mostrarRelacao(personagemKey, pessoa) {
   const relacao = personagem.relacoes[pessoa];
 
   const descricao =
-    typeof relacao === "object"
+    typeof relacao === "object" && relacao !== null
       ? relacao.descricao
-      : relacao || "Nenhum dado registrado para esta relação.";
+      : relacao;
 
-  const tipo = typeof relacao === "object" ? relacao.tipo : "neutral";
-
-  // Texto curto em caps para o título
-  const tipoTitulo =
-    {
-      romantic: "ROMÂNTICO",
-      friend: "AMIZADE",
-      enemy: "INIMIZADE",
-      neutral: "NEUTRO",
-      ex: "EX-ROMÂNTICO",
-      family: "FAMILIAR",
-      rival: "RIVAL",
-      pet: "ANIMAL DE ESTIMAÇÃO",
-    }[tipo] || "DESCONHECIDO";
-
-  // Texto mais descritivo para o campo "Tipo de relação"
-  const tipoDescricao =
-    {
-      romantic: "Parceiros românticos",
-      friend: "Amigos / aliados próximos",
-      enemy: "Inimigos declarados",
-      neutral: "Relação neutra / indefinida",
-      ex: "Ex-parceiros românticos",
-      family: "Relação familiar",
-      rival: "Rivalidade respeitosa",
-      pet: "Relação entre dono e 'animal' de estimação",
-    }[tipo] || "Relação não classificada";
+  const tipo = typeof relacao === "object" ? relacao.tipo : "Neutro";
+  const tipoDados = obterDadosRelacao(tipo);
 
   // Tenta encontrar o outro personagem a partir do nome da relação (ex: Tessia Amberine)
   const outroPersonagem = encontrarPersonagemPorNomeExibido(pessoa);
@@ -486,9 +549,10 @@ function mostrarRelacao(personagemKey, pessoa) {
   const nomeA = document.getElementById("relation-name-a");
   const nomeB = document.getElementById("relation-name-b");
   const tipoCampo = document.getElementById("relation-type");
+  const statusCampo = document.getElementById("relation-status");
 
   // Título no topo do modal
-  title.innerHTML = `ANÁLISE DE RELAÇÃO // ${tipoTitulo}`;
+  title.innerHTML = `ANÁLISE DE RELAÇÃO // ${tipoDados.label.toUpperCase()}`;
 
   // Avatares e nomes
   if (avatarA) {
@@ -502,7 +566,7 @@ function mostrarRelacao(personagemKey, pessoa) {
       ? () =>
           abrirImagemPerfil(
             fotoA,
-            personagem.nome || personagem.id || "SUBJECT"
+            personagem.nome || personagem.id || "SUBJECT",
           )
       : null;
   }
@@ -534,7 +598,7 @@ function mostrarRelacao(personagemKey, pessoa) {
               (relacao.nomeExibido || relacao.nome || pessoa)) ||
               (outroPersonagem && outroPersonagem.nome) ||
               pessoa ||
-              "SUBJECT"
+              "SUBJECT",
           )
       : null;
   }
@@ -547,14 +611,28 @@ function mostrarRelacao(personagemKey, pessoa) {
     nomeB.textContent = nomeCustom || outroPersonagem?.nome || pessoa || "-";
   }
 
-  // Tipo de relação (campo dedicado)
+  // Escala de relação (campo dedicado)
   if (tipoCampo) {
-    tipoCampo.textContent = tipoDescricao;
+    tipoCampo.textContent = tipoDados.label;
+  }
+
+  // Status (campo dedicado)
+  if (statusCampo) {
+    // Prioridade:
+    // 1) status definido diretamente na relação
+    // 2) status inferido pela ficha do outro personagem
+    // 3) fallback
+    let status =
+      (temObjetoRelacao && relacao && relacao.status) ||
+      inferirStatusPessoa(outroPersonagem) ||
+      "DESCONHECIDO";
+
+    statusCampo.textContent = String(status);
   }
 
   // Descrição
   if (text) {
-    text.textContent = descricao;
+    text.innerHTML = descricaoParaHtmlParagrafos(descricao);
   }
 
   modal.classList.add("open");

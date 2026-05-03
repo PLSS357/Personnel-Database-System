@@ -6,7 +6,7 @@ personagens.tessia = {
   nome: "Tessia Amberine",
   funcao: "Fixer | Ex-herdeira corporativa | Projeto Experimental",
   id: "34-3418-46",
-  foto: "img/Personagens/Tessia.png",
+  foto: "img/Personagens/Tessia/Tessia Amberine.png",
   ativo: true, // (true = ativo, false = inativo, null = desconhecido)
 
   // Dados vitais
@@ -39,20 +39,6 @@ personagens.tessia = {
     "Autonomia, verdade emocional, memórias da mãe e quaisquer laços construídos fora do alcance corporativo.",
 
   // --------------------------------------------------------------------
-  // HISTÓRICO FAMILIAR
-  // --------------------------------------------------------------------
-
-  antecedentesFamiliares: [
-    "Mãe: Celeste Amberine, Diretora de Relações Interpessoais. Afetuosa, humana, guardiã de livros físicos e valores. Assassinada por Nathaniel na “Operação Orquídea Branca”.",
-    "Pai: Nathaniel Amberine, executivo da Arasaka. Rígido, controlador, emocionalmente ausente. Responsável pelo projeto Sucessor.",
-  ],
-  pessoaMaisImportante:
-    "Oliver Miller. Uma das únicas pessoas com quem Tessia permitiu vulnerabilidade profunda.",
-  tragedia: [
-    "A morte da mãe por assassinato corporativo e a revelação de que o pai planejava substituir Tessia desde criança constituem a fundação de todas as cicatrizes emocionais dela.",
-  ],
-
-  // --------------------------------------------------------------------
   // HISTÓRICO PESSOAL
   // --------------------------------------------------------------------
 
@@ -66,123 +52,185 @@ personagens.tessia = {
   // --------------------------------------------------------------------
   // RELAÇÕES INTERPESSOAIS
   // --------------------------------------------------------------------
-  // Tipos de relação válidos:
-  // "romantic", "friend", "enemy", "neutral, "family", "ex", "pet", "rival"
 
   relacoes: {
+    // Aliado Incondicional
     "Oliver Miller": {
-      tipo: "romantic",
-      foto: "img/Personagens/Oliver.png",
+      tipo: "Aliado Incondicional",
+      status: "Vivo",
+      foto: "img/Personagens/Oliver/Oliver Miller.png",
       descricao:
-        "Cúmplices, amantes e parceiros profissionais. Ele é a primeira pessoa para quem Tessia baixa a guarda sem hesitar. Ela é a única capaz de acalmar os fantasmas dele. Uma relação construída em confiança mútua e compreensão profunda, apesar dos passados traumáticos de ambos.",
+        "Oliver é a pessoa para quem Tessia baixa a guarda. Ela o vê como parceiro, cúmplice e lar possível; alguém que entende suas feridas sem exigir explicações. A relação é de confiança profunda, proteção mútua e amor silencioso.",
     },
+
+    Ciel: {
+      tipo: "Aliado Incondicional",
+      status: "Viva",
+      foto: "img/Personagens/Tessia/Ciel.png",
+      descricao:
+        "Para Tessia, Ciel representa uma forma nova de vínculo: não algo imposto por sangue ou corporação, mas escolhido. Ela tende a protegê-la com cuidado discreto, vendo nela alguém que não deve ser moldada, controlada ou usada como Tessia foi.",
+    },
+
     "Seraphine Volkov": {
-      tipo: "family",
-      foto: "img/Personagens/Sera.png",
+      tipo: "Aliado Incondicional",
+      status: "Viva",
+      foto: "img/Personagens/Tessia/Seraphine Volkov.png",
       descricao:
-        "Sera foi a primeira pessoa que Tessia escolheu confiar na vida após escapar da mansão Amberine. Amizade profunda, quase irmã. Tessia ainda carrega o chip que Sera entregou nos últimos segundos de vida.",
+        "Seraphine foi uma das primeiras pessoas em quem Tessia confiou após fugir da vida corporativa. Tessia a vê quase como irmã, uma presença ligada à liberdade, à sobrevivência e a uma dívida emocional que nunca desapareceu.",
     },
+
+    "Celeste Amberine": {
+      tipo: "Aliado Incondicional",
+      status: "Morta",
+      foto: "img/Personagens/Tessia/Celeste Amberine.png",
+      descricao:
+        "Celeste é a memória mais humana da infância de Tessia. Para ela, representa afeto, livros, liberdade emocional e tudo que Nathaniel tentou destruir. A lembrança da mãe ainda guia os valores de Tessia.",
+    },
+
+    // Muito positivo
     "Kimber Destaro": {
-      tipo: "friend",
-      foto: "img/Personagens/Kimber.png",
+      tipo: "Muito positivo",
+      status: "Viva",
+      foto: "img/Personagens/Kimber/Kimber Destaro.png",
       descricao:
-        "Kimber é uma das poucas pessoas que Tessia permite chegar perto. Confiança construída lentamente, baseada em respeito mútuo e compreensão das cicatrizes emocionais de ambas.",
+        "Kimber é uma das poucas pessoas que Tessia deixa se aproximar de verdade. A relação nasceu devagar, baseada em respeito, confiança e reconhecimento mútuo das cicatrizes que ambas carregam.",
     },
-    "Aiden Fowler": {
-      tipo: "friend",
-      foto: "img/Personagens/Aiden.png",
-      descricao:
-        "Tessia enxerga Aiden como alguém brilhante, mas autodestrutivo quando imerso demais no ciberespaço. Tessia exige que ele faça pausas, coma e durma, mesmo que ele normalmente não faça.",
-    },
+
     Mirai: {
-      tipo: "pet",
-      foto: "img/Personagens/Mirai.png",
+      tipo: "Muito positivo",
+      status: "Viva",
+      foto: "img/Personagens/Mirai/Mirai.png",
       descricao:
-        "Mirai inicialmente “desconfiou” de Tessia quando a conheceu. Com o tempo, ele passou a gostar dela, especialmente quando percebeu que ela cuida de Oliver de verdade. Ele até traz objetos aleatórios para ela como se fossem “presentes”.",
+        "No começo, a relação foi de estranhamento, mas Tessia passou a gostar de Mirai por ele ser ligado ao bem-estar de Oliver. Para ela, Mirai é uma presença pequena, estranha e afetiva; quase uma prova de que Oliver ainda consegue criar laços.",
     },
+
+    // Positivo
+    "Aiden Fowler": {
+      tipo: "Positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Aiden/Aiden Fowler.png",
+      descricao:
+        "Tessia vê Aiden como brilhante, útil e perigoso para si mesmo. Ela respeita sua inteligência, mas se preocupa com sua tendência a se perder no ciberespaço; por isso, cobra pausas, comida e sono como uma forma seca de cuidado.",
+    },
+
     "Serena Ashbourne": {
-      tipo: "friend",
-      foto: "img/Personagens/Serena.png",
+      tipo: "Positivo",
+      status: "Viva",
+      foto: "img/Personagens/Serena/Serena Ashbourne.png",
       descricao:
-        "Tessia considera Serena perigosa. Não por violência, mas por influência. Apesar disso, trabalham bem juntas quando o assunto envolve infiltrações, negociações e estratégia.",
+        "Tessia considera Serena perigosa, não pela violência direta, mas pela influência, dinheiro e teatralidade. Ainda assim, reconhece sua utilidade e inteligência; quando trabalham juntas, funcionam bem em infiltração, negociação e estratégia.",
     },
+
     Ninvega: {
-      tipo: "friend",
-      foto: "img/Personagens/Ninvega.png",
+      tipo: "Positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Ninvega/Ninvega.png",
       descricao:
-        "Ninvega entende traumas e reconhece o de Tessia. Eles dividem uma calma parecida: eficiente, silenciosa, precisa. Tessia aprecia a honestidade emocional dele, uma qualidade rara.",
+        "Tessia respeita Ninvega por sua honestidade emocional e calma precisa. Ela enxerga nele alguém que entende trauma sem invadir, e aprecia sua forma silenciosa de cuidado.",
     },
-    "Dominic D. V. Chier": {
-      tipo: "neutral",
-      foto: "img/Personagens/Dominic.png",
-      descricao:
-        "Dominic é o tipo de sujeito cuja existência deixa Tessia em dúvida se está em uma missão ou em um episódio de comédia involuntária. Apesar disso, sabe que ele tem um bom coração.",
-    },
+
     Lyra: {
-      tipo: "neutral",
-      foto: "img/Personagens/Lyra.png",
+      tipo: "Positivo",
+      status: "Viva",
+      foto: "img/Personagens/Lyra/Lyra.png",
       descricao:
-        "Tessia admira a coragem de Lyra de dizer “não” — algo que ela mesma levou anos para aprender. As duas compartilham a sensação de terem sido moldadas por outros.",
+        "Tessia admira em Lyra a coragem de dizer “não”. As duas compartilham a sensação de terem sido moldadas por outros, então Tessia tende a vê-la com empatia silenciosa.",
     },
+
+    "Priya Ellison": {
+      tipo: "Positivo",
+      status: "Viva",
+      foto: "img/Personagens/Priya/Priya Ellison.png",
+      descricao:
+        "Tessia respeita Priya porque ambas romperam com sistemas que tentaram moldá-las. Ela valoriza a coragem moral de Priya, sua postura direta e sua competência em campo.",
+    },
+
+    "Ícaro Barbosa": {
+      tipo: "Positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Ícaro/Ícaro Barbosa.png",
+      descricao:
+        "Para Tessia, Ícaro é caos puro: barulhento, impulsivo e completamente oposto à sua postura controlada. Mesmo assim, ela gosta dele justamente pela lealdade simples, direta e sem política.",
+    },
+
+    // Neutro/positivo
+    "Dominic Don Von Chier": {
+      tipo: "Neutro/positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Dominic Don Von Chier.png",
+      descricao:
+        "Dominic confunde Tessia. Ela o vê como alguém tão absurdo que às vezes não sabe se está em uma missão ou numa comédia, mas reconhece que ele tem bom coração e pode ser confiável quando importa.",
+    },
+
     Cypher: {
-      tipo: "neutral",
+      tipo: "Neutro/positivo",
+      status: "Vivo",
       foto: "img/Personagens/Cypher.png",
       descricao:
-        "Tessia inicialmente considerava Cypher teatral, brilhante e imprevisível. Ele tentava arrancar reações dela, normalmente só conseguia um olhar confuso.",
+        "Tessia o via como teatral, brilhante e imprevisível. Ele tentava arrancar reações dela, mas geralmente só conseguia um olhar confuso; ainda assim, ela reconhecia sua criatividade e presença única.",
     },
+
+    // Neutro
     Nyx: {
-      tipo: "neutral",
+      tipo: "Neutro",
+      status: "Viva",
       foto: "img/Personagens/Nyx.png",
       descricao:
-        "Tessia enxerga Nyx como uma presença quieta, mas firme. Ela respeita a independência e o profissionalismo de Nyx.",
+        "Tessia enxerga Nyx como uma presença quieta, firme e profissional. Não parece haver intimidade profunda, mas há respeito pela independência e pela postura dela.",
     },
+
+    // Neutro/negativo
     Shinigami: {
-      tipo: "neutral",
+      tipo: "Neutro/negativo",
+      status: "Vivo",
       foto: "img/Personagens/Shinigami.png",
       descricao:
-        "Tessia enxerga nele um eco do que ela poderia ter sido se não tivesse fugido das mãos da Arasaka. A disciplina e o controle que ele mantém sobre si mesmo são algo que ela admira, mesmo que não concorde com seus métodos.",
+        "Tessia vê em Shinigami um eco do que poderia ter se tornado se nunca tivesse fugido da Arasaka: disciplina, controle e frieza. Ela admira sua força mental, mesmo discordando de seus métodos.",
     },
-    "Priya Ellison": {
-      tipo: "neutral",
-      foto: "img/Personagens/Priya.png",
-      descricao:
-        "Priya e Tessia compartilham algo essencial: ambas romperam com sistemas que tentaram moldá-las. Priya considera Tessia “assustadoramente competente” e gosta do jeito prático dela. Tessia respeita a coragem moral de Priya.",
-    },
-    "Ícaro Barbosa": {
-      tipo: "friend",
-      foto: "img/Personagens/Ícaro.png",
-      descricao:
-        "Ícaro é caos em formato humano, gasolina com pernas, e completa antítese da postura de Tessia — e talvez por isso ela goste dele. Tessia se surpreende com a lealdade dele: pura, direta, sem política.",
-    },
+
     "Kleber Junior": {
-      tipo: "neutral",
-      foto: "img/Personagens/Kleber.png",
+      tipo: "Neutro/negativo",
+      status: "Vivo",
+      foto: "img/Personagens/Kleber Junior.png",
       descricao:
-        "Kleber é um enigma para Tessia. Ela reconhece a inteligência dele, mas desconfia das motivações. Mantêm uma relação profissional cordial, mas distante. Ela não sabe se Kleber é louco, iluminado, profeta ou troll, mas admite que ele é eficaz no que faz. No fim, ela aceita sua existência (algo que parece ser conscenso entre os Dandelions).",
+        "Kleber é um enigma para Tessia. Ela reconhece sua inteligência e eficácia, mas desconfia das motivações dele. Mantém uma relação cordial, profissional e distante, aceitando sua presença sem tentar entendê-lo demais.",
     },
-    "Nathaniel Amberine": {
-      tipo: "enemy",
-      foto: "img/Personagens/Nathaniel.png",
+
+    // Negativo
+    // Nenhum personagem nesta categoria.
+
+    // Muito negativo
+    "Dessia Amberine — Projeto Sucessor": {
+      tipo: "Muito negativo",
+      status: "Viva",
+      foto: "img/Personagens/Tessia/Dessia Amberine.png",
       descricao:
-        "Inimigo pessoal e central; responsável pelos traumas e pelo Projeto Sucessor. Tessia deseja derrubá-lo e expor suas ações para o mundo, garantindo que ele nunca mais possa controlar ou manipular outra pessoa como fez com ela. Ela até pode ter seu sangue, mas não o considera família.",
+        "Tessia vê Dessia como uma substituta criada para apagar sua falha aos olhos de Nathaniel. Mais do que uma rival, Dessia representa a tentativa de transformar Tessia em algo descartável.",
     },
-    Arasaka: {
-      tipo: "enemy",
-      foto: "img/arasaka/arasaka-logo.png",
-      descricao:
-        "Inimiga corporativa declarada. Representa tudo o que Tessia despreza: controle, desumanização, ambição desmedida e falta de ética. Ela está determinada a minar suas operações sempre que possível, vendo isso como uma forma de justiça para as vítimas da corporação.",
-    },
-    "Projeto Sucessor (Dessia Amberine)": {
-      tipo: "enemy",
-      foto: "img/Personagens/Dessia.png",
-      descricao:
-        "A versão “substituta” de Tessia, criada para ser a herdeira perfeita de Nathaniel. Tessia acredita que Nathaniel pretende usá-la como um corpo imortal para si mesmo. Ela vê Dessia como uma ameaça direta à si mesma e está determinada a impedir que o projeto avance.",
-    },
+
     "Raze Lambert": {
-      tipo: "enemy",
-      foto: "img/Personagens/Raze.png",
+      tipo: "Muito negativo",
+      status: "Vivo",
+      foto: "img/Personagens/Raze/Raze Lambert.png",
       descricao:
-        "O atual conselheiro da Arasaka e também responsável pela dor de Oliver. Tessia acredita que Raze está trabalhando junto de Nathaniel. Ela o vê como um inimigo a ser derrubado junto com a Arasaka, tanto por suas ações contra Oliver quanto por seu papel na corporação.",
+        "Tessia vê Raze como aliado de Nathaniel e da Arasaka, além de responsável por parte da dor de Oliver. Para ela, ele é um inimigo a ser derrubado tanto por ameaça pessoal quanto por papel corporativo.",
+    },
+
+    // Inimigo jurado
+    "Nathaniel Amberine": {
+      tipo: "Inimigo jurado",
+      status: "Vivo",
+      foto: "img/Personagens/Tessia/Nathaniel Amberine.png",
+      descricao:
+        "Nathaniel é o inimigo central de Tessia. Ela o vê como o responsável por seus traumas, pela morte de Celeste e pelo Projeto Sucessor. Apesar do sangue, Tessia não o considera família.",
+    },
+
+    Arasaka: {
+      tipo: "Inimigo jurado",
+      status: "Ativa",
+      foto: "img/Arasaka/Arasaka.png",
+      descricao:
+        "A Arasaka representa tudo que Tessia despreza: controle, desumanização, ambição corporativa e uso de pessoas como recursos. Ela deseja sabotar suas operações como forma de justiça.",
     },
   },
 
@@ -192,35 +240,22 @@ personagens.tessia = {
 
   // Pertences importantes
   pertencesImportantes: {
-    "Brinco antigo da mãe": {
-      imagem: "img/itens/brinco-mãe-tessia.png",
-      descricao:
-        "Um par de brincos elegantes de prata e zircônia azul esverdeada, herdados de sua mãe. Tessia não usa sempre, mas mantém como um lembrete de amor e sacrifício dela.",
-    },
-    "Pequeno dispositivo criptográfico pessoal": {
-      imagem: "img/itens/dispositivo-criptografico-tessia.png",
-      descricao:
-        "Um dispositivo portátil usado por Tessia para armazenar e proteger informações sensíveis. Ele possui criptografia avançada para garantir que apenas ela possa acessar os dados armazenados nele.",
-    },
     "Arquivos da Operação Orquídea Branca": {
-      imagem: "img/itens/arquivos-orquídea-branca.png",
+      imagem: "img/itens/Tessia/Arquivos da Operação Orquídea Branca.png",
       descricao:
-        "Documentos confidenciais que detalham a Operação Orquídea Branca, incluindo evidências das ações de Nathaniel Amberine. Tessia os mantém como prova e para usá-los contra seu pai quando tiver a oportunidade, msmo que ela acrdite que essa chance nunca venha.",
+        "Um conjunto de arquivos sigilosos ligados à Operação Orquídea Branca, contendo dados sobre experimentos, operações corporativas e segredos enterrados no passado de Tessia com a Arasaka. São perigosos porque provam aquilo que pessoas poderosas tentaram esconder. Para Tessia, cada página é uma arma silenciosa contra o pai, contra a corporação e contra o sistema que tentou moldá-la.",
     },
-    "Coleção de livros físicos": {
-      imagem: "img/itens/colecao-livros-tessia.png",
-      descricao:
-        "Uma coleção de livros físicos que Tessia conseguiu salvar da mansão Amberine. Inclui clássicos da literatura, filosofia e ciência, representando a conexão dela com a mãe e o mundo fora do controle corporativo.",
-    },
+
     "Caixinha de Música": {
-      imagem: "img/itens/caixinha-musica-tessia.png",
+      imagem: "img/itens/Tessia/Caixinha de Música.png",
       descricao:
-        "Uma pequena caixinha de música que pertenceu à mãe de Oliver. Ele consertou e modificou para que tocasse até cinco músicas diferentes, todas com significados especiais para eles.",
+        "Uma pequena caixinha de música ligada às memórias da mãe de Tessia. Delicada, antiga e quase frágil demais para o mundo em que ela vive, carrega uma melodia suave que sobreviveu ao tempo, à violência e às mentiras da família Amberine. Para Tessia, seu som funciona como uma âncora emocional, lembrando-a de quem ela era antes da Arasaka, da Phantom e da guerra particular contra o próprio sangue.",
     },
-    "Projeto “White Queen”": {
-      imagem: "img/itens/projeto-white-queen.png",
+
+    "Pistola “Phantom”": {
+      imagem: "img/itens/Tessia/Pistola “Phantom”.png",
       descricao:
-        "Projeto de uma arma eletromagnética desenvolvida por Seraphine Volkov. Apesar de incompleto, Tessia sabe que, nas mãos certas, pode ser uma ferramenta poderosa contra corporações como a Arasaka.",
+        "Uma pistola compacta, refinada e extremamente precisa, associada à identidade clandestina de Tessia como Phantom. Sua construção prioriza discrição, silêncio e eficiência, sendo ideal para operações onde uma única decisão precisa encerrar o conflito antes que ele se torne público. Mais do que uma arma, representa o lado de Tessia que aprendeu a sobreviver nas sombras — calculista, elegante e perigoso.",
     },
   },
 
@@ -229,16 +264,37 @@ personagens.tessia = {
   // --------------------------------------------------------------------
 
   implantes: {
-    "": {
-      descricao: "",
+    "Cyberaudio Suite": {
+      descricao:
+        "Plataforma auditiva cibernética centralizada que serve como base para múltiplos módulos sensoriais e de comunicação. Otimiza captação, processamento e distribuição de áudio, funcionando como núcleo para implantes sonoros avançados.",
+    },
+    Cybereye: {
+      descricao:
+        "Substituto ocular artificial de alta precisão, projetado para restaurar e expandir capacidades visuais humanas. Funciona como plataforma modular para sistemas ópticos avançados, interfaces de dados e sobreposições informacionais em tempo real.",
+    },
+    "Internal Agent": {
+      descricao:
+        "Assistente digital totalmente integrado ao corpo do usuário, oferecendo comunicação, processamento de dados e acesso a redes corporativas sem necessidade de dispositivos externos. Pode operar de forma auditiva ou visual conforme integração disponível.",
+    },
+    Skinwatch: {
+      descricao:
+        "Dispositivo cronológico subdérmico com interface visual discreta. Oferece acesso rápido a informações temporais e sincronização com sistemas pessoais ou corporativos, eliminando a necessidade de dispositivos externos visíveis.",
+    },
+    Neuroport: {
+      descricao:
+        "O Neuroport é um sistema integrado de controle cibernético e conectividade neural que se tornou o padrão moderno para integração entre humanos e tecnologia, sendo amplamente adotado desde a infância por estar associado a melhores resultados educacionais, profissionais e financeiros ao longo da vida. O pacote inclui componentes como o Neural Link (sistema nervoso artificial para comunicação cérebro-implantes), Holophone (comunicação por comandos mentais), Biomonitor (monitoramento de sinais vitais), Virtuality (interface para ambientes virtuais), HUD/Chyron (projeção visual de informações contextuais), Shard Slots (para módulos cognitivos) e Interface Plug (conexão direta com sistemas externos). Sua disseminação é tão ampla que existem diversos modelos de financiamento e aquisição, enquanto indivíduos não integrados enfrentam desvantagens competitivas significativas em ambientes tecnológicos avançados, consolidando o Neuroport como infraestrutura essencial da sociedade contemporânea.",
+    },
+    "Subdermal Pocket": {
+      descricao:
+        "Compartimento de armazenamento oculto sob a pele, selado por tecnologia dérmica sintética de alta discrição. Ideal para transporte seguro de itens sensíveis, documentos físicos ou dispositivos compactos.",
+    },
+    Techhair: {
+      descricao:
+        "Implante capilar sintético com emissão controlada de luz e cor. Desenvolvido para personalização estética avançada, identidade visual corporativa e expressão individual em ambientes urbanos de alta tecnologia.",
+    },
+    "Voice Stress Analyzer": {
+      descricao:
+        "Sistema auditivo analítico que avalia microvariações vocais em tempo real. Utilizado para análise comportamental, negociações sensíveis, entrevistas e interrogatórios corporativos.",
     },
   },
-  // --------------------------------------------------------------------
-  // PERFIL PROFISSIONAL
-  // --------------------------------------------------------------------
-
-  tipoTrabalho: "Analítica e de Operações Silenciosas. Especializada em infiltração social, coleta de informação, rotas seguras, lavagem de dados, negociação em baixa luz e operações discretas.",
-  modoTrabalho: "Planeja minuciosamente; age rápido; evita confrontos diretos; não desperdiça palavras. Trabalha com poucos contatos, mas extremamente confiáveis.",
-  espacoTrabalho: "Sem local fixo.",
-  clientes: "Solos, pequenos grupos de resistência, jornalistas independentes, corporativos desesperados e mercenários de elite.",
 };

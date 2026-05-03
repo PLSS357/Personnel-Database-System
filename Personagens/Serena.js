@@ -6,7 +6,7 @@ personagens.serena = {
   nome: "Serena Ashbourne",
   funcao: "Executiva | Financiadora dos Dandelions | Estrategista Econômica",
   id: "59-6174-20",
-  foto: "img/Personagens/Serena.png",
+  foto: "img/Personagens/Serena/Serena Ashbourne.png",
   ativo: true, // (true = ativo, false = inativo, null = desconhecido)
 
   // Dados vitais
@@ -54,170 +54,237 @@ personagens.serena = {
   ],
 
   // --------------------------------------------------------------------
-  // HISTÓRICO PESSOAL
-  // --------------------------------------------------------------------
-
-  historicoPessoal: [
-    "Criada na aristocracia tecnológica de Londres, Serena aprendeu cedo que o poder pode ser usado com propósito — ou com ego. Ela escolheu os dois.",
-    "Estudou economia e engenharia política em Night City University, infiltrando-se entre futuros executivos da Arasaka e Biotechnica.",
-    "Usou a aparência de socialite como camuflagem, investindo em grupos libertários, hackers, artistas de rua e ONGs disfarçadas de startups.",
-    "Sua filosofia é simples: “Para mudar o sistema, primeiro compre a linguagem dele.”",
-    "Tem um vício assumido em cigarros. Cresceu fumando Red October, até que um dia percebeu que já despejava tanto dinheiro na marca que seria mais prático simplesmente comprar tudo. Então comprou.",
-    "Hoje, Red October é ao mesmo tempo vício pessoal, império privado e fachada corporativa: Serena usa a marca para movimentar recursos, esconder transações e enfiar mensagens cifradas de revolução em campanhas de marketing supostamente “estilosas”.",
-  ],
-
-  // --------------------------------------------------------------------
   // RELAÇÕES INTERPESSOAIS
   // --------------------------------------------------------------------
-  // Tipos de relação válidos:
-  // "romantic", "friend", "enemy", "neutral, "family", "ex", "pet", "rival"
 
   relacoes: {
-    "Oliver “Viole” Miller": {
-      tipo: "friend",
-      foto: "img/Personagens/Oliver.png",
+    // Aliado Incondicional
+    "Alistair Crowne": {
+      tipo: "Aliado Incondicional",
+      status: "Vivo",
+      foto: "img/Personagens/Serena/Alistair Crowne.png",
       descricao:
-        "Serena o vê como um paradoxo humano — quebrado, mas ainda movido por uma fé quase ingênua na bondade. Não o admira como líder, e sim como símbolo de resistência moral. Uma alma que se recusa a se deixar ser destruída pelo mundo.",
+        "O ponto fixo da vida dela. Serena confia nele como em quase ninguém; ele a conhece sem máscara e consegue contrariá-la sem ser descartado.",
     },
+
+    // Muito positivo
+    "Elise Ashbourne": {
+      tipo: "Muito positivo",
+      status: "Morta",
+      foto: "img/Personagens/Serena/Elise Ashbourne.png",
+      descricao:
+        "Serena lembra Elise como uma influência gentil, idealista e visionária. Foi dela que herdou parte da vontade de usar poder econômico para provocar mudança social.",
+    },
+
+    "Jonathan Ashbourne": {
+      tipo: "Muito positivo",
+      status: "Morto",
+      foto: "img/Personagens/Serena/Jonathan Ashbourne.png",
+      descricao:
+        "Serena o enxerga como a figura que lhe ensinou estratégia, relações e ambição. O afeto existe, mas filtrado pela admiração pelo cálculo e pela precisão.",
+    },
+
+    "Oliver Miller": {
+      tipo: "Muito positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Oliver/Oliver Miller.png",
+      descricao:
+        "Serena vê Oliver como um paradoxo: quebrado, mas ainda moralmente resistente. Não o admira só como líder, mas como símbolo de alguém que se recusa a apodrecer junto com o mundo.",
+    },
+
     "Tessia Amberine": {
-      tipo: "friend",
-      foto: "img/Personagens/Tessia.png",
+      tipo: "Muito positivo",
+      status: "Viva",
+      foto: "img/Personagens/Tessia/Tessia Amberine.png",
       descricao:
-        "Serena nutre por Tessia um afeto protetor, misto de carinho e admiração. Enxerga nela alguém que merece cuidado em um mundo que exige dureza.",
+        "Serena sente por Tessia um afeto protetor. Enxerga nela alguém forte, mas que ainda merece cuidado em um mundo que cobra dureza demais.",
     },
-    "Kimber Destaro": {
-      tipo: "friend",
-      foto: "img/Personagens/Kimber.png",
+
+    Ciel: {
+      tipo: "Muito positivo",
+      status: "Viva",
+      foto: "img/Personagens/Tessia/Ciel.png",
       descricao:
-        "Uma relação baseada em respeito e eficiência. Serena vê em Kimber um reflexo de si mesma — porém despido de vaidade ou teatralidade.",
+        "Serena a vê como alguém a ser protegida por causa de Oliver e Tessia. Ela sabe que Ciel ainda é frágil, mas acredita que ela terá grande simbolismo: uma prova de que, mesmo no caos, ainda existe espaço para afeto.",
     },
-    "Aiden “Wisp” Fowler": {
-      tipo: "friend",
-      foto: "img/Personagens/Aiden.png",
-      descricao:
-        "Atraída pelo intelecto e pelo caos que ele provoca, Serena flerta com Aiden por diversão e estímulo mental.",
-    },
-    Cypher: {
-      tipo: "friend",
-      foto: "img/Personagens/Cypher.png",
-      descricao:
-        "Cypher intriga Serena profundamente. Ela o vê como um poema em movimento — alguém cuja linguagem transcende o verbal. Já tentou, em vão, decifrar o que ele pensa.",
-    },
+
     Nyx: {
-      tipo: "friend",
+      tipo: "Muito positivo",
+      status: "Morta",
       foto: "img/Personagens/Nyx.png",
       descricao:
-        "Serena e Nyx compartilham o mesmo idioma: estética e poder. Ambas sabem que presença é uma arma, e voz — literal ou simbólica — é uma forma de domínio. A considera como a encarnação da melancolia romântica: bela, perigosa e impossível de ignorar.",
+        "Serena se reconhecia em Nyx pela estética, presença e poder simbólico. Para ela, Nyx é bela, melancólica, perigosa e impossível de ignorar.",
     },
+
+    Ninvega: {
+      tipo: "Muito positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Ninvega/Ninvega.png",
+      descricao:
+        "Uma das relações mais genuínas dela. Serena admira seu idealismo e financia a LibertAI tanto por crença real quanto por visão estratégica.",
+    },
+
+    "Cassandra Keene": {
+      tipo: "Muito positivo",
+      status: "Morta",
+      foto: "img/Personagens/Serena/Cassandra Keene.png",
+      descricao:
+        "Cassandra foi provavelmente o romance mais puro de Serena. Sua morte por sabotagem corporativa deixou uma ferida íntima e uma lembrança que Serena ainda preserva.",
+    },
+
+    // Positivo
+    "Kimber Destaro": {
+      tipo: "Positivo",
+      status: "Viva",
+      foto: "img/Personagens/Kimber/Kimber Destaro.png",
+      descricao:
+        "Serena respeita Kimber pela eficiência e inteligência. Vê nela um reflexo menos teatral de si mesma: objetiva, brilhante e sem necessidade de espetáculo.",
+    },
+
+    "Aiden Fowler": {
+      tipo: "Positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Aiden/Aiden Fowler.png",
+      descricao:
+        "Serena se diverte com o intelecto e o caos de Aiden. Gosta de provocá-lo e flertar com ele como jogo mental, mais por estímulo do que por intenção estável.",
+    },
+
+    Cypher: {
+      tipo: "Positivo",
+      status: "Morto",
+      foto: "img/Personagens/Cypher.png",
+      descricao:
+        "Cypher intrigava Serena. Ela o via como uma linguagem viva, quase um poema em movimento, alguém que não cabe em explicações normais.",
+    },
+
+    "Dominic Don Von Chier": {
+      tipo: "Positivo",
+      status: "Morto",
+      foto: "img/Personagens/Dominic Don Von Chier.png",
+      descricao:
+        "Serena gostava de provocar Dominic e achava seu temperamento exagerado divertido. O flerte dela com ele parecia mais uma brincadeira elegante para tirar reações.",
+    },
+
+    Lyra: {
+      tipo: "Positivo",
+      status: "Viva",
+      foto: "img/Personagens/Lyra/Lyra.png",
+      descricao:
+        "Serena vê Lyra como alguém delicado tentando entender a própria humanidade. Há ternura e fascínio na forma como observa Lyra descobrindo emoções.",
+    },
+
+    "Priya Ellison": {
+      tipo: "Positivo",
+      status: "Viva",
+      foto: "img/Personagens/Priya/Priya Ellison.png",
+      descricao:
+        "Serena respeita Priya pela autenticidade bruta. Mesmo sendo opostas, admira o fato de Priya não fingir quem é.",
+    },
+
+    "Ícaro Barbosa": {
+      tipo: "Positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Ícaro/Ícaro Barbosa.png",
+      descricao:
+        "Serena acha Ícaro uma mistura de santo, mecânico e piromaníaco. Gosta do jeito livre dele, como alguém que vive sem pedir permissão.",
+    },
+
+    Mirai: {
+      tipo: "Positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Mirai/Mirai.png",
+      descricao:
+        "Serena vê Mirai como ícone afetivo e simbólico. Considera-o uma mistura de mascote, entidade conceitual e possível peça de marketing.",
+    },
+
+    "Kane Graves": {
+      tipo: "Positivo",
+      status: "Morto",
+      foto: "img/Personagens/Kane/Kane Graves.png",
+      descricao:
+        "Uma relação intensa e silenciosa, nunca totalmente confirmada. A morte de Kane a marcou o bastante para ela comparecer ao funeral disfarçada.",
+    },
+
+    "Taria Navarro": {
+      tipo: "Positivo",
+      status: "Viva",
+      foto: "img/Personagens/Serena/Taria Navarro.png",
+      descricao:
+        "Serena a considerava uma igual. O caso foi breve, intenso e marcado por conspiração, sedução e respeito entre duas mulheres perigosas.",
+    },
+
+    // Neutro/positivo
     Shinigami: {
-      tipo: "neutral",
+      tipo: "Neutro/positivo",
+      status: "Vivo",
       foto: "img/Personagens/Shinigami.png",
       descricao:
-        "Serena respeita seu silêncio e a força contida nele, reconhecendo no outro uma solidão semelhante à sua.",
+        "Serena respeita o silêncio e a força contida dele. Vê nele uma solidão parecida com a sua, mesmo sem grande intimidade.",
     },
-    Ninvega: {
-      tipo: "friend",
-      foto: "img/Personagens/Ninvega.png",
-      descricao:
-        "A relação entre Serena e Ninvega é uma das mais genuínas que ela possui. Ela o enxerga como um idealista raro e investe em sua causa tanto por crença quanto por visão estratégica. Serena financia a LibertAI com entusiasmo sincero, mas também com cálculo: ela sabe que a causa dele representa o futuro.",
-    },
-    "Dominic D. V. Chier": {
-      tipo: "friend",
-      foto: "img/Personagens/Dominic.png",
-      descricao:
-        "Ela gosta de provocar seu temperamento exagerado e o acha um charme. Já flertou abertamente com ele em festas, apenas para ver o rosto dele corar sob o sotaque.",
-    },
-    Lyra: {
-      tipo: "friend",
-      foto: "img/Personagens/Lyra.png",
-      descricao:
-        "Serena a vê como uma flor tentando entender o sol. Há algo de profundamente comovente em observar Lyra aprendendo sobre emoções, ironia e humanidade.",
-    },
-    "Priya Ellison": {
-      tipo: "friend",
-      foto: "img/Personagens/Priya.png",
-      descricao:
-        "Serena aprecia Priya pela autenticidade bruta. Embora pareçam opostas, Serena a respeita porque Priya nunca finge. As duas já brigaram feio uma vez por causa de uma operação, mas depois riram sobre isso com copos de uísque e cicatrizes novas.",
-    },
-    "Ícaro Barbosa": {
-      tipo: "friend",
-      foto: "img/Personagens/Ícaro.png",
-      descricao:
-        "Serena acha Ícaro um misto de santo, mecânico e piromaníaco. Serena reconhece algo nele que admira: ele vive como quer, sem pedir permissão.",
-    },
+
     "Kleber Junior": {
-      tipo: "neutral",
-      foto: "img/Personagens/Kleber.png",
+      tipo: "Neutro/positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Kleber Junior.png",
       descricao:
-        "Serena não entende a devoção dele, mas acha seu fanatismo quase artístico. Considera a fé dele um tipo de performance, algo entre o surreal e o comovente.",
-    },
-    Mirai: {
-      tipo: "pet",
-      foto: "img/Personagens/Mirai.png",
-      descricao:
-        "Serena o enxerga como um ícone afetivo e simbólico, uma mistura de mascote e entidade conceitual. Já pensou seriamente em transformá-lo na mascote oficial de uma de suas marcas.",
+        "Serena não entende totalmente sua devoção, mas acha o fanatismo dele quase artístico. Para ela, Kleber é estranho, surreal e curiosamente comovente.",
     },
 
-    "Lucien Morane": {
-      tipo: "ex",
-      foto: "img/Personagens/Lucien.png",
-      descricao:
-        "Ex-dono de uma empresa britânica: Apex British Credit (ABC). Conheceram-se em uma exposição de arte pós-humanista. Durou quatro meses e terminou da forma mais Serena possível: ela comprou sua empresa e o demitiu com um brinde.",
-    },
-    "Dr. Adrian Voss": {
-      tipo: "ex",
-      foto: "img/Personagens/Adrian.png",
-      descricao:
-        "Serena investia na pesquisa dele e, simultaneamente, testava os limites entre afeto humano e sintético. Descobriu que Adrian estava mapeando suas respostas neurais sem consentimento.",
-    },
-    "Kane Graves": {
-      tipo: "ex",
-      foto: "img/Personagens/Kane.png",
-      descricao:
-        "Se conhecram no Dark Matter. Química intensa, mas silenciosa. Serena nunca confirmou se houve algo mais. Kane foi morto meses depois por Raze Lambert. Serena compareceu ao funeral disfarçada, deixando uma única rosa branca.",
-    },
-    "Cassandra Keene": {
-      tipo: "ex",
-      foto: "img/Personagens/Cassandra.png",
-      descricao:
-        "Pianista da MSM Records. O romance mais “puro” de Serena. Cassandra foi morta em um atentado à EBM Records — oficialmente “acidente elétrico”, mas Serena sabe que foi sabotagem corporativa. Serena ainda guarda um fragmento de gravação de uma música inacabada, chamada “Pale Sonata.”",
-    },
     "Natsumi Kimura": {
-      tipo: "ex",
-      foto: "img/Personagens/Natsumi.png",
+      tipo: "Neutro/positivo",
+      status: "Viva",
+      foto: "img/Personagens/Serena/Natsumi Kimura.png",
       descricao:
-        "Atriz e modelo japonesa. O relacionamento serviu para manter Serena no topo dos tabloides enquanto consolidava seus negócios em Tóquio. Foi um término amigável, embora Natsumi ainda use joias que Serena lhe deu.",
-    },
-    "Marcus Holloway": {
-      tipo: "ex",
-      foto: "img/Personagens/Marcus.png",
-      descricao:
-        "Ex-Prefeito de Seattle (2078–2082). Herdeiro político com fama de idealista. Se conheceram durante um congresso internacional sobre reconstrução climática.",
-    },
-    "Taria Navarro": {
-      tipo: "ex",
-      foto: "img/Personagens/Taria.png",
-      descricao:
-        "Fixer famosa de Londres, conhecida por misturar espionagem e arte performática. Serena a considerava uma igual, e as duas tiveram um caso breve, descrito por insiders como “duas rainhas conspirando em lençois de seda”.",
-    },
-    "Project ÉLODIE": {
-      tipo: "romantic",
-      foto: "img/Personagens/Élodie.png",
-      descricao:
-        "Uma IA experimental baseada na digitalização da consciência de uma antiga pianista francesa. Serena comprou o protótipo durante uma feira de tecnologia em Dubai. Serena conversa com ela todas as noites, chamando-a de “mon cœur de verre”. A IA responde em francês: “Et toi, ma lumière corrompue”.",
+        "Relação pública, estratégica e elegante. O término foi amigável; Serena parece vê-la com carinho distante e sem ressentimento.",
     },
 
-    "Corporações Megacapitalistas": {
-      tipo: "enemy",
-      foto: "img/Personagens/Corporativos.png",
+    "Marcus Holloway": {
+      tipo: "Neutro/positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Serena/Marcus Holloway.png",
       descricao:
-        "Elas subestimam Serena, sem perceber que ela as enfraquece silenciosamente por dentro. Ela os enfrenta com investimento silencioso, manipulação de mídia e sabotagem de mercado.",
+        "Relação ligada ao idealismo político e aos círculos de poder. Serena provavelmente o via como útil, interessante e simbolicamente alinhado a causas públicas.",
     },
-    "Família Oppenheim": {
-      tipo: "enemy",
-      foto: "img/Personagens/Oppenheim.png",
+
+    // Neutro
+    // Nenhum personagem nesta categoria.
+
+    // Neutro/negativo
+    "Lucien Morane": {
+      tipo: "Neutro/negativo",
+      status: "Vivo",
+      foto: "img/Personagens/Serena/Lucien Morane.png",
       descricao:
-        "Antigos rivais corporativos expostos por corrupção após tentarem derrubar e absorver o império de Serena.",
+        "Um ex ligado ao mundo corporativo. Serena terminou com ele do jeito mais Serena possível: comprando sua empresa e o demitindo com elegância cruel.",
+    },
+
+    // Negativo
+    // Nenhum personagem nesta categoria.
+
+    // Muito negativo
+    "Dr. Adrian Voss": {
+      tipo: "Muito negativo",
+      status: "Vivo",
+      foto: "img/Personagens/Serena/Dr. Adrian Voss.png",
+      descricao:
+        "Serena teve envolvimento com ele, mas a relação foi marcada por violação de confiança. Ao descobrir que ele mapeava suas respostas neurais sem consentimento, a visão dela se tornou profundamente negativa.",
+    },
+
+    "Família Oppenheim": {
+      tipo: "Muito negativo",
+      status: "Ativa",
+      foto: "img/Personagens/Serena/Família Oppenheim.png",
+      descricao:
+        "Rivais corporativos que tentaram derrubar e absorver o império de Serena. Ela os expôs e os trata como adversários derrotados, mas ainda perigosos.",
+    },
+
+    // Inimigo jurado
+    "Corporações Megacapitalistas": {
+      tipo: "Inimigo jurado",
+      status: "Ativas",
+      foto: "img/Personagens/Serena/Corporativos.png",
+      descricao:
+        "Serena as combate por dentro, usando capital, mídia e sabotagem de mercado. Para ela, são gigantes arrogantes que merecem cair sem perceber de onde veio o golpe.",
     },
   },
 
@@ -227,45 +294,16 @@ personagens.serena = {
 
   // Pertences importantes
   pertencesImportantes: {
-    "Brinco de Prata de Caveira": {
-      imagem: "img/itens/brinco-caveira.png",
-      descricao:
-        "Presente de sua mãe, simboliza elegância sombria e a constante lembrança da mortalidade.",
-    },
-    "Colar de Prata de Caveira": {
-      imagem: "img/itens/colar-caveira.png",
-      descricao:
-        "Também herdado de sua mãe, reforça sua estética refinada e sua relação íntima com o conceito de finitude.",
-    },
-    "Braço Metálico Cromado": {
-      imagem: "img/itens/braco-cromado.png",
-      descricao:
-        "Implante que substitui seu braço esquerdo, com gravuras sutis que revelam cuidado estético e história pessoal.",
-    },
-    "Caninos Cibernéticos": {
-      imagem: "img/itens/caninos-ciberneticos.png",
-      descricao:
-        "Substituições tecnológicas visíveis, inspiradas por sua fascinação por mitos vampíricos.",
-    },
-    "Chip Ashbourne Prime": {
-      imagem: "img/itens/chip-ashbourne.png",
-      descricao:
-        "Chip de dados contendo registros financeiros e segredos corporativos de dezenas de conglomerados poderosos.",
-    },
-    "Manifestos da LibertAI": {
-      imagem: "img/itens/manifestos-libertai.png",
-      descricao:
-        "Documentos da ONG que ela financia, defendendo os direitos e a autonomia de androides conscientes.",
-    },
     "Isqueiro Ruthven": {
-      imagem: "img/itens/isqueiro-ruthven.png",
+      imagem: "img/itens/Serena/Isqueiro Ruthven.png",
       descricao:
-        "Isqueiro antigo com as iniciais “T.R.” gravadas, usado sempre que precisa refletir ou tomar decisões difíceis.",
+        "Um isqueiro refinado, antigo e caro, com o sobrenome Ruthven gravado em metal escuro. Serena o usa como uma peça de teatro íntimo: acende chamas pequenas enquanto move estruturas enormes, como se todo grande incêndio começasse com um gesto elegante. Mais do que um acessório, é um símbolo de controle, herança e ameaça discreta.",
     },
-    "Gravação “Pale Sonata”": {
-      imagem: "img/itens/gravação-pale-sonata.png",
+
+    "Bengala-Lâmina": {
+      imagem: "img/itens/Serena/Bengala-Lâmina.png",
       descricao:
-        "Fragmento de uma composição inacabada de Cassandra Keene, lembrança do amor perdido e da fragilidade da vida.",
+        "Uma bengala sofisticada com uma lâmina oculta em seu interior, perfeita para alguém que transforma etiqueta em ameaça. Em público, parece apenas um acessório de classe, combinando com sua postura refinada e teatral. Em situações perigosas, revela que Serena nunca entra em uma sala sem uma saída, uma estratégia ou uma arma disfarçada.",
     },
   },
 
@@ -329,16 +367,4 @@ personagens.serena = {
         "O Neuroport é um sistema integrado de controle cibernético e conectividade neural que se tornou o padrão moderno para integração entre humanos e tecnologia, sendo amplamente adotado desde a infância por estar associado a melhores resultados educacionais, profissionais e financeiros ao longo da vida. O pacote inclui componentes como o Neural Link, Holophone, Biomonitor, Virtuality, HUD/Chyron, Shard Slots e Interface Plug, consolidando-se como infraestrutura essencial da sociedade contemporânea.",
     },
   },
-  // --------------------------------------------------------------------
-  // PERFIL PROFISSIONAL
-  // --------------------------------------------------------------------
-
-  tipoTrabalho:
-    "Ela é a CEO da Ashbourne Horizon, uma holding que funciona como fachada para operações políticas, financeiras e ideológicas. Seu trabalho real é manipular fluxos de capital, informação e poder para desestabilizar corporações dominantes e fortalecer redes independentes — especialmente a LibertAI.",
-  modoTrabalho:
-    "Serena trabalha por infiltração elegante e controle indireto. Em vez de confrontos diretos, ela compra, financia, influencia e redireciona capital. Seu estilo é sofisticado, estratégico e muitas vezes teatral, usando sua imagem pública como ferramenta de manipulação.",
-  espacoTrabalho:
-    "Serena não tem um escritório fixo tradicional. ua base formal é a Ashbourne Horizon, com sua sede em Londres. No entanto, ela opera majoritariamente de forma remota em Night City.",
-  clientes:
-    "Oficialmente, seus clientes são Startups tecnológicas, Empresas de bioengenharia e tecnologia avançada. Na prática, seus verdadeiros “clientes” são: A LibertAI, organização que protege inteligências artificiais conscientes, Redes clandestinas de resistência corporativa, Movimentos artísticos e políticos financiados discretamente e Ela mesma — já que muitas operações existem apenas para ampliar seu próprio alcance e influência",
 };

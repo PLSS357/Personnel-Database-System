@@ -6,11 +6,11 @@ personagens.Ícaro = {
   nome: "Ícaro Barbosa",
   funcao: "Mecânico / Piloto / Artista de Rua",
   id: "84-0380-55",
-  foto: "img/Personagens/Ícaro.png",
+  foto: "img/Personagens/Ícaro/Ícaro Barbosa.png",
   ativo: true, // (true = ativo, false = inativo, null = desconhecido)
 
   // Dados vitais
-  localNascimento: "Mooca — Zona Leste de São Paulo, Brasil",
+  localNascimento: "Mooca, Zona Leste de São Paulo, Brasil",
   dataNascimento: "13/AUG/2064",
   idade: 27,
   altura: "1,83 m",
@@ -39,23 +39,6 @@ personagens.Ícaro = {
     "Liberdade, motor funcionando, lealdade e a sensação de vento na cara.",
 
   // --------------------------------------------------------------------
-  // HISTÓRICO FAMILIAR
-  // --------------------------------------------------------------------
-
-  antecedentesFamiliares: [
-    "Mãe: Isaura Barbosa — costureira aposentada, forte e prática; sempre acreditou no filho, mesmo sem entender suas loucuras.",
-    "Irmão: Elias Barbosa — 22 anos, trabalha como técnico de painéis solares na Zona Leste. Diferente de Ícaro, é disciplinado e organizado.",
-    "Pai: desaparecido desde que Ícaro tinha 2 anos; nunca foi um assunto importante.",
-    "Apesar das dificuldades, a família sempre se manteve unida. Elias hoje sustenta a casa e cuida da mãe, que sonha em ver os dois juntos novamente — mesmo que por chamada de vídeo.",
-  ],
-  pessoaMaisImportante: "",
-  tragedia: [
-    "A família Barbosa nunca passou fome, mas viveu sempre no limite.",
-    "Dívidas, apagões, falta de oportunidades e as corporações engolindo o bairro tornaram a vida dura — mas também ensinaram Ícaro a improvisar.",
-    "A verdadeira tragédia foi a monotonia que ele se recusou a aceitar.",
-  ],
-
-  // --------------------------------------------------------------------
   // HISTÓRICO PESSOAL
   // --------------------------------------------------------------------
 
@@ -68,183 +51,233 @@ personagens.Ícaro = {
   // --------------------------------------------------------------------
   // RELAÇÕES INTERPESSOAIS
   // --------------------------------------------------------------------
-  // Tipos de relação válidos:
-  // "romantic", "friend", "enemy", "neutral, "family", "ex", "pet", "rival"
 
   relacoes: {
-    "Oliver “Viole” Miller": {
-      tipo: "friend",
-      foto: "img/Personagens/Oliver.png",
+    // Aliado Incondicional
+    "Oliver Miller": {
+      tipo: "Aliado Incondicional",
+      status: "Vivo",
+      foto: "img/Personagens/Oliver/Oliver Miller.png",
       descricao:
-        "Ícaro respeita Oliver como um comandante indispensável, mesmo quando suas decisões parecem pura loucura. Viole aposta alto, cruza limites e confia no caos — e Ícaro confia nele porque já sobreviveu vezes suficientes para saber que, estranhamente, funciona.",
-    },
-
-    "Tessia Amberine": {
-      tipo: "friend",
-      foto: "img/Personagens/Tessia.png",
-      descricao:
-        "O respeito foi imediato. Tessia tem tom firme, postura inabalável e um olhar que identifica falhas antes mesmo que elas existam. Ícaro sempre se oferece para levá-la de carro, dirigindo devagar demais para alguém como ele — um gesto silencioso de confiança.",
-    },
-
-    "Kimber Destaro": {
-      tipo: "friend",
-      foto: "img/Personagens/Kimber.png",
-      descricao:
-        "Provocar Kimber é um hobby. Ícaro gosta quando ela perde a paciência, reclama do funk ecoando pela oficina e ameaça bater nele toda semana. Ele responde sempre com o mesmo sorriso convencido, sabendo exatamente até onde pode ir.",
-    },
-
-    "Aiden Fowler": {
-      tipo: "friend",
-      foto: "img/Personagens/Aiden.png",
-      descricao:
-        "Eles se entendem no improviso absoluto. Aiden arromba portas; Ícaro atravessa paredes. Amigos de madrugada, café horrível, planos mal pensados e decisões que só fazem sentido depois que dão certo.",
-    },
-
-    Cypher: {
-      tipo: "friend",
-      foto: "img/Personagens/Cypher.png",
-      descricao:
-        "Cypher já compôs uma música inteira sobre o Uno Amarelo. Ícaro respondeu criando um funk de garagem com batidas improvisadas em panelas e lataria. Cypher ajudou na mixagem — e os dois ainda discutem qual versão é melhor.",
-    },
-
-    Nyx: {
-      tipo: "friend",
-      foto: "img/Personagens/Nyx.png",
-      descricao:
-        "Ícaro acredita que Nyx deveria cantar bossa nova, samba ou pagode. Ele respeita profundamente a arte dela e adora desafiá-la musicalmente, sempre tentando puxá-la para novos ritmos sem jamais diminuir o talento que ela já tem.",
-    },
-
-    Shinigami: {
-      tipo: "neutral",
-      foto: "img/Personagens/Shinigami.png",
-      descricao:
-        "Shinigami é um mistério que Ícaro não tenta decifrar. Ele faz piadas; Shinigami responde com silêncio e um leve balançar de cabeça. Às vezes, depois de horas calado, solta uma única frase que deixa Ícaro pensando por uma semana inteira.",
-    },
-
-    "Serena Ashbourne": {
-      tipo: "friend",
-      foto: "img/Personagens/Serena.png",
-      descricao:
-        "Serena vê Ícaro como algo exótico: o jeito brasileiro, o neon improvisado, a tatuagem cibernética torta. Ícaro adora o drama dela — Serena entra em qualquer sala como se estivesse descendo de um helicóptero. Em troca, ela banca peças raríssimas para o Uno.",
-    },
-
-    Ninvega: {
-      tipo: "friend",
-      foto: "img/Personagens/Ninvega.png",
-      descricao:
-        "Ícaro venera Ninvega como o primeiro robô que demonstrou sentir algo diante dele. Respeita sua gentileza, poesia e análise emocional profunda — mas isso não o impede de tentar instalar neon no chassis quando Ninvega não está olhando.",
+        "Ícaro respeita Oliver como um comandante indispensável. Mesmo achando algumas decisões dele pura loucura, confia porque já viu esse caos funcionar. Para Ícaro, Oliver é o tipo de pessoa que aposta alto, cruza limites e ainda assim segura o grupo de pé.",
     },
 
     Lyra: {
-      tipo: "friend",
-      foto: "img/Personagens/Lyra.png",
+      tipo: "Aliado Incondicional",
+      status: "Viva",
+      foto: "img/Personagens/Lyra/Lyra.png",
       descricao:
-        "Ícaro tenta ensinar memes brasileiros para Lyra; ela responde com perguntas filosóficas sobre moralidade e existência. Ele a vê como alguém ainda montando as peças da humanidade — e quer ajudá-la a encontrar ritmo, humor e identidade.",
+        "Ícaro vê Lyra como alguém ainda montando as próprias peças. Tenta ensiná-la memes, humor e ritmo brasileiro, mas também a protege com seriedade. Para ele, Lyra representa uma consciência nova que merece liberdade e identidade.",
     },
 
-    "Priya Ellison": {
-      tipo: "friend",
-      foto: "img/Personagens/Priya.png",
+    // Muito positivo
+    "Tessia Amberine": {
+      tipo: "Muito positivo",
+      status: "Viva",
+      foto: "img/Personagens/Tessia/Tessia Amberine.png",
       descricao:
-        "Ícaro vive tentando fazer Priya rir com piadas ruins e comentários absurdos. Ela resiste, mas às vezes deixa escapar um sorriso discreto. Trabalham juntos carregando peças pesadas e depois dividem refrigerante ou cerveja barata.",
+        "Ícaro respeita Tessia de imediato. Vê nela firmeza, precisão e uma presença que identifica problemas antes que eles aconteçam.",
     },
 
-    "Dominic D. V. Chier": {
-      tipo: "friend",
-      foto: "img/Personagens/Dominic.png",
+    "Aiden Fowler": {
+      tipo: "Muito positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Aiden/Aiden Fowler.png",
       descricao:
-        "Dominic e Ícaro combinam destruição e precisão. Dominic quebra tudo; Ícaro reconstrói. Dominic grita em francês; Ícaro responde com funk alto. Juntos, o caos sempre termina funcionando.",
+        "Ícaro vê Aiden como parceiro de improviso. É uma amizade de madrugada, café ruim, risco e confiança.",
     },
 
-    "Kleber Junior": {
-      tipo: "friend",
-      foto: "img/Personagens/Kleber.png",
+    Ninvega: {
+      tipo: "Muito positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Ninvega/Ninvega.png",
       descricao:
-        "Ícaro adora o conceito do Cthulhu Neon como piada interna. Não entende metade das teorias de Kleber sobre religião e luz cósmica, mas respeita sua devoção e intensidade espiritual.",
+        "Ícaro venera Ninvega como o primeiro robô que demonstrou sentir algo. Pelo menos, o primeiro que ele conheceu. Respeita sua gentileza, poesia e profundidade emocional, embora isso não impeça Ícaro de querer instalar neon no chassis dele.",
     },
 
     Mirai: {
-      tipo: "pet",
-      foto: "img/Personagens/Mirai.png",
+      tipo: "Muito positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Mirai/Mirai.png",
       descricao:
-        "Ícaro trata Mirai como um mascote hiperativo. Ama quando ele dança, odeia quando monta playlists de K-pop às três da manhã. No fundo, sente que Mirai tem alma — e isso o toca mais do que ele admite.",
+        "Ícaro trata Mirai como mascote hiperativo e quase como copiloto. Ama quando ele dança e tenta modificá-lo com LEDs e buzinas. No fundo, acredita que Mirai tem alma.",
     },
 
-    "Valentina Rocha": {
-      tipo: "ex",
-      foto: "img/Personagens/Valentina.png",
+    "Kaede Komatsu": {
+      tipo: "Muito positivo",
+      status: "Viva",
+      foto: "img/Personagens/Ícaro/Kaede Komatsu.png",
       descricao:
-        "Tatuadora da Mooca e primeiro grande amor adolescente de Ícaro. O relacionamento terminou quando ela se mudou para Curitiba, deixando mais saudade do que ressentimento.",
+        "Kaede é namorada de Ícaro e presidente da Black Creek Production. Ícaro se apaixonou primeiro pela presença dela: a elegância, o poder e a maturidade de alguém que não precisa levantar a voz para dominar uma sala. Para ele, Kaede é intimidadora de um jeito bonito, uma mulher que parece estar sempre três passos à frente. O relacionamento dos dois é pouco convencional, especialmente por envolver também Akane, mas Ícaro vê Kaede como uma das figuras mais fortes, fascinantes e importantes da vida dele.",
     },
 
-    "Rina Okada": {
-      tipo: "ex",
-      foto: "img/Personagens/Rina.png",
+    "Akane Komatsu": {
+      tipo: "Muito positivo",
+      status: "Viva",
+      foto: "img/Personagens/Ícaro/Akane Komatsu.png",
       descricao:
-        "Pilota de drift intensa e impulsiva. O namoro acabou depois que ela destruiu metade da garagem de Ícaro durante um ataque de ciúmes, levando junto qualquer chance de reconciliação.",
+        "Akane também é namorada de Ícaro. A relação começou com flertes nos bastidores de videoclipes e virou algo bem mais complexo. Kaede e Akane são as namoradas dele; é um relacionamento estranho, pouco convencional e difícil de explicar por fora, mas funciona… de alguma forma.",
     },
 
-    "Daisy Moreau": {
-      tipo: "ex",
-      foto: "img/Personagens/Daisy.png",
+    "Isaura Barbosa": {
+      tipo: "Muito positivo",
+      status: "Viva",
+      foto: "img/Personagens/Ícaro/Isaura Barbosa.png",
       descricao:
-        "Nômade francesa e caso breve, porém marcante. Terminou quando Daisy roubou as velas de ignição do Uno como 'vingança poética', desaparecendo logo depois.",
+        "Isaura é a mãe de Ícaro. Costureira aposentada, forte e prática. Para Ícaro, ela representa casa, origem e o tipo de amor que não precisa entender tudo para apoiar.",
+    },
+
+    "Elias Barbosa": {
+      tipo: "Muito positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Ícaro/Elias Barbosa.png",
+      descricao:
+        "Elias é o irmão mais novo de Ícaro. Mais disciplinado e organizado, trabalha como técnico de painéis solares e ajuda a cuidar da casa e da mãe. Ícaro pode ser o caos da família, mas vê Elias como alguém essencial, firme e confiável.",
+    },
+
+    // Positivo
+    Ciel: {
+      tipo: "Positivo",
+      status: "Viva",
+      foto: "img/Personagens/Tessia/Ciel.png",
+      descricao:
+        "Ciel é a filha adotiva de Oliver e Tessia. Por isso, Ícaro a enxerga como parte da família. Ele não necessariamente tem uma relação tão intensa com ela quanto tem com Oliver, mas toma muito cuidado com ela.",
+    },
+
+    "Kimber Destaro": {
+      tipo: "Positivo",
+      status: "Viva",
+      foto: "img/Personagens/Kimber/Kimber Destaro.png",
+      descricao:
+        "Ícaro gosta de provocar Kimber. Para ele, as reclamações dela sobre o barulho, o funk e o caos da oficina fazem parte da amizade. Mesmo brincando com a paciência dela, sabe exatamente até onde pode ir e reconhece o valor dela.",
+    },
+
+    Cypher: {
+      tipo: "Positivo",
+      status: "Morto",
+      foto: "img/Personagens/Cypher.png",
+      descricao:
+        "Ícaro via Cypher como alguém artisticamente estranho, mas genial. Os dois se conectavam pela música e pelo absurdo.",
+    },
+
+    Nyx: {
+      tipo: "Positivo",
+      status: "Morta",
+      foto: "img/Personagens/Nyx.png",
+      descricao:
+        "Ícaro respeita a arte de Nyx. Tentava puxá-la para ritmos brasileiros, porque acreditava que a música dela ainda poderia descobrir novas cores.",
+    },
+
+    "Serena Ashbourne": {
+      tipo: "Positivo",
+      status: "Viva",
+      foto: "img/Personagens/Serena/Serena Ashbourne.png",
+      descricao:
+        "Ícaro gosta do drama de Serena. Para ele, ela entra em qualquer ambiente como se estivesse num espetáculo. Também valoriza o fato de ela bancar peças raras para o Uno, mesmo que veja nela uma extravagância quase teatral.",
+    },
+
+    "Priya Ellison": {
+      tipo: "Positivo",
+      status: "Viva",
+      foto: "img/Personagens/Priya/Priya Ellison.png",
+      descricao:
+        "Ícaro tenta fazer Priya rir com piadas ruins e comentários absurdos. Gosta da força direta dela e da forma como ela não suaviza as coisas.",
+    },
+
+    "Dominic Don Von Chier": {
+      tipo: "Positivo",
+      status: "Morto",
+      foto: "img/Personagens/Dominic Don Von Chier.png",
+      descricao:
+        "Dominic e Ícaro eram uma combinação de destruição e reconstrução. Dominic quebrava, Ícaro consertava. Dominic gritava, Ícaro colocava funk alto. De algum jeito absurdo, os dois funcionavam juntos, principalmente quando a missão já tinha virado bagunça.",
     },
 
     "Nayara Santos": {
-      tipo: "ex",
-      foto: "img/Personagens/Nayara.png",
+      tipo: "Positivo",
+      status: "Viva",
+      foto: "img/Personagens/Ícaro/Nayara Santos.png",
       descricao:
-        "DJ carioca cheia de energia. Hoje são amigos, mas o namoro era mais barulho do que sintonia real, com batidas altas e pouco alinhamento emocional.",
+        "Nayara é uma ex que virou amizade. Ícaro reconhece que o namoro tinha mais barulho do que sintonia emocional, mas ainda gosta da energia dela. Para ele, ela combina melhor como parceira de rolê, música e boas histórias.",
+    },
+
+    // Neutro/positivo
+    Shinigami: {
+      tipo: "Neutro/positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Shinigami.png",
+      descricao:
+        "Ícaro não tenta decifrar Shinigami. Ele o vê como um mistério respeitável.",
+    },
+
+    "Kleber Junior": {
+      tipo: "Neutro/positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Kleber Junior.png",
+      descricao:
+        "Ícaro acha o “Cthulhu Neon” uma piada interna maravilhosa. Não entende metade das teorias de Kleber, mas respeita. Kleber é estranho, mas não descartável.",
+    },
+
+    "Valentina Rocha": {
+      tipo: "Neutro/positivo",
+      status: "Viva",
+      foto: "img/Personagens/Ícaro/Valentina Rocha.png",
+      descricao:
+        "Valentina foi o primeiro grande amor de Ícaro. Ele a lembra mais com saudade do que com ressentimento. A relação terminou quando ela se mudou para Curitiba.",
+    },
+
+    // Neutro
+    // Nenhum personagem nesta categoria.
+
+    // Neutro/negativo
+    "Daisy Moreau": {
+      tipo: "Neutro/negativo",
+      status: "Desconhecido",
+      foto: "img/Personagens/Ícaro/Daisy Moreau.png",
+      descricao:
+        "Daisy foi um caso breve, marcante e irritante. Ícaro ainda lembra dela como alguém livre, mas também como quem roubou as velas de ignição do Uno.",
+    },
+
+    // Negativo
+    "Rina Okada": {
+      tipo: "Negativo",
+      status: "Detida",
+      foto: "img/Personagens/Ícaro/Rina Okada.png",
+      descricao:
+        "Ícaro vê Rina como alguém que passou do limite. O namoro terminou mal depois que ela destruiu parte da garagem dele em um ataque de ciúmes. Para ele, qualquer chance de reconciliação ficou soterrada junto com os danos.",
     },
 
     "Bianca Graça": {
-      tipo: "ex",
-      foto: "img/Personagens/Bianca.png",
+      tipo: "Negativo",
+      status: "Morta",
+      foto: "img/Personagens/Ícaro/Bianca Graça.png",
       descricao:
-        "Grafiteira parceira de Ícaro na Mooca. O relacionamento acabou quando ela decidiu se alistar na divisão acolchoada de segurança corporativa, algo que Ícaro sentiu como uma traição aos ideais deles.",
+        "Bianca foi parceira de grafite e parte importante da vida de Ícaro na Mooca. O rompimento ficou pesado quando ela se alinhou a uma divisão corporativa de segurança, algo que Ícaro sentiu como traição aos ideais que dividiam.",
     },
 
-    "Kaede Kurokawa": {
-      tipo: "romantic",
-      foto: "img/Personagens/Kaede.png",
-      descricao:
-        "Atual relacionamento. Presidente da Black Creek Production. Ícaro se apaixonou pela presença imponente de Kaede: elegância, poder, maturidade e controle absoluto do ambiente.",
-    },
-
-    "Akane Kurokawa": {
-      tipo: "romantic",
-      foto: "img/Personagens/Akane.png",
-      descricao:
-        "Atriz e filha de Kaede. O relacionamento começou com flertes nos bastidores de videoclipes e evoluiu para algo mais complexo. Atualmente, Ícaro mantém o relacionamento com ambas.",
-    },
-
+    // Muito negativo
     "Los Halcones del Asfalto": {
-      tipo: "enemy",
-      foto: "img/Personagens/Halcones.png",
+      tipo: "Muito negativo",
+      status: "Ativos",
+      foto: "img/Personagens/Ícaro/Los Halcones del Asfalto.png",
       descricao:
-        "Grupo rival de corredores mexicanos que jurou vingança depois que Ícaro venceu cinco corridas consecutivas usando o Uno Amarelo, humilhando sua reputação.",
+        "São rivais diretos de corrida. Ícaro humilhou a reputação deles vencendo cinco corridas consecutivas com o Uno Amarelo, e o grupo nunca engoliu isso. Para ele, são perigosos, orgulhosos e bons o bastante para merecer atenção, mas não respeito pleno.",
     },
 
     "Oficina Padrão de Ouro": {
-      tipo: "enemy",
-      foto: "img/Personagens/Oficina Padrão Ouro.png",
+      tipo: "Muito negativo",
+      status: "Ativa",
+      foto: "img/Personagens/Ícaro/Oficina Padrão de Ouro.png",
       descricao:
-        "Corporação de mecânica de luxo que acusa Ícaro de roubar clientes e peças. O conflito é constante, movido por inveja, mercado e ideologia.",
+        "Representa tudo que Ícaro detesta em mecânica corporativa: luxo, elitismo, controle de mercado e desprezo por quem vive de gambiarra honesta. Eles acusaram Ícaro de roubar clientes e peças; ele enxerga o conflito como inveja deles.",
     },
 
+    // Inimigo jurado
     "Milícia da Marginal": {
-      tipo: "enemy",
-      foto: "img/Personagens/Milicia Marginal.png",
+      tipo: "Inimigo jurado",
+      status: "Ativa",
+      foto: "img/Personagens/Ícaro/Milícia da Marginal.png",
       descricao:
-        "Bando armado que controla trechos da antiga Rodovia dos Bandeirantes. Ícaro já cruzou seus interesses vezes demais para não ser considerado um alvo.",
-    },
-
-    "Cabo Augusto “Guto Radar”": {
-      tipo: "enemy",
-      foto: "img/Personagens/Cabo Augusto.png",
-      descricao:
-        "Policial rodoviário obcecado em prender Ícaro. Há três anos tenta capturá-lo sem sucesso, tornando a perseguição algo pessoal.",
+        "A Milícia da Marginal é ameaça. Eles controlam trechos da Rodovia dos Bandeirantes e Ícaro cruzou seus interesses vezes demais. Para ele, esse grupo não é competição: é alvo, perigo e um problema que precisava ser enfrentado.",
     },
   },
 
@@ -254,46 +287,25 @@ personagens.Ícaro = {
 
   // Pertences importantes
   pertencesImportantes: {
-    "Fiat Uno Amarelo 1995": {
-      imagem: "img/itens/Uno_Amarelo.png",
+    "Fiat Uno Amarelo": {
+      imagem: "img/itens/Ícaro/Fiat Uno Amarelo.png",
       descricao:
-        "Um Fiat Uno 1995 pintado de amarelo gritante, extensivamente modificado para corridas ilegais. Motor retrabalhado, suspensão reforçada e interior simplificado ao extremo. Mais do que um carro, é um símbolo de liberdade, risco e velocidade.",
+        "Um Fiat Uno 1995 amarelo gritante, modificado por Ícaro para corridas ilegais, fugas urbanas e todo tipo de gambiarra mecânica possível. Barulhento, resistente e absurdo demais para ser ignorado, o carro se tornou uma extensão da própria identidade dele: caótico, improvisado, veloz e orgulhosamente marginal.",
     },
-
-    "Spray Verde Neon": {
-      imagem: "img/itens/Spray_Verde.png",
-      descricao:
-        "Lata de spray verde neon usada para marcações clandestinas. A tinta é altamente visível mesmo no escuro e costuma ser usada para deixar sinais rápidos em muros, asfalto ou estruturas abandonadas.",
-    },
-
     "Óculos Juliet": {
-      imagem: "img/itens/Óculos_Juliet.png",
+      imagem: "img/itens/Ícaro/Óculos Juliet.png",
       descricao:
-        "Óculos escuros de lente curva, quase sempre repousando na testa. Servem tanto como proteção ocular quanto como acessório de identidade, transmitindo atenção constante e prontidão para a ação.",
+        "Óculos de lente curva que Ícaro usa quase como uma assinatura pessoal. Além de proteger os olhos durante corridas, manobras arriscadas e trabalhos em oficina, a Juliet reforça sua imagem provocadora e debochada — quando ela aparece na testa ou no rosto, geralmente significa que alguma ideia imprudente está prestes a acontecer.",
     },
-
-    "Brinco Discreto": {
-      imagem: "img/itens/Brinco_Discreta.png",
+    "Chave Inglesa Cromada": {
+      imagem: "img/itens/Ícaro/Chave Inglesa Cromada.png",
       descricao:
-        "Brinco pequeno e minimalista, usado em apenas uma orelha. Detalhe sutil que equilibra discrição e personalidade, quase imperceptível à primeira vista.",
+        "Uma chave inglesa pesada, cromada e muito bem cuidada, usada por Ícaro tanto para consertar motores quanto para resolver problemas que insistem em ficar no caminho. É uma ferramenta simples, mas confiável, representando sua filosofia de vida: se algo quebrou, ele dá um jeito; se alguém atrapalhou, talvez também precise de ajuste.",
     },
-
-    "Corrente do Avô": {
-      imagem: "img/itens/Corrente_Avô.png",
+    "Spray Verde Neon": {
+      imagem: "img/itens/Ícaro/Spray Verde Neon.png",
       descricao:
-        "Corrente metálica simples que carrega antiga herdada do avô. Funciona como amuleto, memória afetiva e símbolo de continuidade familiar.",
-    },
-
-    "Luvas Táticas": {
-      imagem: "img/itens/Luvas_Táticas.png",
-      descricao:
-        "Luvas resistentes, próprias para proteção das mãos em situações de esforço físico, escaladas improvisadas ou manuseio de ferramentas. Garantem firmeza, aderência e segurança.",
-    },
-
-    "Chave Inglesa": {
-      imagem: "img/itens/Chave-Inglesa.png",
-      descricao:
-        "Ferramenta pesada e confiável, carregada no bolso lateral para acesso rápido. Útil tanto para reparos mecânicos quanto para situações imprevistas que exigem força e improviso.",
+        "Uma lata de spray verde neon usada por Ícaro para marcar muros, pistas, peças, becos e qualquer lugar onde queira deixar sua presença registrada. A cor vibrante brilha sob luz baixa e combina com sua energia caótica, funcionando como uma mistura de assinatura, provocação e arte de rua.",
     },
   },
 
@@ -307,16 +319,4 @@ personagens.Ícaro = {
         "O Neuroport é um sistema integrado de controle cibernético e conectividade neural que se tornou o padrão moderno para integração entre humanos e tecnologia, sendo amplamente adotado desde a infância por estar associado a melhores resultados educacionais, profissionais e financeiros ao longo da vida. O pacote inclui componentes como o Neural Link (sistema nervoso artificial para comunicação cérebro-implantes), Holophone (comunicação por comandos mentais), Biomonitor (monitoramento de sinais vitais), Virtuality (interface para ambientes virtuais), HUD/Chyron (projeção visual de informações contextuais), Shard Slots (para módulos cognitivos) e Interface Plug (conexão direta com sistemas externos). Sua disseminação é tão ampla que existem diversos modelos de financiamento e aquisição, enquanto indivíduos não integrados enfrentam desvantagens competitivas significativas em ambientes tecnológicos avançados, consolidando o Neuroport como infraestrutura essencial da sociedade contemporânea.",
     },
   },
-  // --------------------------------------------------------------------
-  // PERFIL PROFISSIONAL
-  // --------------------------------------------------------------------
-
-  tipoTrabalho:
-    "Mecânica automotiva improvisada, preparação de carros clandestinos, reparo de emergência e customização não registrada",
-  modoTrabalho:
-    "Aprende fazendo, conserta sob pressão, usa gambiarra inteligente, adapta peças incompatíveis e resolve problemas na hora — sem manual",
-  espacoTrabalho:
-    "Oficinas abandonadas, garagens improvisadas, beira de estrada, pátios industriais e qualquer lugar onde o carro consiga parar",
-  clientes:
-    "Corredores ilegais, nômades, contrabandistas, artistas de rua, motoristas sem grana e gente que não pode confiar em oficinas corporativas",
 };

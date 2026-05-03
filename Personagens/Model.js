@@ -39,20 +39,6 @@ personagens.NAME = {
     "",
 
   // --------------------------------------------------------------------
-  // HISTÓRICO FAMILIAR
-  // --------------------------------------------------------------------
-
-  antecedentesFamiliares: [
-    "Mãe: ",
-    "Pai: ",
-  ],
-  pessoaMaisImportante:
-    "",
-  tragedia: [
-    "",
-  ],
-
-  // --------------------------------------------------------------------
   // HISTÓRICO PESSOAL
   // --------------------------------------------------------------------
 
@@ -63,12 +49,11 @@ personagens.NAME = {
   // --------------------------------------------------------------------
   // RELAÇÕES INTERPESSOAIS
   // --------------------------------------------------------------------
-  // Tipos de relação válidos:
-  // "romantic", "friend", "enemy", "neutral, "family", "ex", "pet", "rival"
 
   relacoes: {
     "": {
       tipo: "",
+      status: "",
       foto: "img/Personagens/",
       descricao:
         "",
@@ -97,12 +82,4 @@ personagens.NAME = {
       descricao: "",
     },
   },
-  // --------------------------------------------------------------------
-  // PERFIL PROFISSIONAL
-  // --------------------------------------------------------------------
-
-  tipoTrabalho: "",
-  modoTrabalho: "",
-  espacoTrabalho: "",
-  clientes: "",
 };

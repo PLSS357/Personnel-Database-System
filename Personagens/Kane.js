@@ -6,7 +6,7 @@ personagens.kane = {
   nome: "Kane Graves",
   funcao: "Solo | Lenda | Fundador da Organização XIII (Rank I)",
   id: "69-9333-83",
-  foto: "img/Personagens/Kane.png",
+  foto: "img/Personagens/Kane/Kane Graves.png",
   ativo: false, // (true = ativo, false = inativo, null = desconhecido)
 
   // Dados vitais
@@ -40,26 +40,6 @@ personagens.kane = {
     "A família que construiu: Oliver, Raze, Kimber e os membros centrais da XIII. A música que criaram juntos. A sensação de liberdade que buscava em cada missão.",
 
   // --------------------------------------------------------------------
-  // HISTÓRICO FAMILIAR
-  // --------------------------------------------------------------------
-
-  antecedentesFamiliares: [
-    "Mãe: Marla Graves, Técnica de manutenção elétrica, trabalhava em subestações de energia abandonadas – Falecida em 2070 devido a um acidente de trabalho.",
-    "Pai: Desconhecido – Um mercenário fracassado morto em um trabalho mal-sucedido, um ex-soldado envolvido com contrabando, ou até um corporativo eliminado por saber demais. Kane nunca descobriu a verdade, nem quis ir atrás.",
-  ],
-  pessoaMaisImportante:
-    "Todos da Organização XIII, especialmente Oliver Miller, por o ver como um irmão mais novo.",
-  tragedia: [
-    "1. A morte de sua mãe",
-    "O acidente que matou Marla Graves foi encoberto por documentos corporativos. Anos depois, um informante anônimo entregou a Kane relatórios indicando envolvimento da Arasaka.",
-    "     ",
-    "2. A morte própria morte",
-    "Em 17 de novembro de 2085, durante uma operação contra a Arasaka, Kane foi traído pelo homem que ele considerava como família: Raze Lambert.",
-    "Raze, já aliado à corporação, plantou explosivos numa estrutura abandonada onde a XIII havia montado uma base temporária.",
-    "Kane morreu na detonação, protegendo Oliver com o próprio corpo — mas o impacto devastou Viole, deixando-o desfigurado e em coma.",
-  ],
-
-  // --------------------------------------------------------------------
   // HISTÓRICO PESSOAL
   // --------------------------------------------------------------------
 
@@ -77,106 +57,297 @@ personagens.kane = {
   // --------------------------------------------------------------------
   // RELAÇÕES INTERPESSOAIS
   // --------------------------------------------------------------------
-  // Tipos de relação válidos:
-  // "romantic", "friend", "enemy", "neutral, "family", "ex", "pet", "rival"
 
   relacoes: {
+    // Aliado Incondicional
     "Oliver Miller": {
-      tipo: "family",
-      foto: "img/Personagens/Oliver.png",
+      tipo: "Aliado Incondicional",
+      status: "Vivo",
+      foto: "img/Personagens/Oliver/Oliver Miller.png",
       descricao:
-        "Kane via Oliver como espelho. Um garoto que sofreu cedo demais, como ele. Kane acreditava genuinamente que Oliver seria melhor do que ele e por acreditar nisso deu sua vida para protegê-lo.",
-    },
-
-    "Dakota Veyriss": {
-      tipo: "neutral",
-      foto: "img/Personagens/Veyriss.png",
-      descricao:
-        "Ele a respeitava como combatente, mas discordava absolutamente da sua filosofia. Eles discutiam quase todas as semanas. Apesar disso, confiava que, se morresse, Dakota manteria a XIII funcionando. Ele só temia como ela faria isso.",
+        "Kane via Oliver como um irmão mais novo e como alguém que poderia ser melhor do que ele. Deu a vida para protegê-lo.",
     },
 
     "Murphy Elliot": {
-      tipo: "friend",
-      foto: "img/Personagens/Murphy.png",
+      tipo: "Aliado Incondicional",
+      status: "Vivo",
+      foto: "img/Personagens/Kane/XIII/Murphy Elliot.png",
       descricao:
-        "Murphy sempre foi o amigo mais leal de Kane, ainda antes da XIII. Um técnico capaz de consertar qualquer coisa. Ele nunca desejou ser um mercenário, então quando finalmente abriu seu bar, Kane foi o primeiro cliente.",
+        "Um dos amigos mais leais de Kane. Via Murphy como alguém confiável, técnico e essencial fora da violência da XIII.",
     },
 
     "Kimber Destaro": {
-      tipo: "family",
-      foto: "img/Personagens/Kimber.png",
+      tipo: "Aliado Incondicional",
+      status: "Viva",
+      foto: "img/Personagens/Kimber/Kimber Destaro.png",
       descricao:
-        "Quando chegou a Night City, Kimber dormia dentro de seu carro. Kane viu potencial nela e a ajudou. Kimber entrou para a XIII não por ambição, mas por gratidão. Quando Dakota saiu, Kimber assumiu como segunda em comando.",
+        "Kane viu potencial nela quando estava perdida em Night City. Ajudou Kimber e confiou nela a ponto de vê-la como peça central da XIII.",
+    },
+
+    // Muito positivo
+    "Marla Graves": {
+      tipo: "Muito positivo",
+      status: "Morta",
+      foto: "img/Personagens/Kane/Marla Graves.png",
+      descricao:
+        "A mãe foi uma perda fundadora na vida dele. A morte dela marcou seu ódio contra o controle corporativo.",
     },
 
     "Aiden Fowler": {
-      tipo: "friend",
-      foto: "img/Personagens/Aiden.png",
+      tipo: "Muito positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Aiden/Aiden Fowler.png",
       descricao:
-        "Aiden entrou na XIII em 2083. Um jovem com a mente tão rápida que parecia sempre à beira do colapso. Kane já tinha visto mentes serem consumidas pelo ciberespaço. Então protegia Aiden, porque sabia que ele os levaria para o futuro.",
-    },
-
-    "Raze Lambert": {
-      tipo: "family",
-      foto: "img/Personagens/Raze.png",
-      descricao:
-        "Kane sempre soube que Raze era genial, mas havia uma escuridão à sua volta. Kane tentava redirecionar esse ódio, mas viver à sombra de Kane foi algo que Raze nunca conseguiu suportar. Quando morreu, Kane não sentiu ódio, apenas tristeza.",
+        "Kane via Aiden como uma mente brilhante, mas vulnerável ao ciberespaço. Protegia-o por acreditar que ele representava o futuro.",
     },
 
     "Ivy Naranjo": {
-      tipo: "friend",
-      foto: "img/Personagens/Ivy.png",
+      tipo: "Muito positivo",
+      status: "Desconhecido",
+      foto: "img/Personagens/Ivy/Ivy Naranjo.png",
       descricao:
-        "Ivy entrou aos 16 anos e imediatamente ascendeu ao Rank IV. Quando Ivy e Oliver começaram a se relacionar, Kane passou a tratá-la como família. Após sua saída da XIII, Kane continuou acreditando que ela sobreviveria ao mundo.",
-    },
-
-    Arasaka: {
-      tipo: "enemy",
-      foto: "img/arasaka/arasaka-logo.png",
-      descricao:
-        "Desde jovem, Kane entendeu que qualquer um que ousasse operar no submundo de Night City por tempo suficiente inevitavelmente cruzaria o caminho da corporação. E Kane estava disposto a confrontar e vencer.",
-    },
-
-    "Gangue Laminares": {
-      tipo: "enemy",
-      foto: "img/Personagens/Laminares.png",
-      descricao:
-        "Ao contrário da Arasaka, a relação entre Kane e os Laminares era pessoal. Os Laminares representavam tudo o que ele odiava: gente que se achava predadora quando, na verdade, eram só chacais com lâminas.",
-    },
-
-    "Harper Shaw": {
-      tipo: "enemy",
-      foto: "img/Personagens/Harper.png",
-      descricao:
-        "Harper era uma das solos mais fortes da XIII. Ela concordava com Veyriss, acreditava que a gangue deveria se tornar algo maior. Após uma grande briga, ela saiu da gangue e jurou que um dia derrubaria Kane.",
-    },
-
-    "Alys Verona": {
-      tipo: "ex",
-      foto: "img/Personagens/Alys.png",
-      descricao:
-        "Netrunner independente; Kane contratou Alys para decodificar arquivos corporativos da Kendachi. O relacionamento acabou quando tiveram algumas discussões sérias.",
+        "Admirava sua coragem e convicção. Quando Ivy se aproximou de Oliver, Kane passou a tratá-la quase como família.",
     },
 
     "Irina Sokolova": {
-      tipo: "romantic",
-      foto: "img/Personagens/Irina.png",
+      tipo: "Muito positivo",
+      status: "Viva",
+      foto: "img/Personagens/Kane/Irina Sokolova.png",
       descricao:
-        "Medicânica clandestina; Foi o relacionamento mais saudável da vida de Kane e terminou com uma amizade colorida entre os dois, apesar dela ainda gostar dele. Após a morte dele, ela saiu de Night City.",
+        "Foi um dos amores mais saudáveis de Kane. Terminaram, reataram e ficaram juntos até a morte dele; devastada, Irina retornou à Rússia.",
     },
 
+    "Basil Crow": {
+      tipo: "Muito positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Kane/XIII/Basil Crow.png",
+      descricao:
+        "Kane conheceu Basil em uma luta clandestina onde todos riam dele por ser baixo. Basil venceu três homens maiores usando seus braços de aço como marretas. Kane não o recrutou por pena, mas porque viu nele uma raiva disciplinada. Basil passou a respeitar Kane porque foi um dos poucos que nunca tratou seu tamanho como fraqueza.",
+    },
+
+    "Clint Westwood": {
+      tipo: "Muito positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Kane/XIII/Clint Westwood.png",
+      descricao:
+        "Clint chamou a atenção de Kane ao vencer um tiroteio sem desperdiçar munição. O terceiro braço robótico permitia que ele recarregasse, mirasse e atirasse quase ao mesmo tempo. Kane achava seu estilo cowboy exagerado, mas respeitava sua eficiência. Entre eles havia uma confiança simples: quando Clint estava no alto, ninguém avançava sem pagar caro.",
+    },
+
+    "Eden Reid": {
+      tipo: "Muito positivo",
+      status: "Morto",
+      foto: "img/Personagens/Kane/XIII/Eden Reid.png",
+      descricao:
+        "Eden era um jogador de basquete rebelde que Kane encontrou fugindo de dívidas e policiais corporativos. Kane viu nele reflexos, impulsividade e uma necessidade enorme de pertencer a algo real. Na XIII, Eden usava sua agilidade e força para abrir caminhos durante conflitos. Kane o tratava como alguém que precisava de direção antes de virar só mais um corpo nas ruas.",
+    },
+
+    "Kenan Sharp": {
+      tipo: "Muito positivo",
+      status: "Morto",
+      foto: "img/Personagens/Kane/XIII/Kenan Sharp.png",
+      descricao:
+        "Kenan apareceu na XIII investigando um assassinato que a gangue não tinha cometido. O cachimbo e o visual clássico pareciam teatro, mas Kane logo entendeu que aquilo escondia uma mente absurda. Kenan ajudou a provar a inocência da XIII e revelou o verdadeiro culpado. Desde então, Kane o usava para descobrir traições, armadilhas e mentiras antes que virassem sangue derramado.",
+    },
+
+    Rider: {
+      tipo: "Muito positivo",
+      status: "Morto",
+      foto: "img/Personagens/Kane/XIII/Rider.png",
+      descricao:
+        "Ninguém sabia quem Rider era. Kane também não parecia saber tudo, mas era um dos poucos que entendia alguns de seus sinais. Rider surgiu um dia, em seu skate flutuante, ajudou Kane em uma operação, e desde então se associou a gangue. Para Kane, Rider era a prova de que confiança nem sempre precisava de identidade.",
+    },
+
+    "Reika Yanami": {
+      tipo: "Muito positivo",
+      status: "Viva",
+      foto: "img/Personagens/Kane/XIII/Reika Yanami.png",
+      descricao:
+        "Reika tentou manipular Kane em uma entrevista clandestina, mas ele percebeu as armadilha. Em vez de expulsá-la, ele ofereceu acesso à verdade suja de Night City. Reika aceitou porque Kane era uma fonte impossível de ignorar; Kane aceitou porque ela podia destruir reputações sem disparar uma bala.",
+    },
+
+    // Positivo
     "Kaori Mizushima": {
-      tipo: "ex",
-      foto: "img/Personagens/Kaori.png",
+      tipo: "Positivo",
+      status: "Morta",
+      foto: "img/Personagens/Kane/Kaori Mizushima.png",
       descricao:
-        "Kaori era uma assassina dos Garra de Tygre; Se conheceram quando Kane precisou negociar um carregamento da XIII roubado. Tiveram um relacionamento escondido por mais de um ano, antes dela falecer em missão.",
+        "Relação escondida e intensa. Kaori era uma assassina associada aos Garras de Tygre. Kane a respeitava como assassina e como alguém que conhecia o peso de viver entre violência e lealdade. Seu término ocorreu devido a morte de Kaori.",
     },
 
-    "Serena Ashbourne": {
-      tipo: "ex",
-      foto: "img/Personagens/Serena.png",
+    "Hazel Reeve": {
+      tipo: "Positivo",
+      status: "Viva",
+      foto: "img/Personagens/Kane/Hazel Reeve.png",
       descricao:
-        "Corporativa excêntrica. Se conheceram no Dark Matter. Foi uma química intensa, silenciosa, sem declarações. Passaram apenas uma noite juntos. Eles nunca mais viram. Mas Serena esteve no funeral de Kane, escondida e longe.",
+        "Esposa de Murphy Elliot. Kane a respeitava por ser parte da vida de um de seus amigos mais leais, tratando-a com cuidado e consideração.",
+    },
+
+    "Thomas Reeve Elliot": {
+      tipo: "Positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Kane/Thomas Elliot.png",
+      descricao:
+        "Filho de Murphy Elliot. Para Kane, Thomas era alguém a ser protegido, quase como parte da família estendida da XIII.",
+    },
+
+    "Cerise Blossom": {
+      tipo: "Positivo",
+      status: "Morta",
+      foto: "img/Personagens/Kane/XIII/Cerise Blossom.png",
+      descricao:
+        "Cerise veio de fora de Night City com fama de ginasta reconhecida, mas Kane percebeu que a cidade queria transformá-la em produto. Ele ofereceu a ela um lugar onde sua precisão não seria usada para aplausos falsos, mas para sobrevivência. Kane a via como alguém elegante demais para aquele mundo, mas perigosa o bastante para não ser quebrada por ele.",
+    },
+
+    "Heath Hardy": {
+      tipo: "Positivo",
+      status: "Morto",
+      foto: "img/Personagens/Kane/XIII/Heath Hardy.png",
+      descricao:
+        "Heath não confiava em ninguém quando conheceu Kane. Tentou vender informação falsa para a XIII, foi descoberto e, em vez de ser punido, recebeu uma proposta: trabalhar direito ou continuar fugindo sozinho. Kane gostava da paranoia dele, porque em Night City ela era quase uma virtude. Heath virou os olhos e ouvidos da gangue nos becos, telhados e mercados ilegais.",
+    },
+
+    "Mael Vellum": {
+      tipo: "Positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Kane/XIII/Mael Vellum.png",
+      descricao:
+        "Mael veio da Turquia depois de perder os braços e trocar a própria carne por metal. Kane o encontrou como mercenário frio, sem ligação com ninguém. Durante uma missão, Mael poderia ter abandonado a XIII, mas ficou para cobrir a retirada de Kane e dos feridos. Depois disso, Kane passou a vê-lo como sentinela da gangue.",
+    },
+
+    "Ashley Crawford": {
+      tipo: "Positivo",
+      status: "Morta",
+      foto: "img/Personagens/Aiden/Ashley Crawford.png",
+      descricao:
+        "Ligada à tragédia de Aiden. Kane a via com respeito e pesar, tanto por ser membra da gangue, mas principalmente pelo impacto que sua perda causou em Aiden.",
+    },
+
+    // Neutro/positivo
+    "Serena Ashbourne": {
+      tipo: "Neutro/positivo",
+      status: "Viva",
+      foto: "img/Personagens/Serena/Serena Ashbourne.png",
+      descricao:
+        "Uma conexão curta, silenciosa e marcante. Kane não a conheceu profundamente, mas deixou uma impressão forte o bastante para Serena ir ao funeral escondida.",
+    },
+
+    "Jin Xiao": {
+      tipo: "Neutro/positivo",
+      status: "Morta",
+      foto: "img/Personagens/Kane/XIII/Jin Xiao.png",
+      descricao:
+        "Jin era gananciosa o suficiente para assustar qualquer líder, mas Kane percebeu que a ganância dela tinha regra: ela não roubava de quem considerava seu. Depois de descobrir um desvio em uma operação, Jin devolveu tudo com juros e ainda expôs os culpados. Kane a manteve perto porque sabia que lealdade sem inteligência era inútil, e Jin tinha as duas coisas, mesmo cobrando caro por isso.",
+    },
+
+    "Valen Kadwell": {
+      tipo: "Neutro/positivo",
+      status: "Morta",
+      foto: "img/Personagens/Kane/XIII/Valen Kadwell.png",
+      descricao:
+        "Valen vivia arrumando briga antes de entrar na XIII. Kane a encontrou espancada depois de enfrentar gente demais sozinha. Em vez de elogiar sua coragem, Kane chamou aquilo de burrice. Valen odiou ouvir isso e desafiou Kane para uma briga. Kane aceitou, e venceu. Depois disso, Valen decidiu o seguir. Com o tempo, Kane transformou sua violência em ferramenta: Valen continuou briguenta, mas passou a escolher melhor por quem e quando quebrar alguém.",
+    },
+
+    // Neutro
+    // Nenhum personagem nesta categoria.
+
+    // Neutro/negativo
+    "Dakota Veyriss": {
+      tipo: "Neutro/negativo",
+      status: "Morta",
+      foto: "img/Personagens/Kane/XIII/Dakota Veyriss.png",
+      descricao:
+        "Respeitava sua força como combatente, mas discordava da filosofia dela. Confiava em sua capacidade, mas temia seus métodos.",
+    },
+
+    "Raze Lambert": {
+      tipo: "Neutro/negativo",
+      status: "Vivo",
+      foto: "img/Personagens/Raze/Raze Lambert.png",
+      descricao:
+        "Kane via genialidade em Raze, mas também escuridão. Tentou guiá-lo; morreu sem ódio, apenas tristeza pela traição.",
+    },
+
+    "Alys Verona": {
+      tipo: "Neutro/negativo",
+      status: "Viva",
+      foto: "img/Personagens/Kane/Alys Verona.png",
+      descricao:
+        "Netrunner contratada por Kane. Tiveram um relacionamento. A relação terminou após discussões sérias, sem indicação de ódio profundo.",
+    },
+
+    "Aaron Lazarev": {
+      tipo: "Neutro/negativo",
+      status: "Morto",
+      foto: "img/Personagens/Kane/Laminares/Aaron Lazarev.png",
+      descricao:
+        "Aaron era o tipo de inimigo que transformava qualquer conflito em massacre. Kane passou a odiá-lo depois que armas fornecidas por ele chegaram às mãos de grupos que atacaram civis em território protegido pela XIII. Se Ulrik era a cabeça dos Laminares, Aaron era o arsenal.",
+    },
+
+    "Soyeon Bae": {
+      tipo: "Neutro/negativo",
+      status: "Detida",
+      foto: "img/Personagens/Kane/Laminares/Soyeon Bae.png",
+      descricao:
+        "Soyeon entrou no radar de Kane quando sistemas da XIII começaram a cair sem sinal de invasão comum. Ela era limpa, precisa e quase invisível. Kane a via como uma ameaça moderna: alguém capaz de matar uma operação sem aparecer no campo de batalha.",
+    },
+
+    // Negativo
+    "Harper Shaw": {
+      tipo: "Negativo",
+      status: "Desconhecido",
+      foto: "img/Personagens/Kane/XIII/Harper Shaw.png",
+      descricao:
+        "Ex-membro forte da XIII que rompeu com Kane após discordâncias ideológicas e jurou derrubá-lo.",
+    },
+
+    "Talon Rhyse": {
+      tipo: "Negativo",
+      status: "Morto",
+      foto: "img/Personagens/Kane/Laminares/Talon Rhyse.png",
+      descricao:
+        "Talon era usado pelos Laminares para deixar mensagens em forma de cadáver. Kane ouviu seu nome após uma sequência de ataques contra aliados menores da XIII. O conflito entre eles ficou pessoal quando Talon começou a mirar pessoas protegidas por Kane.",
+    },
+
+    "Ysolde Mercer": {
+      tipo: "Negativo",
+      status: "Viva",
+      foto: "img/Personagens/Kane/Laminares/Ysolde Mercer.png",
+      descricao:
+        "Ysolde era uma ameaça diferente. Ela não precisava gritar nem sujar as mãos para destruir alguém. Kane a encontrou em negociações indiretas, onde ela tentava isolar a XIII cortando suprimentos, contatos e rotas. Ele a respeitava como estrategista, mas não confiava em nenhuma palavra dela.",
+    },
+
+    // Muito negativo
+    "Mireya Petrenko": {
+      tipo: "Muito negativo",
+      status: "Morta",
+      foto: "img/Personagens/Kane/Laminares/Mireya Petrenko.png",
+      descricao:
+        "Mireya tentou se aproximar de contatos usando charme e falsas alianças. Kane percebeu rápido que ela não buscava informação, mas rachaduras emocionais. Ele a via como alguém perigosa porque entendia fraquezas humanas melhor do que muitos assassinos entendiam armas.",
+    },
+
+    // Inimigo jurado
+    Arasaka: {
+      tipo: "Inimigo jurado",
+      status: "Ativa",
+      foto: "img/Arasaka/Arasaka.png",
+      descricao:
+        "Para Kane, a Arasaka era o rosto do domínio corporativo. Uma força que precisava ser confrontada, mesmo que isso custasse sua vida.",
+    },
+
+    Laminares: {
+      tipo: "Inimigo jurado",
+      status: "Desmantelado",
+      foto: "img/Personagens/Kane/Laminares/Laminares.png",
+      descricao:
+        "Para Kane, os Laminares representavam violência predatória e covarde. A relação era pessoal, não apenas estratégica.",
+    },
+
+    "Ulrik Deamonne": {
+      tipo: "Inimigo jurado",
+      status: "Desconhecido",
+      foto: "img/Personagens/Kane/Laminares/Ulrik Deamonne.png",
+      descricao:
+        "Ulrik era tudo que Kane odiava em um líder: dominava pelo medo, não pela lealdade. Para Kane, Ulrik não comandava uma gangue, criava uma matilha faminta. O conflito entre os dois virou pessoal quando os Laminares passaram a mirar pessoas próximas da XIII.",
     },
   },
 
@@ -186,58 +357,22 @@ personagens.kane = {
 
   // Pertences importantes
   pertencesImportantes: {
-    "Guitarra Personalizada da Ghouls 'n Ghosts": {
-      imagem: "img/itens/guitarra-ghouls.png",
+    "Guitarra da Ghouls ’n Ghosts": {
+      imagem: "img/itens/Kane/Guitarra da Ghouls ’n Ghosts.png",
       descricao:
-        "Guitarra elétrica customizada com detalhes góticos e símbolos da XIII. Kane a usava em todas as apresentações da banda, e ela se tornou um símbolo de resistência contra o controle corporativo.",
+        "Uma guitarra elétrica customizada, marcada pela estética sombria e rebelde da antiga banda Ghouls ’n Ghosts. Para Kane, ela nunca foi apenas um instrumento: era uma forma de protesto, catarse e resistência contra o domínio corporativo. Suas cordas carregam lembranças dos palcos clandestinos, das noites no Rusted Note e de uma época em que música ainda parecia capaz de manter a XIII unida.",
     },
 
     "Machado “Belial”": {
-      imagem: "img/itens/machado-belial.png",
+      imagem: "img/itens/Kane/Machado “Belial”.png",
       descricao:
-        "Um machado de combate corpo a corpo com lâmina dupla com aparência demoniaca. Kane o utilizava em combates próximos, como uma extensão de sua própria força e presença intimidadora. Foi roubado por Raze após a morte de Kane.",
+        "Um machado de combate pesado, brutal e intimidador, com uma lâmina agressiva que parece ter sido feita para abrir caminho em meio ao caos. Nas mãos de Kane, “Belial” era mais do que uma arma: era uma extensão de sua presença protetora, usada para defender a XIII e impor respeito nas ruas. Após sua morte, o machado se tornou uma relíquia amarga, carregando o peso de sua força, sua ausência e a traição que veio depois.",
     },
 
-    "Armadura customizada": {
-      imagem: "img/itens/armadura-kane.png",
+    "Pingente da XIII": {
+      imagem: "img/itens/Kane/Pingente da XIII.png",
       descricao:
-        "Armadura reforçada, personalizada com o emblema da Organização XIII. Projetada para oferecer mobilidade máxima sem sacrificar a proteção, refletindo o estilo de combate agressivo de Kane.",
-    },
-
-    "Luva de Batalha": {
-      imagem: "img/itens/luva-batalha.png",
-      descricao:
-        "Luva tática reforçada usada por Kane em combates corpo a corpo. Feita de materiais avançados, oferece proteção extra e melhor aderência durante confrontos intensos.",
-    },
-
-    "Rifle de Assalto": {
-      imagem: "img/itens/rifle-assalto.png",
-      descricao:
-        "Rifle de assalto personalizado com mira holográfica e modificações para maior precisão e controle de recuo. Kane o utilizava em operações que exigiam fogo sustentado e versatilidade.",
-    },
-
-    "Lança-Chamas Grande": {
-      imagem: "img/itens/lanca-chamas.png",
-      descricao:
-        "Lança-chamas pesado usado por Kane em situações de combate extremo. Equipado com um tanque de combustível de alta capacidade, era capaz de criar uma parede de fogo devastadora contra inimigos.",
-    },
-
-    "Pistolas Extremamente Pesadas": {
-      imagem: "img/itens/pistolas-pesadas.png",
-      descricao:
-        "Duas pistolas de grande calibre, modificadas para aumentar o poder de fogo e a precisão. Kane as utilizava como armas secundárias em combates próximos, confiando em sua potência para dominar adversários.",
-    },
-
-    "Pulseiras de couro e metal": {
-      imagem: "img/itens/pulseiras-couro-metal.png",
-      descricao:
-        "Pulseiras robustas feitas de couro reforçado com placas de metal. Kane as usava como parte de seu estilo pessoal, mas também ofereciam proteção adicional para os pulsos durante combates corpo a corpo.",
-    },
-
-    "Pingente metálico com o símbolo da XIII": {
-      imagem: "img/itens/pingente-xiii.png",
-      descricao:
-        "Pingente de metal com o emblema da Organização XIII. Kane o usava como um símbolo de lealdade ao grupo e como um lembrete constante de sua missão contra as corporações.",
+        "Um pingente metálico com o símbolo da Organização XIII, gasto pelo tempo e pelo uso constante. Kane o carregava como prova de pertencimento, liderança e lealdade à família que ajudou a construir nas ruas. Mais do que um emblema, o pingente representa o código que sustentava a XIII: proteger os seus, resistir ao controle corporativo e nunca abandonar quem ainda podia ser salvo.",
     },
   },
 
@@ -339,16 +474,4 @@ personagens.kane = {
         "Conjunto de lâminas extensíveis integradas às articulações dos dedos, fabricadas em material de altíssima resistência. Projetadas para confrontos diretos, mantendo ocultação total quando retraídas.",
     },
   },
-
-  // --------------------------------------------------------------------
-  // PERFIL PROFISSIONAL
-  // --------------------------------------------------------------------
-
-  tipoTrabalho:
-    "Solo de elite, estilo Blackhand: versátil, rápido, agressivo, especialista em táticas urbanas e infiltração.",
-  modoTrabalho:
-    "Caótico-bom ou neutro-bom — agressivo, imprevisível, mas moralmente guiado.",
-  espacoTrabalho: "Toda região de Night City.",
-  clientes:
-    "Esconderijos improvisados da Organização XIII, setores abandonados, mercados ilegais, etc.",
 };

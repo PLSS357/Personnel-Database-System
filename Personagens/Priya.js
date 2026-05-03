@@ -6,7 +6,7 @@ personagens.Priya = {
   nome: "Priya Ellison",
   funcao: "Solo | Ex-Militar | Sniper Punk Grunge",
   id: "43-5499-00",
-  foto: "img/Personagens/Priya.png",
+  foto: "img/Personagens/Priya/Priya Ellison.png",
   ativo: true, // (true = ativo, false = inativo, null = desconhecido)
 
   // Dados vitais
@@ -40,23 +40,6 @@ personagens.Priya = {
     "Coragem, honestidade e o vínculo entre aqueles que lutam lado a lado.",
 
   // --------------------------------------------------------------------
-  // HISTÓRICO FAMILIAR
-  // --------------------------------------------------------------------
-
-  antecedentesFamiliares: [
-    "Avô: Arthur Ellison, comandante aposentado, rígido, patriota, treinador militar cruel.",
-    "Avó: Evelyn Ellison, ex-enfermeira de guerra, empática; ensinou limites éticos.",
-    "Pai: General Michael Ellison, distante, frio, sempre preocupado com a imagem política.",
-    "Mãe: Margaret Ellison, figura ausente, ligada a círculos corporativos do governo.",
-  ],
-  pessoaMaisImportante:
-    "Atualmente, os Dandelions como unidade — mas emocionalmente, Viole simboliza tudo o que ela acredita que um líder deveria ser: humano.",
-  tragedia: [
-    "O avô faleceu enquanto Priya estava em missão, e o comando negou liberação para o funeral alegando “baixo impacto para a tropa”.",
-    "Priya nunca se perdoou por não se despedir.",
-  ],
-
-  // --------------------------------------------------------------------
   // HISTÓRICO PESSOAL
   // --------------------------------------------------------------------
 
@@ -70,141 +53,199 @@ personagens.Priya = {
   // --------------------------------------------------------------------
   // RELAÇÕES INTERPESSOAIS
   // --------------------------------------------------------------------
-  // Tipos de relação válidos:
-  // "romantic", "friend", "enemy", "neutral, "family", "ex", "pet", "rival"
 
   relacoes: {
-    "Oliver “Viole” Miller": {
-      tipo: "friend",
-      foto: "img/Personagens/Oliver.png",
+    // Aliado Incondicional
+    "Oliver Miller": {
+      tipo: "Aliado Incondicional",
+      status: "Vivo",
+      foto: "img/Personagens/Oliver/Oliver Miller.png",
       descricao:
-        "Priya confia nele mais do que confiou em qualquer outro oficial. Admira sua coragem, honestidade e a forma humana com que lidera, mesmo quando isso o coloca em risco. Reconhece suas falhas e não o idealiza, mas acredita que líderes precisam de coração — e Viole tem até demais.",
-    },
-
-    "Tessia Amberine": {
-      tipo: "friend",
-      foto: "img/Personagens/Tessia.png",
-      descricao:
-        "Priya aprecia o equilíbrio entre inteligência e sensibilidade de Tessia. Embora não conversem muito, sente um impulso instintivo de permanecer por perto quando Tessia está presente, como se estivesse sempre em modo de guarda silenciosa.",
+        "Priya confia nele mais do que confiou em qualquer oficial. Vê Oliver como um líder humano, corajoso e honesto, alguém que erra, mas lidera com coração.",
     },
 
     "Kimber Destaro": {
-      tipo: "friend",
-      foto: "img/Personagens/Kimber.png",
+      tipo: "Aliado Incondicional",
+      status: "Viva",
+      foto: "img/Personagens/Kimber/Kimber Destaro.png",
       descricao:
-        "Respeito absoluto. Para Priya, Kimber é o pilar que mantém todos vivos quando tudo desmorona. Confia em suas decisões sem questionar e reconhece sua importância estratégica e prática.",
+        "Priya tem respeito absoluto por Kimber. Enxerga nela um pilar estratégico e prático do grupo, alguém que mantém todos vivos quando tudo desmorona.",
     },
 
-    "Aiden Fowler": {
-      tipo: "friend",
-      foto: "img/Personagens/Aiden.png",
-      descricao:
-        "Quieto, às vezes irritante com seus memes fora de hora, mas alguém em quem Priya confia silenciosamente. Demonstra cuidado de forma prática, obrigando-o a beber água e a se cuidar.",
-    },
-
-    Cypher: {
-      tipo: "neutral",
-      foto: "img/Personagens/Cypher.png",
-      descricao:
-        "Priya gosta dos hologramas e considera a linguagem visual dele extremamente inteligente, mesmo sem compreendê-la totalmente. Não conversam muito, mas ela admira sua expressão artística, especialmente quando ele dança.",
-    },
-
-    Nyx: {
-      tipo: "neutral",
-      foto: "img/Personagens/Nyx.png",
-      descricao:
-        "Gosta de ouvir suas músicas, especialmente quando Nyx canta My Chemical Romance e Evanescence. A música funciona como uma válvula emocional para Priya, mesmo que ela nunca verbalize isso.",
-    },
-
+    // Muito positivo
     Shinigami: {
-      tipo: "friend",
+      tipo: "Muito positivo",
+      status: "Vivo",
       foto: "img/Personagens/Shinigami.png",
       descricao:
-        "Vínculo silencioso de soldados. Não precisam conversar; apenas existir lado a lado é suficiente. Compartilham honra, disciplina e uma compreensão profunda do peso da guerra.",
-    },
-
-    "Serena Ashbourne": {
-      tipo: "neutral",
-      foto: "img/Personagens/Serena.png",
-      descricao:
-        "Priya a acha teatral, dramática e excessivamente ostentosa. Ainda assim, reconhece seu talento, influência e o impacto real que Serena exerce no mundo e nas pessoas ao redor.",
+        "Priya vê nele um vínculo silencioso de soldados. Não precisam conversar muito; há respeito, disciplina e compreensão mútua sobre o peso da guerra.",
     },
 
     Ninvega: {
-      tipo: "friend",
-      foto: "img/Personagens/Ninvega.png",
+      tipo: "Muito positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Ninvega/Ninvega.png",
       descricao:
-        "Aprecia sua lógica compassiva e o esforço ativo em buscar humanidade. No início, Priya se sentia desconfortável com a ideia de um 'robô emocional', mas hoje confia nele plenamente.",
+        "Priya inicialmente estranhava a ideia de um robô emocional, mas passou a confiar nele plenamente. Valoriza sua lógica compassiva e sua busca por humanidade.",
     },
 
     Lyra: {
-      tipo: "friend",
-      foto: "img/Personagens/Lyra.png",
+      tipo: "Muito positivo",
+      status: "Viva",
+      foto: "img/Personagens/Lyra/Lyra.png",
       descricao:
-        "Priya enxerga em Lyra uma humanidade que falta em muitos humanos. Admira a simplicidade direta com que ela vê o mundo e encontra conforto nessa clareza.",
+        "Priya vê em Lyra uma humanidade rara, talvez mais sincera que a de muitos humanos. Admira sua clareza, simplicidade e forma direta de enxergar o mundo.",
     },
 
     "Ícaro Barbosa": {
-      tipo: "friend",
-      foto: "img/Personagens/Ícaro.png",
+      tipo: "Muito positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Ícaro/Ícaro Barbosa.png",
       descricao:
-        "Faz Priya rir contra a vontade, o que ela considera irritante… e terapêutico. Seu caos leve equilibra o peso emocional que ela carrega. Não admite, mas adora tomar refrigerante com ele na garagem.",
-    },
-
-    "Dominic D. V. Chier": {
-      tipo: "friend",
-      foto: "img/Personagens/Dominic.png",
-      descricao:
-        "Treinam juntos sempre que possível. Priya o vê como confiável, forte e surpreendentemente carismático. Respeita sua disciplina e habilidade física; já apostaram quem quebraria uma porta primeiro.",
-    },
-
-    "Kleber Junior": {
-      tipo: "neutral",
-      foto: "img/Personagens/Kleber.png",
-      descricao:
-        "Priya não entende nem tenta entender sua religião. Mantém uma distância segura, respeitando limites e evitando conflitos desnecessários.",
+        "Ícaro faz Priya rir mesmo quando ela tenta resistir. Ela considera isso irritante, mas também terapêutico; o caos leve dele equilibra o peso que ela carrega.",
     },
 
     Mirai: {
-      tipo: "pet",
-      foto: "img/Personagens/Mirai.png",
+      tipo: "Muito positivo",
+      status: "Viva",
+      foto: "img/Personagens/Mirai/Mirai.png",
       descricao:
-        "Gosta bastante dele, mas jamais admitiria. Às vezes o chama de 'coisa', mas o protege instintivamente. Brinca com ele quando ninguém está olhando, revelando afeto genuíno.",
+        "Priya gosta bastante de Mirai, mas dificilmente admitiria. Chama-o de “coisa”, mas o protege por instinto e brinca com ele quando ninguém está olhando.",
     },
 
+    "Evelyn Ellison": {
+      tipo: "Muito positivo",
+      status: "Morta",
+      foto: "img/Personagens/Priya/Evelyn Ellison.png",
+      descricao:
+        "Avó de Priya e uma das figuras mais importantes de sua formação moral. Foi empática, ex-enfermeira de guerra, e ensinou a Priya limites éticos que o exército tentou apagar.",
+    },
+
+    // Positivo
+    "Tessia Amberine": {
+      tipo: "Positivo",
+      status: "Viva",
+      foto: "img/Personagens/Tessia/Tessia Amberine.png",
+      descricao:
+        "Priya respeita a competência e o equilíbrio de Tessia. Não são extremamente próximas em palavras, mas Priya sente vontade de protegê-la em silêncio.",
+    },
+
+    "Aiden Fowler": {
+      tipo: "Positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Aiden/Aiden Fowler.png",
+      descricao:
+        "Priya confia nele de forma silenciosa. Acha seus memes irritantes às vezes, mas demonstra cuidado prático, como garantir que ele descanse e se cuide.",
+    },
+
+    "Dominic Don Von Chier": {
+      tipo: "Positivo",
+      status: "Morto",
+      foto: "img/Personagens/Dominic Don Von Chier.png",
+      descricao:
+        "Priya o vê como forte, confiável e carismático. Respeita sua disciplina física e gosta de treinar com ele, mantendo uma relação de camaradagem direta.",
+    },
+
+    // Neutro/positivo
+    Ciel: {
+      tipo: "Neutro/positivo",
+      status: "Viva",
+      foto: "img/Personagens/Tessia/Ciel.png",
+      descricao:
+        "Priya não é muito próxima de Ciel, mas a protege por respeito a Oliver e Tessia. Vê nela alguém que deve ser mantida longe dos sistemas e violências que destruíram tantas pessoas.",
+    },
+
+    Cypher: {
+      tipo: "Neutro/positivo",
+      status: "Morto",
+      foto: "img/Personagens/Cypher.png",
+      descricao:
+        "Priya admira sua linguagem visual, seus hologramas e sua arte, mesmo sem entender tudo. Não são tão próximos, mas ela respeita sua expressão, principalmente quando ele dança.",
+    },
+
+    Nyx: {
+      tipo: "Neutro/positivo",
+      status: "Morta",
+      foto: "img/Personagens/Nyx.png",
+      descricao:
+        "Priya gosta de ouvir suas músicas, especialmente quando Nyx canta algo mais pesado e emocional. Para ela, a voz de Nyx funciona como uma válvula de escape.",
+    },
+
+    "Serena Ashbourne": {
+      tipo: "Neutro/positivo",
+      status: "Viva",
+      foto: "img/Personagens/Serena/Serena Ashbourne.png",
+      descricao:
+        "Priya acha Serena teatral, dramática e exageradamente ostentosa, mas reconhece sua influência, inteligência e impacto real sobre o grupo.",
+    },
+
+    // Neutro
+    "Kleber Junior": {
+      tipo: "Neutro",
+      status: "Vivo",
+      foto: "img/Personagens/Kleber Junior.png",
+      descricao:
+        "Priya não entende a religião de Kleber e nem tenta entender. Prefere manter distância segura, respeitando limites sem criar conflito desnecessário.",
+    },
+
+    // Neutro/negativo
     "Tenente Mira Vaughn": {
-      tipo: "ex",
-      foto: "img/Personagens/Mira.png",
+      tipo: "Neutro/negativo",
+      status: "Viva",
+      foto: "img/Personagens/Priya/Tenente Mira Vaughn.png",
       descricao:
-        "Antiga paixão de Priya durante o serviço militar. O relacionamento foi proibido e terminou de forma abrupta, deixando marcas emocionais que contribuíram para sua dificuldade em se permitir sentir novamente.",
+        "Foi uma antiga paixão de Priya no período militar. O relacionamento proibido terminou mal e deixou marcas emocionais, tornando difícil para Priya se permitir sentir de novo.",
     },
 
-    Macrosoft: {
-      tipo: "enemy",
-      foto: "img/Personagens/Macrosoft.png",
+    "Margaret Ellison": {
+      tipo: "Neutro/negativo",
+      status: "Viva",
+      foto: "img/Personagens/Priya/Margaret Ellison.png",
       descricao:
-        "Corporação responsável pelo CitizenSight™. Priya roubou o chip que expunha o software letal algorítmico, levando a empresa à ruína pública e tornando-se um alvo permanente.",
+        "Mãe de Priya, ausente e ligada aos círculos corporativos do governo. Priya provavelmente a enxerga como parte distante do sistema familiar que nunca a acolheu de verdade.",
     },
 
+    // Negativo
+    "Arthur Ellison": {
+      tipo: "Negativo",
+      status: "Vivo",
+      foto: "img/Personagens/Priya/Arthur Ellison.png",
+      descricao:
+        "Avô rígido, patriota e cruel no treinamento militar. Priya carrega dele a disciplina, mas também o peso de uma criação moldada pela guerra e pela dureza.",
+    },
+
+    // Muito negativo
     "Houndsight Security": {
-      tipo: "enemy",
-      foto: "img/Personagens/Houndsight.png",
+      tipo: "Muito negativo",
+      status: "Ativa",
+      foto: "img/Personagens/Priya/Houndsight Security.png",
       descricao:
-        "Após a queda da Macrosoft, Priya expôs falhas críticas que resultaram na humilhação corporativa da Houndsight. Seus diretores perderam contratos bilionários e nunca a perdoaram.",
+        "Depois da queda da Macrosoft, Priya também expôs falhas da Houndsight, humilhando a empresa e destruindo contratos bilionários. Para ela, é mais uma estrutura corrupta a ser derrubada.",
+    },
+
+    "Forças Armadas dos NEUA": {
+      tipo: "Muito negativo",
+      status: "Ativas",
+      foto: "img/Personagens/Priya/Forças Armadas dos NEUA.png",
+      descricao:
+        "Priya já tentou acreditar no uniforme, mas passou a ver as Forças Armadas como uma corporação armada disfarçada de patriotismo. Sua deserção nasceu dessa quebra moral.",
     },
 
     "General Michael Ellison": {
-      tipo: "enemy",
-      foto: "img/Personagens/General_Michael.png",
+      tipo: "Muito negativo",
+      status: "Vivo",
+      foto: "img/Personagens/Priya/General Michael Ellison.png",
       descricao:
-        "Pai de Priya. Sua reputação foi manchada quando ela desertou. Desde então, tenta silenciá-la para proteger sua carreira e imagem pública, criando um conflito profundo entre sangue e ideologia.",
+        "É seu pai, mas também seu inimigo ideológico. Priya o vê como frio, preocupado com reputação e disposto a silenciá-la para proteger a própria carreira.",
     },
 
-    "Raze Lambert": {
-      tipo: "enemy",
-      foto: "img/Personagens/Raze.png",
+    // Inimigo jurado
+    Macrosoft: {
+      tipo: "Inimigo jurado",
+      status: "Ativa",
+      foto: "img/Personagens/Priya/Macrosoft.png",
       descricao:
-        "Priya não conhece, mas sabe que Oliver o quer morto. Ela sabe que Raze traiu seus amigos e se juntou à Arasaka, e como Oliver a ajudou, ela está disposta a lutar contra Raze por seu capitão.",
+        "Priya vê a Macrosoft como símbolo de morte algorítmica e desumanização. Roubou o chip que expôs o CitizenSight™, causando a ruína pública da corporação.",
     },
   },
 
@@ -214,46 +255,34 @@ personagens.Priya = {
 
   // Pertences importantes
   pertencesImportantes: {
-    fonesCriptografados: {
-      imagem: "img/itens/Fones_Auriculares.png",
+    "Rifle de Precisão": {
+      imagem: "img/itens/Priya/Rifle de Precisão.png",
       descricao:
-        "Fones auriculares internos de uso militar, projetados para comunicação criptografada de curto alcance. Discretos e quase invisíveis, permitem receber ordens e transmitir informações sem levantar suspeitas, mesmo em ambientes hostis.",
+        "Um rifle de precisão personalizado, ajustado milimetricamente ao estilo de tiro de Priya. Combina alcance extremo, estabilidade e confiabilidade absoluta, sendo tratado por ela não como uma arma de glória, mas como uma responsabilidade carregada sem margem para erro. Cada disparo precisa ter motivo, peso e consequência.",
     },
 
-    relogioTatico: {
-      imagem: "img/itens/Relógio_Tático.png",
+    "Relógio Tático": {
+      imagem: "img/itens/Priya/Relógio Tático.png",
       descricao:
-        "Relógio de pulso militar modificado artesanalmente, equipado com sensores térmicos capazes de detectar variações de calor no ambiente. Mais do que marcar o tempo, funciona como uma extensão de seus instintos em campo.",
+        "Um relógio militar modificado com sensores de campo, leitura térmica, cronômetros de missão e funções de rastreamento. Mais do que marcar horas, ajuda Priya a ler o ambiente, antecipar ameaças e manter o controle mesmo quando tudo ao redor vira ruído. É uma ferramenta de disciplina, paciência e precisão.",
     },
 
-    braceleteIdentificacao: {
-      imagem: "img/itens/Bracelete_Identificação.png",
+    "Pingente Cápsula": {
+      imagem: "img/itens/Priya/Pingente Cápsula.png",
       descricao:
-        "Bracelete fino e aparentemente comum, mas com uma gravação oculta em seu interior: o antigo número de identificação militar. É o único fragmento físico que restou de seu passado — e um lembrete silencioso de quem ele foi.",
+        "Um pingente feito a partir de uma cápsula vazia de munição. Para Priya, ele não representa mortes ou vitórias em combate, mas o peso de cada escolha feita no campo de batalha. É um lembrete silencioso de que nem todo alvo precisa cair, nem todo disparo precisa ser feito e nem toda missão vale a perda de si mesma.",
     },
 
-    riflePrecisao: {
-      imagem: "img/itens/Hecate_V.png",
+    "Vinil Nirvana": {
+      imagem: "img/itens/Priya/Vinil Nirvana.png",
       descricao:
-        "Rifle de precisão personalizado, modelo “PGM Ultima Ratio Hecate V”. Ajustado milimetricamente ao seu estilo de tiro, combina alcance extremo, estabilidade impecável e confiabilidade absoluta. Uma arma feita para decisões sem margem de erro.",
+        "Um vinil antigo da banda Nirvana, herdado de sua avó. Mesmo riscado e cheio de chiados, guarda um tipo de paz que Priya raramente encontra no mundo ao seu redor. Para ela, o som imperfeito do disco funciona como refúgio, memória e humanidade em meio às ordens, guerras e alvos.",
     },
 
-    pingenteCapsula: {
-      imagem: "img/itens/Pingente_Cápsula.png",
+    "Coleção Facas de Combate": {
+      imagem: "img/itens/Priya/Coleção Facas de Combate.png",
       descricao:
-        "Pingente contendo uma cápsula vazia de munição. Não representa tiros disparados, mas sim vidas poupadas. Cada risco microscópico na superfície carrega uma escolha feita para não puxar o gatilho.",
-    },
-
-    vinilNirvana: {
-      imagem: "img/itens/Vinil_Nirvana.png",
-      descricao:
-        "Disco de vinil riscado da banda Nirvana, herdado de sua avó. Apesar dos estalos e falhas no som, guarda memórias de um tempo mais simples, onde a música era refúgio e não havia ordens para cumprir.",
-    },
-
-    baionetasAntigas: {
-      imagem: "img/itens/Coleção_Baionetas.png",
-      descricao:
-        "Coleção de baionetas antigas pertencentes a seu avô. Cada lâmina apresenta marcas do tempo e de conflitos passados, funcionando mais como relíquias históricas do que armas — símbolos de gerações moldadas pela guerra.",
+        "Uma coleção de facas antigas e lâminas de combate, mantidas com cuidado quase ritual. Algumas vieram do passado militar de sua família, outras foram adquiridas em missões ou situações extremas. Para Priya, cada lâmina representa disciplina, sobrevivência e a lembrança de que habilidade sem ética se torna apenas violência treinada.",
     },
   },
 
@@ -343,13 +372,4 @@ personagens.Priya = {
         "Conjunto clássico de aprimoramentos estruturais para membros superiores artificiais, desenvolvido para trabalho pesado e aplicações industriais de alta demanda. Reconhecido por sua confiabilidade e durabilidade, é amplamente utilizado em setores de construção, logística, extração e segurança.",
     },
   },
-
-  // --------------------------------------------------------------------
-  // PERFIL PROFISSIONAL
-  // --------------------------------------------------------------------
-
-  tipoTrabalho: "",
-  modoTrabalho: "",
-  espacoTrabalho: "",
-  clientes: "",
 };

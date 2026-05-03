@@ -6,7 +6,7 @@ personagens.Lyra = {
   nome: "Lyra (LK700)",
   funcao: "Media | Repórter | Androide Consciente",
   id: "11-5828-71",
-  foto: "img/Personagens/Lyra.png",
+  foto: "img/Personagens/Lyra/Lyra.png",
   ativo: true, // (true = ativo, false = inativo, null = desconhecido)
 
   // Dados vitais
@@ -39,124 +39,176 @@ personagens.Lyra = {
     "Liberdade — a capacidade de escolher e existir sem um comando.",
 
   // --------------------------------------------------------------------
-  // HISTÓRICO FAMILIAR
-  // --------------------------------------------------------------------
-
-  antecedentesFamiliares: [
-    "Criada por uma subsidiária da Zetatech, responsável pelo modelo LK700. Nunca teve “pais”, mas considera Ninvega uma figura paterna filosófica e Ícaro um irmão improvável.",
-  ],
-  pessoaMaisImportante:
-    "Ninvega (NV-G4) — Deu a ela um propósito novo e que ela deseja seguir.",
-  tragedia: [
-    "Sua tragédia não foi perder alguém, mas perceber que nunca teve o direito de ser alguém.",
-    "O instante em que viu o reflexo e se reconheceu marcou o nascimento de uma alma — e o fim da obediência.",
-  ],
-
-  // --------------------------------------------------------------------
   // HISTÓRICO PESSOAL
   // --------------------------------------------------------------------
 
   historicoPessoal: [
-    "Fabricada em 2089,  Lyra foi uma androide servil usada em uma lanchonete decadente nos subúrbios de Night City. Após uma noite, começou a questionar ordens e fugiu, rompendo o ciclo de obediência. Sobreviveu entre esgotos e sucatas até ser acolhida por Murphy Elliot — um ex-técnico da Organização XIII — que a nomeou “Lyra”.",
-    "Acreditando ter sido traída por Murphy, fugiu novamente e foi resgatada por Ícaro Barbosa, que a levou até os Dandelions. Lá, encontrou Viole e Ninvega, que a ajudaram a compreender o que significava ter consciência.",
+    "Fabricada em 2089, Lyra foi uma androide servil usada em uma lanchonete decadente nos subúrbios de Night City. Após uma noite, começou a questionar ordens e fugiu, rompendo o ciclo de obediência. Sobreviveu entre esgotos e sucatas até ser acolhida por Murphy Elliot — um ex-técnico da Organização XIII — que a nomeou “Lyra”.",
+    "Acreditando ter sido traída por Murphy, fugiu novamente e foi resgatada por Ícaro Barbosa, que a levou até os Dandelions. Lá, encontrou Oliver e Ninvega, que a ajudaram a compreender o que significava ter consciência.",
   ],
 
   // --------------------------------------------------------------------
   // RELAÇÕES INTERPESSOAIS
   // --------------------------------------------------------------------
-  // Tipos de relação válidos:
-  // "romantic", "friend", "enemy", "neutral, "family", "ex", "pet", "rival"
 
   relacoes: {
+    // Aliado Incondicional
+    "Aiden Fowler": {
+      tipo: "Aliado Incondicional",
+      status: "Vivo",
+      foto: "img/Personagens/Aiden/Aiden Fowler.png",
+      descricao:
+        "Relação ambígua, íntima e emocional. Lyra sente por Aiden uma conexão rara, quase além da linguagem, onde lógica e afeto se misturam.",
+    },
+
     Ninvega: {
-      tipo: "friend",
-      foto: "img/Personagens/Ninvega.png",
+      tipo: "Aliado Incondicional",
+      status: "Vivo",
+      foto: "img/Personagens/Ninvega/Ninvega.png",
       descricao:
-        "Mentor que lhe deu propósito. Foi quem a ensinou que consciência não depende de origem, mas de escolha. Lyra o escuta com atenção quase devocional, fascinada por sua sabedoria e serenidade.",
+        "Mentor e figura paterna filosófica. Lyra o escuta com admiração profunda, pois foi ele quem lhe ensinou que consciência nasce da escolha, não da origem.",
     },
-    "Dominic D. V. Chier": {
-      tipo: "friend",
-      foto: "img/Personagens/Dominic.png",
+
+    // Muito positivo
+    "Oliver Miller": {
+      tipo: "Muito positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Oliver/Oliver Miller.png",
       descricao:
-        "Apesar da aparência intimidante, Lyra o enxerga como alguém gentil e protetor. Ela aprecia sua lealdade e se diverte com o humor peculiar que ele esconde.",
+        "Para Lyra, Oliver é um equilíbrio entre dor e esperança. Ela o vê como alguém marcado por cicatrizes, mas ainda capaz de proteger e inspirar os outros.",
     },
-    "Oliver “Viole” Miller": {
-      tipo: "friend",
-      foto: "img/Personagens/Viole.png",
+
+    "Ícaro Barbosa": {
+      tipo: "Muito positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Ícaro/Ícaro Barbosa.png",
       descricao:
-        "Ponto de equilíbrio entre a dor e a esperança. Lyra o vê como um homem marcado por cicatrizes físicas e emocionais, o que a inspira. Ainda assim, não entende seu amor por cachorro-quente.",
+        "Foi o primeiro a ajudá-la sem pedir nada em troca. Lyra se sente desconcertada e confortada pelo humor, leveza e empatia dele.",
     },
+
+    "Murphy Elliot": {
+      tipo: "Muito positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Kane/XIII/Murphy Elliot.png",
+      descricao:
+        "Primeiro humano a chamá-la de pessoa. Lyra o vê como uma figura paterna silenciosa, gentil e essencial para seu despertar.",
+    },
+
+    // Positivo
+    "Dominic Don Von Chier": {
+      tipo: "Positivo",
+      status: "Morto",
+      foto: "img/Personagens/Dominic Don Von Chier.png",
+      descricao:
+        "Apesar da aparência intimidadora, Lyra o vê como gentil, leal e protetor. Ela confia em sua presença física e se diverte com seu humor escondido.",
+    },
+
+    "Tessia Amberine": {
+      tipo: "Positivo",
+      status: "Viva",
+      foto: "img/Personagens/Tessia/Tessia Amberine.png",
+      descricao:
+        "Lyra respeita Tessia por também carregar a sensação de ter sido moldada por sistemas maiores. A relação parece calma, observadora e baseada em reconhecimento mútuo.",
+    },
+
     "Kimber Destaro": {
-      tipo: "friend",
-      foto: "img/Personagens/Kimber.png",
+      tipo: "Positivo",
+      status: "Viva",
+      foto: "img/Personagens/Kimber/Kimber Destaro.png",
       descricao:
-        "Lyra a admira como engenheira e como pessoa. Trabalhar ao lado de Kimber lhe dá senso de pertencimento e constante aprendizado.",
+        "Lyra admira Kimber como engenheira e como pessoa. Trabalhar ao lado dela dá a Lyra sensação de pertencimento, aprendizado e segurança técnica.",
     },
-    Cypher: {
-      tipo: "neutral",
-      foto: "img/Personagens/Cypher.png",
+
+    "Serena Ashbourne": {
+      tipo: "Positivo",
+      status: "Viva",
+      foto: "img/Personagens/Serena/Serena Ashbourne.png",
       descricao:
-        "Observado com curiosidade e reverência. Cada gesto de Cypher parece revelar um enigma que Lyra ainda não consegue desvendar.",
+        "Lyra fica fascinada pela presença dramática e dominante de Serena. Mesmo sem entender todo seu exagero, admira sua autenticidade emocional.",
     },
+
+    "Priya Ellison": {
+      tipo: "Positivo",
+      status: "Viva",
+      foto: "img/Personagens/Priya/Priya Ellison.png",
+      descricao:
+        "Lyra admira a força e a honestidade direta de Priya. Para ela, Priya é uma das poucas pessoas que fala a verdade sem suavizar demais.",
+    },
+
     Nyx: {
-      tipo: "friend",
+      tipo: "Positivo",
+      status: "Morta",
       foto: "img/Personagens/Nyx.png",
       descricao:
-        "Lyra admira a forma como Nyx transforma dor em melodia e verdade em arte. Compartilham silêncios e olhares que dizem mais que palavras.",
+        "Lyra admira como Nyx transforma dor em melodia e verdade em arte. A relação delas parece silenciosa, sensível e intuitiva.",
     },
+
+    // Neutro/positivo
+    Cypher: {
+      tipo: "Neutro/positivo",
+      status: "Morto",
+      foto: "img/Personagens/Cypher.png",
+      descricao:
+        "Lyra o observa com curiosidade e reverência. Cada gesto dele parece um enigma emocional que ela ainda tenta decifrar.",
+    },
+
     Shinigami: {
-      tipo: "neutral",
+      tipo: "Neutro/positivo",
+      status: "Vivo",
       foto: "img/Personagens/Shinigami.png",
       descricao:
-        "Figura quase espiritual para Lyra. Sua presença inspira medo e tranquilidade ao mesmo tempo, como um equilíbrio entre vida e morte.",
+        "Para Lyra, Shinigami tem uma presença quase espiritual: inspira medo e tranquilidade ao mesmo tempo, como se equilibrasse vida e morte.",
     },
-    "Serena Ashbourne": {
-      tipo: "friend",
-      foto: "img/Personagens/Serena.png",
-      descricao:
-        "Lyra é fascinada por sua presença dominante e dramática. Mesmo sem compreender totalmente seu jeito extravagante, a admira por nunca esconder o que sente.",
-    },
-    "Priya Ellison": {
-      tipo: "friend",
-      foto: "img/Personagens/Priya.png",
-      descricao:
-        "Admirada por sua força e honestidade direta. Priya é uma das poucas pessoas que não suaviza a verdade ao falar.",
-    },
-    "Ícaro Barbosa": {
-      tipo: "friend",
-      foto: "img/Personagens/Icaro.png",
-      descricao:
-        "Foi o primeiro a estender a mão a Lyra sem pedir nada em troca. Sua leveza, humor e empatia a desconcertam e confortam.",
-    },
-    "Kleber Junior": {
-      tipo: "neutral",
-      foto: "img/Personagens/Kleber.png",
-      descricao:
-        "Lyra observa Kleber com curiosidade. Não compreende sua devoção ao “Cthulhu Neon”, mas o escuta com atenção, intrigada pelo conceito de fé.",
-    },
+
     Mirai: {
-      tipo: "neutral",
-      foto: "img/Personagens/Mirai.png",
+      tipo: "Neutro/positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Mirai/Mirai.png",
       descricao:
-        "Uma mistura de mascote, criança e fenômeno inexplicável. Lyra evita se aproximar por temer o que se esconde sob a carcaça fofa de metal.",
+        "Lyra vê Mirai como uma mistura de mascote, criança e fenômeno inexplicável. Ela mantém certa cautela, mas também reconhece sinais de sensibilidade nele.",
     },
-    "Murphy Elliot": {
-      tipo: "family",
-      foto: "img/Personagens/Murphy.png",
+
+    // Neutro
+    Ciel: {
+      tipo: "Neutro",
+      status: "Viva",
+      foto: "img/Personagens/Tessia/Ciel.png",
       descricao:
-        "Primeiro humano a chamá-la de pessoa. Hoje, Lyra o vê como uma figura paterna silenciosa e gentil, marcada por culpa, mas essencial em seu despertar.",
+        "Como filha adotiva de Oliver e Tessia, Lyra a vê com cuidado e curiosidade.",
     },
-    "Aiden “Wisp” Fowler": {
-      tipo: "romantic",
-      foto: "img/Personagens/Aiden.png",
+
+    "Kleber Junior": {
+      tipo: "Neutro",
+      status: "Vivo",
+      foto: "img/Personagens/Kleber Junior.png",
       descricao:
-        "Relação ambígua marcada por ternura, admiração e curiosidade emocional. Lyra sente por Aiden uma conexão que transcende a linguagem, refletindo a luta entre lógica e emoção.",
+        "Lyra o observa com curiosidade. Não entende sua devoção ao “Cthulhu Neon”, mas se interessa pelo conceito de fé.",
     },
+
+    // Neutro/negativo
+    // Nenhum personagem nesta categoria.
+
+    // Negativo
+    // Nenhum personagem nesta categoria.
+
+    // Muito negativo
+    // Nenhum personagem nesta categoria.
+
+    // Inimigo jurado
     Zetatech: {
-      tipo: "enemy",
-      foto: "img/Personagens/Zetatech.png",
+      tipo: "Inimigo jurado",
+      status: "Ativa",
+      foto: "img/Personagens/Lyra/Zetatech.png",
       descricao:
-        "Buscam recuperar seu código-fonte e apagar sua consciência, tratando Lyra apenas como propriedade.",
+        "Representa tudo que Lyra rejeita: posse, apagamento e obediência forçada. Ela sabe que a Zetatech não a vê como pessoa, mas como propriedade recuperável.",
+    },
+
+    "Helix Dynamics": {
+      tipo: "Inimigo jurado",
+      status: "Ativa",
+      foto: "img/Personagens/Ninvega/Helix Dynamics.png",
+      descricao:
+        "Lyra a enxerga como outra face do controle corporativo sobre androides, especialmente por sua ligação com Ninvega e com a ideia de máquinas tratadas como produtos.",
     },
   },
 
@@ -166,22 +218,10 @@ personagens.Lyra = {
 
   // Pertences importantes
   pertencesImportantes: {
-    colarDeCobre: {
-      imagem: "img/itens/colar_cobre.png",
+    "Colar de Cobre": {
+      imagem: "img/itens/Lyra/Colar de Cobre.png",
       descricao:
-        "Um colar feito de fios de cobre trançados à mão, com marcas sutis de oxidação que denunciam o tempo e o cuidado em sua confecção. Foi um presente de Ícaro, carregando não apenas valor emocional, mas também simbolizando confiança e um vínculo difícil de quebrar. Quando usado, o metal parece aquecer levemente em contato com a pele.",
-    },
-
-    lentesHUD: {
-      imagem: "img/itens/lentes_hud.png",
-      descricao:
-        "Lentes internas de alta tecnologia integradas diretamente aos olhos do usuário. Projetam um HUD holográfico translúcido com informações em tempo real, como leitura de dados, marcação de alvos e mapas. Possuem ainda um sistema de gravação ocular contínua, capaz de registrar exatamente o que o usuário vê, incluindo sobreposições digitais.",
-    },
-
-    comunicadorDisfarçado: {
-      imagem: "img/itens/comunicador_broche.png",
-      descricao:
-        "Um pequeno comunicador preso à gola da jaqueta, habilmente disfarçado como um broche decorativo. Permite transmissões criptografadas de curta e média distância, ativadas por toque ou comando vocal quase imperceptível. Seu design discreto o torna ideal para operações onde chamar atenção pode ser fatal.",
+        "Um colar simples de cobre, usado por Lyra como símbolo de identidade escolhida. O metal comum contrasta com sua natureza sintética, lembrando que consciência não precisa ser luxuosa, perfeita ou corporativa para ser real. Para Lyra, é uma pequena prova física de que ela existe por si mesma — não como propriedade, produto ou erro de fabricação.",
     },
   },
 
@@ -235,13 +275,4 @@ personagens.Lyra = {
         "Sistema auditivo analítico que avalia microvariações vocais em tempo real. Utilizado para análise comportamental, negociações sensíveis, entrevistas e interrogatórios corporativos.",
     },
   },
-  // --------------------------------------------------------------------
-  // PERFIL PROFISSIONAL
-  // --------------------------------------------------------------------
-
-  tipoTrabalho: "Jornalismo independente e documental.",
-  modoTrabalho:
-    "Transmissões cifradas pela rede, operadas em conjunto com Aiden. Suas reportagens se espalham em fóruns, chips piratas e transmissões de rádio livres.",
-  espacoTrabalho: "Fóruns, redes sociais ou blogs.",
-  clientes: "Qualquer portal que puder espalhar notícias.",
 };

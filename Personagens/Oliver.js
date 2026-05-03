@@ -1,12 +1,13 @@
 // Oliver.js
-// Ficha completa de Oliver "Viole" Miller
+// Ficha completa de Oliver Miller
 
 personagens.oliver = {
   // Identificação básica
   nome: 'Oliver "Viole" Miller',
-  funcao: "Fixer | Fundador e Líder dos Dandelions | Ex-Organização XIII (Rank VI)",
+  funcao:
+    "Fixer | Fundador e Líder dos Dandelions | Ex-Organização XIII (Rank VI)",
   id: "38-4647-48",
-  foto: "img/Personagens/Oliver.png",
+  foto: "img/Personagens/Oliver/Oliver Miller.png",
   ativo: true, // (true = ativo, false = inativo, null = desconhecido)
 
   // Dados vitais
@@ -39,23 +40,6 @@ personagens.oliver = {
     "Honestidade direta, responsabilidade pelas próprias escolhas, silêncio confortável, e a capacidade de continuar mesmo quando tudo aperta.",
 
   // --------------------------------------------------------------------
-  // HISTÓRICO FAMILIAR
-  // --------------------------------------------------------------------
-
-  antecedentesFamiliares: [
-    "Mãe: Elena Miller, técnica em manutenção industrial – falecida em 2071 durante parto.",
-    "Pai: Derek Miller, operário e contrabandista associado à gangue Laminares – responsável acidental pela morte de Emily Miller, cometeu suicídio logo após.",
-    "Irmã: Emily Miller, falecida em 2079 aos 8 anos.",
-  ],
-  pessoaMaisImportante:
-    "Tessia Amberine — parceira de vida e apoio emocional inabalável.",
-  tragedia: [
-    "Em 2079, durante confronto entre gangues causado pelos Laminares, sua irmã Emily foi morta acidentalmente por seu próprio pai, Derek.",
-    "O evento resultou no suicídio do pai diante de Oliver.",
-    "O trauma o marcou permanentemente, levando à introspecção e ao desejo de criar algo que substituísse a “família” que perdeu.",
-  ],
-
-  // --------------------------------------------------------------------
   // HISTÓRICO PESSOAL
   // --------------------------------------------------------------------
 
@@ -71,162 +55,415 @@ personagens.oliver = {
   // --------------------------------------------------------------------
   // RELAÇÕES INTERPESSOAIS
   // --------------------------------------------------------------------
-  // Tipos de relação válidos:
-  // "romantic", "friend", "enemy", "neutral, "family", "ex", "pet", "rival"
 
   relacoes: {
+    // Aliado Incondicional
     "Tessia Amberine": {
-      tipo: "romantic",
-      foto: "img/Personagens/Tessia.png",
+      tipo: "Aliado Incondicional",
+      status: "Viva",
+      foto: "img/Personagens/Tessia/Tessia Amberine.png",
       descricao:
-        "Tessia é a pessoa mais importante da vida de Oliver. Com Tessia, ele não precisa fingir força, nem esconder as rachaduras. Ela é a única presença que o faz sentir que existe um lar possível, mesmo num mundo que tentou quebrá-lo tantas vezes. Ele está disposto a fazer qualquer coisa para protegê-la.",
-    },
-
-    "Kimber Destaro": {
-      tipo: "friend",
-      foto: "img/Personagens/Kimber.png",
-      descricao:
-        "Para Oliver, Kimber é um tipo raro de pessoa que enxerga além da postura fria e do sarcasmo que ele usa como armadura. Ele a vê como a pessoa que o manteve de pé quando ele mesmo não acreditava que ainda conseguisse.",
-    },
-
-    "Murphy Elliot": {
-      tipo: "friend",
-      foto: "img/Personagens/Murphy.png",
-      descricao:
-        "Murphy é um ponto fixo no mapa emocional de Viole. Quando está no limite, ele vai até o Rusted Note. Para Viole, ele não é só o bartender favorito: é um tipo de irmão mais velho que a vida colocou depois de ter tirado todos os outros.",
-    },
-
-    "Seraphine Volkov": {
-      tipo: "friend",
-      foto: "img/Personagens/Sera.png",
-      descricao:
-        "Sera é uma antiga ferida que nunca cicatrizou. Não por culpa, mas por memória. Ela representa decisões antigas que o definiram, perdas que ele não conseguiu impedir e um juramento que influenciou todo seu cuidado com Tessia.",
-    },
-
-    Cypher: {
-      tipo: "friend",
-      foto: "img/Personagens/Cypher.png",
-      descricao:
-        "Cypher era irritante, mas também fazia Viole rir quando menos queria. A morte dele deixou uma culpa permanente em Oliver. Uma sensação de que ele deveria ter sido mais rápido, mais atento, mais alguma coisa.",
-    },
-
-    Nyx: {
-      tipo: "friend",
-      foto: "img/Personagens/Nyx.png",
-      descricao:
-        "Viole confia em Nyx porque sabe que ela é leal até o fim. Ele reconhece o amor que ela tinha por Cypher e respeita esse sentimento profundamente. Ele não fala muito sobre isso, mas vê em Nyx alguém que compreende como é perder algo precioso.",
-    },
-
-    Shinigami: {
-      tipo: "friend",
-      foto: "img/Personagens/Shinigami.png",
-      descricao:
-        "A relação de Oliver com Shinigami é construída sobre respeito. Ele confia no samurai urbano porque vê nele alguém que carrega cicatrizes semelhantes às suas. Oliver prometeu ajudá-lo a encontrar Izanami, mesmo que ele odeie fazer promessas.",
-    },
-
-    "Serena Ashbourne": {
-      tipo: "friend",
-      foto: "img/Personagens/Serena.png",
-      descricao:
-        "Oliver nunca sabe exatamente onde pisa quando está perto dela. Ele fica desconcertado com suas provocações, mas também sabe que sem ela, o grupo talvez nunca tivesse sobrevivido por tanto tempo.",
-    },
-
-    Ninvega: {
-      tipo: "friend",
-      foto: "img/Personagens/Ninvega.png",
-      descricao:
-        "Para Oliver, Ninvega não é uma máquina. É uma vida. Ele confia no médico androide porque vê nele algo que o mundo insiste em ignorar nos sintéticos.Viole acredita que Ninvega pode mudar a forma como o mundo enxerga a consciência artificial.",
-    },
-
-    "Dominic D. V. Chier": {
-      tipo: "friend",
-      foto: "img/Personagens/Dominic.png",
-      descricao:
-        "Oliver gosta de Dominic pelo jeito direto, pelo humor estranho e pela força física absurda que nunca o decepcionou em missão. Para Viole, Dominic é o tipo de aliado que você quer ao lado quando tudo desaba.",
-    },
-
-    Lyra: {
-      tipo: "friend",
-      foto: "img/Personagens/Lyra.png",
-      descricao:
-        "Viole vê Lyra como alguém que ainda está descobrindo o mundo, e isso desperta nele um instinto protetor. Ele fica inquieto quando Lyra vai para missões arriscadas, e faz o possível para mantê-la fora de perigo.",
-    },
-
-    "Priya Ellison": {
-      tipo: "friend",
-      foto: "img/Personagens/Priya.png",
-      descricao:
-        "Priya é força pura. Oliver respeita o foco, a disciplina, e a capacidade de enfrentar qualquer ameaça sem hesitar. Treinar com ela é uma forma de se testar, e ele melhorou muito graças à parceria dos dois.",
-    },
-
-    "Ícaro Barbosa": {
-      tipo: "friend",
-      foto: "img/Personagens/Ícaro.png",
-      descricao:
-        "Para Oliver, Ícaro é barulhento, imprevisível e confiável. Eles têm uma sintonia perfeita em corridas: Ícaro no volante, Oliver nas armas. A competição entre os dois é amigável, mas Oliver nunca admite o quanto fica irritado por estar perdendo por 4x3.",
-    },
-
-    "Kleber Junior": {
-      tipo: "friend",
-      foto: "img/Personagens/Kleber.png",
-      descricao:
-        "Kleber é um mistério que Oliver não tenta mais resolver. Ele nunca sabe se ele é um profeta, um louco ou uma piada cósmica. Viole o deixa quieto porque percebeu que tentar entender ele é pelo menos metade da dor de cabeça.",
-    },
-
-    Mirai: {
-      tipo: "pet",
-      foto: "img/Personagens/Mirai.png",
-      descricao:
-        "Mirai é mais do que um robô: é a pequena prova de que Oliver ainda é capaz de se apegar. Eles são literalmente conectados, Mirai sente quando algo está errado e alerta o resto do grupo. Qualquer um que tente atacar Mirai, se tornará inimigo de Viole.",
+        "Tessia é a pessoa mais importante da vida de Oliver. Com ela, ele não precisa sustentar a máscara de líder invencível: ela conhece suas rachaduras, entende seus silêncios e é a única presença que faz a ideia de “lar” parecer possível.",
     },
 
     "Kane Graves": {
-      tipo: "family",
-      foto: "img/Personagens/Kane.png",
+      tipo: "Aliado Incondicional",
+      status: "Morto",
+      foto: "img/Personagens/Kane/Kane Graves.png",
       descricao:
-        "Kane foi tudo o que Oliver precisava na adolescência: mentor, guia, modelo de disciplina e a figura mais próxima de um irmão mais velho. A morte dele é o segundo maior arrependimento da vida de Viole.",
+        "Kane foi mentor, irmão mais velho e o primeiro homem que ensinou Oliver a transformar dor em disciplina. Sua morte é uma das maiores culpas de Oliver, não só porque perdeu alguém essencial, mas porque sente que sobreviveu no lugar dele.",
     },
 
-    "Ivy Naranjo": {
-      tipo: "ex",
-      foto: "img/Personagens/Ivy.png",
+    "Kimber Destaro": {
+      tipo: "Aliado Incondicional",
+      status: "Viva",
+      foto: "img/Personagens/Kimber/Kimber Destaro.png",
       descricao:
-        "Ivy e Oliver tiveram um relacionamento intenso quando estavam na Organização XIII. Ivy era ambiciosa e determinada, e Oliver se sentia atraído por sua força de vontade. No entanto, ela desejava sair de Night City para buscar uma vida diferente, enquanto Oliver ainda se via preso à cidade e às suas responsabilidades. Eles tiveram suas discussões, e eventualmente decidiram terminar o relacionamento de forma amigável, reconhecendo que seus caminhos estavam se separando.",
+        "Kimber é família para Oliver. Ela viu além da frieza, cuidou dos implantes dele, o ajudou a se reerguer e se tornou uma das poucas pessoas diante de quem ele consegue baixar a guarda sem sentir que está ficando vulnerável demais.",
+    },
+
+    Mirai: {
+      tipo: "Aliado Incondicional",
+      status: "Viva",
+      foto: "img/Personagens/Mirai/Mirai.png",
+      descricao:
+        "Mirai é mais do que um robô para Oliver: é a pequena prova de que ele ainda consegue se apegar. A conexão entre os dois é quase instintiva, e qualquer ameaça contra Mirai automaticamente se torna uma ameaça pessoal contra Oliver.",
+    },
+
+    // Muito positivo
+    "Elena Miller": {
+      tipo: "Muito positivo",
+      status: "Morta",
+      foto: "img/Personagens/Oliver/Elena Miller.png",
+      descricao:
+        "Elena é a memória mais pura que Oliver ainda guarda da palavra “mãe”. Mesmo tendo morrido cedo, ela representa o pouco de calor doméstico que existiu antes de Pacifica, da XIII e da culpa transformarem Oliver em alguém silencioso.",
     },
 
     "Emily Miller": {
-      tipo: "family",
-      foto: "img/Personagens/Emily.png",
+      tipo: "Muito positivo",
+      status: "Morta",
+      foto: "img/Personagens/Oliver/Emily Miller.png",
       descricao:
-        "Emily é a ferida eternamente aberta. Sua irmã era tudo para ele, o motivo pelo qual entrou na Organização XIII, o motivo pelo qual permaneceu vivo na época. A forma como ela morreu destruiu Oliver, e a culpa de não tê-la protegido nunca desapareceu. Ele carrega a memória dela como um lembrete constante do que perdeu e do que precisa proteger nos outros.",
+        "Emily é a ferida eternamente aberta de Oliver. Ela era sua irmã, seu motivo para entrar na Organização XIII e a pessoa que ele mais queria proteger; sua morte destruiu algo nele que nunca voltou inteiro.",
     },
 
-    "Raze Lambert": {
-      tipo: "enemy",
-      foto: "img/Personagens/Raze.png",
+    Ciel: {
+      tipo: "Muito positivo",
+      status: "Viva",
+      foto: "img/Personagens/Tessia/Ciel.png",
       descricao:
-        "No passado, eles eram parceiros na Organização XIII. Raze era alguém em quem Oliver confiava o suficiente para entrar em operações de alto risco ao lado dele. Porém, tudo ruiu quando Raze traiu Oliver durante uma missão, o que levou a morte de Kane Graves e deixou Oliver gravemente ferido. Desde então, Raze se tornou não apenas um inimigo, mas a personificação da maior ferida e quebra de confiança na vida de Oliver.",
+        "Ciel é filha adotiva de Oliver e Tessia, e por isso ocupa um espaço delicado no coração dele. Oliver a protege com uma intensidade quase silenciosa, como se cada cuidado com ela fosse uma forma de provar que ainda é capaz de construir família sem perdê-la.",
+    },
+
+    "Murphy Elliot": {
+      tipo: "Muito positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Kane/XIII/Murphy Elliot.png",
+      descricao:
+        "Murphy é um ponto fixo no mapa emocional de Oliver. O Rusted Note virou abrigo, e Murphy virou uma espécie de irmão mais velho tardio: alguém que não exige explicações quando Oliver chega destruído demais para falar.",
+    },
+
+    "Seraphine Volkov": {
+      tipo: "Muito positivo",
+      status: "Morta",
+      foto: "img/Personagens/Tessia/Seraphine Volkov.png",
+      descricao:
+        "Sera é uma memória antiga que Oliver trata com respeito quase sagrado. Ela representa uma promessa que ele nunca esqueceu, uma perda ligada diretamente ao cuidado que hoje dedica a Tessia e à raiva que sente por tudo que a Arasaka destruiu.",
+    },
+
+    Cypher: {
+      tipo: "Muito positivo",
+      status: "Morto",
+      foto: "img/Personagens/Cypher.png",
+      descricao:
+        "Cypher irritava Oliver, confundia Oliver e, contra todas as probabilidades, fazia Oliver rir. Sua morte deixou em Oliver uma culpa silenciosa: a sensação de que deveria ter percebido antes, chegado antes ou protegido melhor.",
+    },
+
+    Nyx: {
+      tipo: "Muito positivo",
+      status: "Viva",
+      foto: "img/Personagens/Nyx.png",
+      descricao:
+        "Oliver confia em Nyx porque reconhece nela uma lealdade intensa e sem espetáculo. Ele respeita a dor que ela carrega por Cypher e vê nela alguém que entende o peso de continuar vivo depois de perder algo precioso.",
+    },
+
+    Shinigami: {
+      tipo: "Muito positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Shinigami.png",
+      descricao:
+        "Oliver respeita Shinigami como alguém moldado por cicatrizes semelhantes às suas. Não tenta invadir seu silêncio, mas confia em seu código, em sua lâmina e na promessa difícil que fez de ajudá-lo a encontrar Izanami.",
+    },
+
+    "Serena Ashbourne": {
+      tipo: "Muito positivo",
+      status: "Viva",
+      foto: "img/Personagens/Serena/Serena Ashbourne.png",
+      descricao:
+        "Serena desarma Oliver de formas que ele não sabe explicar. Suas provocações o deixam desconcertado, mas ele sabe que sua inteligência, influência e teatralidade salvaram o grupo mais vezes do que ele gostaria de admitir.",
+    },
+
+    Ninvega: {
+      tipo: "Muito positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Ninvega/Ninvega.png",
+      descricao:
+        "Para Oliver, Ninvega não é uma máquina: é uma vida. Ele confia no médico androide porque vê nele uma humanidade que o mundo insiste em negar, e acredita que Ninvega pode mudar a forma como todos enxergam a consciência artificial.",
+    },
+
+    "Dominic Don Von Chier": {
+      tipo: "Muito positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Dominic Don Von Chier.png",
+      descricao:
+        "Oliver gosta de Dominic pelo jeito direto, pelo humor estranho e pela força absurda que nunca falha em missão. Para ele, Dominic é o tipo de aliado que você quer por perto quando tudo desaba e ainda precisa parecer simples.",
+    },
+
+    "Priya Ellison": {
+      tipo: "Muito positivo",
+      status: "Viva",
+      foto: "img/Personagens/Priya/Priya Ellison.png",
+      descricao:
+        "Priya é força, foco e disciplina. Oliver respeita sua coragem moral e física, e treinar com ela virou uma forma de testar os próprios limites sem precisar transformar tudo em autodestruição.",
+    },
+
+    "Ícaro Barbosa": {
+      tipo: "Muito positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Ícaro/Ícaro Barbosa.png",
+      descricao:
+        "Para Oliver, Ícaro é barulho, caos e confiança em forma humana. Eles funcionam bem demais em corrida e tiroteio: Ícaro no volante, Oliver nas armas, ambos fingindo que a competição entre eles é mais séria do que realmente é.",
+    },
+
+    "Clint Westwood": {
+      tipo: "Muito positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Kane/XIII/Clint Westwood.png",
+      descricao:
+        "Oliver confia em Clint como se confia em cobertura no alto: sem precisar olhar duas vezes. O estilo cowboy pode parecer exagerado, mas sua eficiência com armas e seu controle de campo fazem dele alguém que Oliver respeita profundamente.",
+    },
+
+    Rider: {
+      tipo: "Muito positivo",
+      status: "Morto",
+      foto: "img/Personagens/Kane/XIII/Rider.png",
+      descricao:
+        "Rider é o tipo de mistério que Oliver aceita sem exigir nome, rosto ou explicação. Para Oliver, confiança nem sempre precisa de identidade; às vezes basta aparecer quando tudo dá errado e não abandonar ninguém.",
+    },
+
+    "Reika Yanami": {
+      tipo: "Muito positivo",
+      status: "Viva",
+      foto: "img/Personagens/Kane/XIII/Reika Yanami.png",
+      descricao:
+        "Oliver respeita Reika porque ela destrói reputações sem precisar disparar uma bala. Ele não confia facilmente em jornalistas, mas reconhece nela uma arma rara contra mentiras corporativas: alguém capaz de transformar verdade em dano real.",
+    },
+
+    "Thomas Reeve Elliot": {
+      tipo: "Muito positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Kane/Thomas Elliot.png",
+      descricao:
+        "Thomas desperta em Oliver um instinto protetor ligado à família estendida de Murphy. Para Oliver, ele é alguém que deve ser mantido longe da parte mais suja da vida que os adultos ao redor dele tiveram que enfrentar.",
+    },
+
+    "Jesse Reeve Elliot": {
+      tipo: "Muito positivo",
+      status: "Viva",
+      foto: "img/Personagens/Kane/Jesse Elliot.png",
+      descricao:
+        "Jesse representa para Oliver uma inocência que Night City não deveria tocar. Por ser filha de Murphy, ele a protege com uma seriedade discreta, como se proteger Jesse também fosse honrar tudo que Murphy fez por ele.",
+    },
+
+    // Positivo
+    "Aiden Fowler": {
+      tipo: "Positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Aiden/Aiden Fowler.png",
+      descricao:
+        "Oliver respeita Aiden como uma mente brilhante e inquieta. Ele se preocupa com o quanto Aiden se perde na rede, mas reconhece nele um idealista escondido atrás do cinismo, alguém que ainda acredita que informação pode ser resistência.",
+    },
+
+    Lyra: {
+      tipo: "Positivo",
+      status: "Viva",
+      foto: "img/Personagens/Lyra/Lyra.png",
+      descricao:
+        "Oliver vê Lyra como alguém ainda descobrindo o mundo, e isso desperta nele um instinto protetor. Ele respeita sua curiosidade e sua autonomia, mas fica inquieto quando ela se aproxima demais de missões perigosas.",
+    },
+
+    "Irina Sokolova": {
+      tipo: "Positivo",
+      status: "Viva",
+      foto: "img/Personagens/Kane/Irina Sokolova.png",
+      descricao:
+        "Oliver respeita Irina pelo lugar que ela ocupou na vida de Kane. Mesmo que a relação entre os dois não seja íntima, ele a associa a uma parte mais humana e saudável do mentor que perdeu.",
+    },
+
+    "Cerise Blossom": {
+      tipo: "Positivo",
+      status: "Morta",
+      foto: "img/Personagens/Kane/XIII/Cerise Blossom.png",
+      descricao:
+        "Cerise parece, para Oliver, alguém elegante demais para Night City, mas perigosa o bastante para sobreviver nela. Ele respeita sua precisão, sua disciplina física e a forma como ela não permite que o mundo a reduza a aparência ou espetáculo.",
+    },
+
+    "Heath Hardy": {
+      tipo: "Positivo",
+      status: "Morto",
+      foto: "img/Personagens/Kane/XIII/Heath Hardy.png",
+      descricao:
+        "Oliver valoriza a paranoia de Heath porque, em Night City, desconfiança pode ser instinto de sobrevivência. Ele o vê como olhos e ouvidos úteis, alguém que entende becos, rumores e perigos antes que eles cheguem à porta.",
+    },
+
+    "Hazel Reeve": {
+      tipo: "Positivo",
+      status: "Viva",
+      foto: "img/Personagens/Kane/Hazel Reeve.png",
+      descricao:
+        "Hazel tem o respeito de Oliver por ser parte da vida de Murphy. Ele a trata com cuidado, não por formalidade, mas porque qualquer pessoa importante para Murphy entra, de algum modo, no círculo de proteção silenciosa de Oliver.",
+    },
+
+    // Neutro/positivo
+    "Kleber Junior": {
+      tipo: "Neutro/positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Kleber Junior.png",
+      descricao:
+        "Kleber é um mistério que Oliver desistiu de resolver. Ele não sabe se está diante de um profeta, de um louco ou de uma piada cósmica, mas admite que Kleber consegue resultados e, por isso, prefere deixá-lo existir em paz.",
+    },
+
+    "Basil Crow": {
+      tipo: "Neutro/positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Kane/XIII/Basil Crow.png",
+      descricao:
+        "Oliver reconhece Basil como alguém moldado por raiva disciplinada. Não necessariamente são próximos, mas Oliver respeita quem transforma humilhação em força sem desperdiçar isso em autopiedade.",
+    },
+
+    "Eden Reid": {
+      tipo: "Neutro/positivo",
+      status: "Morto",
+      foto: "img/Personagens/Kane/XIII/Eden Reid.png",
+      descricao:
+        "Oliver vê Eden como alguém impulsivo, forte e ainda procurando direção. Não o trata como problema perdido, mas como alguém que precisa de estrutura antes que Night City transforme sua energia em tragédia.",
+    },
+
+    // Neutro
+    "Alys Verona": {
+      tipo: "Neutro",
+      status: "Viva",
+      foto: "img/Personagens/Kane/Alys Verona.png",
+      descricao:
+        "Alys ocupa um espaço distante na memória de Oliver. Ele reconhece sua competência como netrunner e sua ligação com Kane, mas não parece carregar afeto ou ódio profundo por ela; apenas cautela diante de alguém difícil de ler.",
+    },
+
+    "Jin Xiao": {
+      tipo: "Neutro",
+      status: "Morta",
+      foto: "img/Personagens/Kane/XIII/Jin Xiao.png",
+      descricao:
+        "Jin é competente, gananciosa e perigosa de um jeito administrável. Oliver não confia plenamente nela, mas reconhece que sua lealdade tem regras próprias; enquanto essas regras forem respeitadas, ela pode ser útil.",
+    },
+
+    // Neutro/negativo
+    "Ivy Naranjo": {
+      tipo: "Neutro/negativo",
+      status: "Desconhecido",
+      foto: "img/Personagens/Ivy/Ivy Naranjo.png",
+      descricao:
+        "Ivy foi amor, campo e segredo. Oliver não a odeia, mas a relação terminou porque os dois queriam futuros diferentes: ela queria fugir de Night City, enquanto ele ainda se sentia preso às responsabilidades que a cidade colocou sobre seus ombros.",
+    },
+
+    "Kenan Sharp": {
+      tipo: "Neutro/negativo",
+      status: "Morto",
+      foto: "img/Personagens/Kane/XIII/Kenan Sharp.png",
+      descricao:
+        "Oliver respeita a inteligência de Kenan, mas não gosta de se sentir analisado como uma cena de crime. Para ele, Kenan é útil demais para ser descartado e invasivo demais para ser confortável.",
+    },
+
+    "Soyeon Bae": {
+      tipo: "Neutro/negativo",
+      status: "Detida",
+      foto: "img/Personagens/Kane/Laminares/Soyeon Bae.png",
+      descricao:
+        "Soyeon é uma ameaça limpa demais para ser confortável. Oliver não a odeia como odeia Raze ou a Arasaka, mas a vê como alguém capaz de derrubar uma operação inteira sem aparecer, e isso o obriga a manter distância e cautela.",
+    },
+
+    // Negativo
+    "Mael Vellum": {
+      tipo: "Negativo",
+      status: "Vivo",
+      foto: "img/Personagens/Kane/XIII/Mael Vellum.png",
+      descricao:
+        "Mael incomoda Oliver porque lembra o limite entre sobreviver e virar só metal, frieza e função. Mesmo reconhecendo sua utilidade em combate, Oliver não confia totalmente em alguém que parece ter enterrado a própria humanidade fundo demais.",
+    },
+
+    "Talon Rhyse": {
+      tipo: "Negativo",
+      status: "Morto",
+      foto: "img/Personagens/Kane/Laminares/Talon Rhyse.png",
+      descricao:
+        "Talon representa violência usada como mensagem. Oliver o vê como um assassino que não mata apenas corpos, mas tenta espalhar medo através deles; isso basta para colocá-lo no lado errado da lâmina de Oliver.",
+    },
+
+    "Aaron Lazarev": {
+      tipo: "Negativo",
+      status: "Morto",
+      foto: "img/Personagens/Kane/Laminares/Aaron Lazarev.png",
+      descricao:
+        "Aaron é o arsenal por trás de massacres que outros executam. Oliver o despreza por transformar conflitos em carnificina e por vender poder de fogo sem se importar com quem vai sangrar depois.",
+    },
+
+    // Muito negativo
+    "Derek Miller": {
+      tipo: "Muito negativo",
+      status: "Vivo",
+      foto: "img/Personagens/Oliver/Derek Miller.png",
+      descricao:
+        "Derek é uma ferida que Oliver não consegue limpar. Mesmo entendendo que a morte de Emily foi acidental, ele nunca conseguiu separar o pai do homem que trouxe os Laminares para dentro da vida deles e terminou tudo com sangue, trauma e abandono.",
     },
 
     "Dakota Veyriss": {
-      tipo: "enemy",
-      foto: "img/Personagens/Dakota.png",
+      tipo: "Muito negativo",
+      status: "Morta",
+      foto: "img/Personagens/Kane/XIII/Dakota Veyriss.png",
       descricao:
-        "Dakota foi o motivo pelo qual Oliver abandonou a Organização XIII. Ela era uma Solo implacável, e sua ambição desmedida colocou Oliver para assassinar crianças à sangue frio. A dependência dela pelos implantes a tornavam cada dia mais instável, e Oliver não podia mais fazer parte daquilo. Ele a vê como um símbolo do que ele rejeita: a perda de humanidade em troca de poder.",
+        "Dakota representa tudo que Oliver rejeitou na Organização XIII. Sua ambição, sua brutalidade e a forma como empurrou Oliver para ultrapassar limites imperdoáveis fizeram dela um símbolo da perda de humanidade em troca de poder.",
+    },
+
+    "Harper Shaw": {
+      tipo: "Muito negativo",
+      status: "Desconhecido",
+      foto: "img/Personagens/Kane/XIII/Harper Shaw.png",
+      descricao:
+        "Harper é uma lembrança amarga da antiga XIII: alguém forte, perigosa e marcada por discordâncias que viraram ruptura. Oliver a vê como uma ameaça ideológica e prática, alguém que conhece demais o passado do grupo para ser ignorada.",
+    },
+
+    "Valen Kadwell": {
+      tipo: "Muito negativo",
+      status: "Morta",
+      foto: "img/Personagens/Kane/XIII/Valen Kadwell.png",
+      descricao:
+        "Valen representa violência impulsiva demais para Oliver tolerar. Ele entende raiva, mas despreza quando ela vira vício, espetáculo ou risco para o grupo; por isso, a vê como alguém perigosa mesmo quando está do mesmo lado.",
+    },
+
+    Laminares: {
+      tipo: "Muito negativo",
+      status: "Desmantelado",
+      foto: "img/Personagens/Kane/Laminares/Laminares.png",
+      descricao:
+        "Os Laminares são uma das raízes da tragédia familiar de Oliver. Ele os vê como violência predatória, covarde e oportunista; não apenas uma gangue inimiga, mas parte do mecanismo que colocou Emily, Derek e sua infância no caminho da destruição.",
+    },
+
+    "Mireya Petrenko": {
+      tipo: "Muito negativo",
+      status: "Morta",
+      foto: "img/Personagens/Kane/Laminares/Mireya Petrenko.png",
+      descricao:
+        "Mireya é perigosa porque entende rachaduras emocionais. Oliver desconfia dela não só como inimiga estratégica, mas como alguém capaz de transformar dor, desejo e confiança em ferramentas de manipulação.",
+    },
+
+    "Ysolde Mercer": {
+      tipo: "Muito negativo",
+      status: "Viva",
+      foto: "img/Personagens/Kane/Laminares/Ysolde Mercer.png",
+      descricao:
+        "Ysolde incomoda Oliver porque destrói sem precisar aparecer. Ela corta rotas, contatos e recursos, tentando isolar seus inimigos antes do confronto; para Oliver, esse tipo de ameaça fria é quase tão perigosa quanto uma arma apontada.",
+    },
+
+    // Inimigo jurado
+    "Raze Lambert": {
+      tipo: "Inimigo jurado",
+      status: "Vivo",
+      foto: "img/Personagens/Raze/Raze Lambert.png",
+      descricao:
+        "Raze é a personificação da traição na vida de Oliver. Já foi alguém confiável dentro da Organização XIII, mas sua traição matou Kane, destruiu parte de Oliver e transformou qualquer lembrança de parceria em ódio irreversível.",
     },
 
     Arasaka: {
-      tipo: "enemy",
-      foto: "img/arasaka/arasaka-logo.png",
+      tipo: "Inimigo jurado",
+      status: "Ativa",
+      foto: "img/Arasaka/Arasaka.png",
       descricao:
-        "Oliver vê a Arasaka como a materialização da maldade corporativa. A ambição, os métodos brutais e a falta de ética da Arasaka causaram sofrimento incalculável a ele e a muitos outros. Ele está determinado a desmantelar suas operações sempre que possível, vendo isso como uma forma de justiça para as vítimas da corporação. E mesmo sabendo que existem outras corporações igualmente perigosas, a Arasaka representa para Oliver o inimigo número um a ser combatido.",
+        "Para Oliver, a Arasaka é a maldade corporativa ganhando nome, prédio e exército privado. Ela destruiu aliados, alimentou traumas e transformou pessoas em recursos; por isso, Oliver vê derrubar suas operações como justiça, não vingança simples.",
     },
 
     "Nathaniel Amberine": {
-      tipo: "enemy",
-      foto: "img/Personagens/Nathaniel.png",
+      tipo: "Inimigo jurado",
+      status: "Vivo",
+      foto: "img/Personagens/Tessia/Nathaniel Amberine.png",
       descricao:
-        "O pai de quem Oliver mais ama, e ao mesmo tempo, o símbolo máximo daquilo que ele odeia. Nathaniel representa a corrupção, a ganância e a crueldade que a Arasaka tenta esconder. Oliver o vê como um inimigo pessoal, não apenas por suas ações como executivo da Arasaka, mas também pelo jeito que tratou Tessia. Ele está determinado a derrubar Nathaniel, não apenas como um ato de vingança, mas como uma forma de proteger aqueles que ama.",
+        "Nathaniel é o pai da pessoa que Oliver mais ama e, ao mesmo tempo, um dos rostos mais claros de tudo que ele odeia. Para Oliver, derrubá-lo é proteger Tessia, confrontar a Arasaka e impedir que outros sejam moldados como propriedade.",
+    },
+
+    "Ulrik Deamonne": {
+      tipo: "Inimigo jurado",
+      status: "Desconhecido",
+      foto: "img/Personagens/Kane/Laminares/Ulrik Deamonne.png",
+      descricao:
+        "Ulrik é, para Oliver, o tipo de líder que transforma medo em sistema. Ele não comanda por lealdade, mas por fome e brutalidade, e qualquer ligação dele com os Laminares torna o conflito pessoal demais para Oliver ignorar.",
     },
   },
 
@@ -235,76 +472,46 @@ personagens.oliver = {
   // --------------------------------------------------------------------
 
   pertencesImportantes: {
-    "Primeiro Baixo": {
-      imagem: "img/itens/oliver-baixo-original.png",
+    "Baixo Digital": {
+      imagem: "img/itens/Oliver/Baixo Digital.png",
       descricao:
-        "Primeiro instrumento de Oliver, presente de Kane. Possui marcas de uso pesado e customizações improvisadas.",
+        "Um baixo digital usado por Oliver como herança emocional da Ghouls ’n Ghosts. A música funciona como disciplina, memória e descarga silenciosa; quando ele toca, não está se apresentando, está tentando manter algo dentro de si no lugar. É um dos poucos objetos que ainda ligam Oliver ao tempo em que sua vida parecia menos quebrada.",
     },
 
     "Foto de Emily": {
-      imagem: "img/itens/oliver-foto-emily.png",
+      imagem: "img/itens/Oliver/Foto de Emily.png",
       descricao:
-        "Foto antiga, tirada antes da morte de Emily. Oliver a guarda como um lembrete da vida que perdeu.",
+        "Uma foto antiga de Emily Miller, irmã de Oliver e uma das feridas mais profundas de sua vida. Ele a guarda como lembrança da pessoa que tentou proteger e perdeu, um objeto pequeno demais para carregar tanta culpa. Para Oliver, olhar para essa foto é lembrar do motivo pelo qual ele continua lutando, mesmo quando isso o destrói por dentro.",
+    },
+
+    "Espada Leviathan": {
+      imagem: "img/itens/Oliver/Espada Leviathan.png",
+      descricao:
+        "Uma espada personalizada feita por Kimber sob medida para Oliver, construída com uma liga leve, resistente e extremamente afiada. Seus detalhes em branco, roxo e dourado dão à arma uma aparência elegante e intimidadora. A Leviathan combina precisão, mobilidade e brutalidade controlada, refletindo o estilo de combate de Oliver: rápido, direto e difícil de prever.",
+    },
+
+    "Máscara ΛN0MΔLY II": {
+      imagem: "img/itens/Oliver/Máscara ΛN0MΔLY II.png",
+      descricao:
+        "A segunda versão da máscara ΛN0MΔLY, resultado da engenharia clandestina de Kimber e Murphy. Mistura camuflagem, intimidação e tecnologia experimental, servindo tanto como proteção quanto como símbolo da identidade que Oliver construiu depois de sobreviver ao impossível. Para seus inimigos, a máscara é um aviso; para Oliver, é uma forma de esconder o que ainda sangra.",
+    },
+
+    "Dogtag de Kane": {
+      imagem: "img/itens/Oliver/Dogtag de Kane.png",
+      descricao:
+        "A placa de identificação de Kane Graves, guardada por Oliver como uma relíquia de irmão, mentor e dívida impossível de pagar. Não é apenas uma lembrança de luto, mas um peso físico que o lembra de continuar quando desistir parecer mais fácil. A dogtag carrega tudo que Kane representava para ele: proteção, música, liderança e sacrifício.",
     },
 
     Hoverboard: {
-      imagem: "img/itens/oliver-hoverboard.png",
+      imagem: "img/itens/Oliver/Hoverboard.png",
       descricao:
-        "Meio de transporte favorito de Oliver pelas ruas estreitas de Night City.",
+        "Um hoverboard usado por Oliver para se mover pelas ruas estreitas, perigosas e verticais de Night City. Ágil, silencioso e arriscado, combina com seu estilo de deslocamento: rápido o bastante para fugir, preciso o bastante para chegar onde ninguém espera. É uma ferramenta prática, mas também um reflexo da liberdade que ele tenta preservar.",
     },
 
-    "Espada Absolution": {
-      imagem: "img/itens/oliver-espada.png",
+    "Foto Trio": {
+      imagem: "img/itens/Oliver/Foto Trio.png",
       descricao:
-        "Espada personalizada, feita por Kimber sob medida para Oliver. Feita de uma liga de aço leve e resistente, com detalhes em branco, roxo e dourado.",
-    },
-
-    "Lista digital de ranking de cafés": {
-      imagem: "img/itens/oliver-lista.png",
-      descricao:
-        "Lista onde Oliver anota e classifica os melhores cafés que já experimentou em Night City.",
-    },
-
-    "Máscara de Combate Danificada: Pierrot": {
-      imagem: "img/itens/Pierrot - Desgastada.png",
-      descricao:
-        "A primeira máscara que Oliver utilizou. Foi feita à mão por ele mesmo, mas devido a sua fragilidade, ela foi extremamente danificada em uma missão e substituída pela máscara H.U.S.H.",
-    },
-
-    "Máscara de Combate Danificada: H.U.S.H": {
-      imagem: "img/itens/H.U.S.H - Desgastada.png",
-      descricao:
-        "H.U.S.H ou Harmonic Ultrasound Spatial Harness, era uma máscara de ferro, criada por Elliot Murphy para Oliver. Essa máscara tinha um sistema chamado de 'Hollow Voice', um sistema de modulação vocal com três canais que sobrepõem ecos e reverberações leves, criando uma voz múltipla. Serve tanto para intimidação quanto para ocultação de identidade. Contudo, o uso prolongado aquecia demais o módulo de som, o que obrigava Oliver a desligar o sistema. Devido a esses problemas, Oliver a substituiu pela máscara Red Skull.",
-    },
-
-    "Traje de Combate Danificado: Traje Red Skull": {
-      imagem: "img/itens/Red Skull - Desgastada.png",
-      descricao:
-        "Criado por Kimber Destaro, o Traje Red Skull abandonava a abordagem acústica da H.U.S.H. para focar totalmente em combate. Equipado com o DGS (Double Gear System), permitia a Oliver acionar picos breves de força (Power Gear) ou acelerar seus movimentos (Speed Gear). O uso, porém, exigia demais do corpo, drenando suas energias rapidamente. Em sua última missão, Oliver forçou ambos os Gears simultaneamente, causando danos irreversíveis ao traje e à unidade DGS, tornando-o inutilizável. Devido a esses danos, Oliver substituiu o Red Skull pela máscara Eclipse.",
-    },
-
-    "Máscara de Combate Danificada: Eclipse": {
-      imagem: "img/itens/Eclipse - Desgastada.png",
-      descricao:
-        "Criada por Kimber Destaro, a Máscara Eclipse utiliza a tecnologia CrystalCoat, permitindo que sua superfície altere de cor manualmente ou de forma autônoma. Essa adaptação dinâmica a torna ideal para infiltração e operações furtivas, camuflando o usuário em diferentes ambientes sem comprometer mobilidade ou sigilo. A Eclipse, porém, foi aposentada após sofrer danos irreversíveis durante a explosão em um dos armazéns da Arasaka, em Watson, em 19 de novembro de 2085.",
-    },
-
-    "Máscara de Combate Danificada: Mirage": {
-      imagem: "img/itens/Mirage - Desgastada.png",
-      descricao:
-        "A Mirage era um protótipo de máscara de gás recuperado e restaurado por Kimber. Embora aparentemente simples, possuía um módulo de interface neural defeituoso que infiltrava a mente do usuário como um vírus, distorcendo memórias e provocando alucinações vívidas. Extremamente viciante, Oliver resistiu a abandoná-la até 2087, quando afirmou ter “entrado em contato direto com uma poderosa fonte de energia”. Desde então, a Mirage foi inutilizada, provavelmente com seus circuitos completamente queimados.",
-    },
-
-    "Máscara de Combate: ΛN0MΔLY": {
-      imagem: "img/itens/ΛN0MΔLY.png",
-      descricao:
-        "A ΛN0MΔLγ representa o ápice da engenharia clandestina de Kimber Destaro e Elliot Murphy — uma convergência impossível entre finesse artesanal e tecnologia experimental. Projetada sobre uma liga leve derivada da CrystalCoat, mas completamente reprojetada em sua microestrutura, a ΛN0MΔLγ é um artefato capaz de alterar a voz em tempo real de forma clara e controlada, identifica rotas de fuga e pontos cegos, e se camufla de forma dinâmica e adaptativa. Ela é, de certo modo, um memorial tecnológico da trajetória de Oliver, reconstruído peça por peça até sua forma mais perfeita.",
-    },
-
-    "Máscara de Apresentação: Vermillion": {
-      imagem: "img/itens/Vermillion.png",
-      descricao:
-        "Máscara estilizada utilizada por Oliver durante apresentações musicais. Ele utiliza o nome artístico 'Vermillion' quando está no palco.",
+        "Uma foto antiga de Oliver, Kane e Raze antes da traição, tirada em uma época em que os três ainda pareciam uma família. Para Oliver, é um objeto difícil de encarar: nela existem afeto, música, juventude e a prova cruel de que Raze um dia esteve perto demais. A imagem sobrevive como lembrança de tudo que foi perdido, quebrado e jamais totalmente enterrado.",
     },
   },
 
@@ -382,17 +589,4 @@ personagens.oliver = {
         "Implante capilar sintético com emissão controlada de luz e cor. Desenvolvido para personalização estética avançada, identidade visual corporativa e expressão individual em ambientes urbanos de alta tecnologia.",
     },
   },
-
-  // --------------------------------------------------------------------
-  // PERFIL PROFISSIONAL
-  // --------------------------------------------------------------------
-
-  tipoTrabalho:
-    "Fixer autônomo com especialização em obtenção de informações, mediação de conflitos e operações de infiltração.",
-  modoTrabalho:
-    "Cauteloso, calculado e silencioso. Avalia riscos antes de agir e prefere soluções estratégicas a confrontos diretos.",
-  espacoTrabalho:
-    "Combinação de base improvisada dos Dandelions e múltiplos pontos de apoio espalhados pela cidade.",
-  clientes:
-    "Independentes, pequenos grupos de resistência, freelancers e indivíduos que buscam proteção fora das corporações.",
 };
