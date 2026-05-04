@@ -13,7 +13,7 @@ personagens.oliver = {
   // Dados vitais
   localNascimento: "Pacifica, Night City",
   dataNascimento: "03/FEB/2065",
-  idade: 26,
+  idade: 27,
   altura: "1,83 m",
   peso: "73 kg",
 
