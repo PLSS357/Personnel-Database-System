@@ -84,7 +84,7 @@ personagens.oliver = {
 
     Mirai: {
       tipo: "Aliado Incondicional",
-      status: "Viva",
+      status: "Vivo",
       foto: "img/Personagens/Mirai/Mirai.png",
       descricao:
         "Mirai é mais do que um robô para Oliver: é a pequena prova de que ele ainda consegue se apegar. A conexão entre os dois é quase instintiva, e qualquer ameaça contra Mirai automaticamente se torna uma ameaça pessoal contra Oliver.",
@@ -141,7 +141,7 @@ personagens.oliver = {
 
     Nyx: {
       tipo: "Muito positivo",
-      status: "Viva",
+      status: "Morta",
       foto: "img/Personagens/Nyx.png",
       descricao:
         "Oliver confia em Nyx porque reconhece nela uma lealdade intensa e sem espetáculo. Ele respeita a dor que ela carrega por Cypher e vê nela alguém que entende o peso de continuar vivo depois de perder algo precioso.",
@@ -173,7 +173,7 @@ personagens.oliver = {
 
     "Dominic Don Von Chier": {
       tipo: "Muito positivo",
-      status: "Vivo",
+      status: "Morto",
       foto: "img/Personagens/Dominic Don Von Chier.png",
       descricao:
         "Oliver gosta de Dominic pelo jeito direto, pelo humor estranho e pela força absurda que nunca falha em missão. Para ele, Dominic é o tipo de aliado que você quer por perto quando tudo desaba e ainda precisa parecer simples.",
@@ -379,7 +379,7 @@ personagens.oliver = {
     // Muito negativo
     "Derek Miller": {
       tipo: "Muito negativo",
-      status: "Vivo",
+      status: "Morto",
       foto: "img/Personagens/Oliver/Derek Miller.png",
       descricao:
         "Derek é uma ferida que Oliver não consegue limpar. Mesmo entendendo que a morte de Emily foi acidental, ele nunca conseguiu separar o pai do homem que trouxe os Laminares para dentro da vida deles e terminou tudo com sangue, trauma e abandono.",
