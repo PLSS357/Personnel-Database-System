@@ -236,7 +236,7 @@ personagens.kimber = {
     // Neutro/negativo
     "Marcus Destaro": {
       tipo: "Neutro/negativo",
-      status: "Desconhecido",
+      status: "Morto",
       foto: "img/Personagens/Kimber/Marcus Destaro.png",
       descricao:
         "Figura contraditória: tentou protegê-la em algum momento, mas também está ligado à traição que levou Kimber às mãos dos Prescott.",
