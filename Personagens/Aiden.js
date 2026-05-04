@@ -82,7 +82,7 @@ personagens.aiden = {
 
     "Oliver Miller": {
       tipo: "Muito positivo",
-      status: "Viva",
+      status: "Vivo",
       foto: "img/Personagens/Oliver/Oliver Miller.png",
       descricao:
         "Aiden o vê como veterano, inspiração e símbolo de rebeldia sincera. Admirava sua antiga banda, Ghouls ’n Ghosts, e a filosofia de identidade e resistência que Oliver representava.",
@@ -90,7 +90,7 @@ personagens.aiden = {
 
     Ninvega: {
       tipo: "Muito positivo",
-      status: "Viva",
+      status: "Vivo",
       foto: "img/Personagens/Ninvega/Ninvega.png",
       descricao:
         "Companheiro intelectual. Aiden admira sua busca por humanidade. Costumam conversar sobre ética, inteligência artificial e o futuro da existência digital.",
@@ -98,7 +98,7 @@ personagens.aiden = {
 
     "Ícaro Barbosa": {
       tipo: "Muito positivo",
-      status: "Viva",
+      status: "Vivo",
       foto: "img/Personagens/Ícaro/Ícaro Barbosa.png",
       descricao:
         "Aiden o acha caótico demais, mas se diverte com suas histórias absurdas e imprevisíveis. A relação dos dois funciona no improviso: planos ruins, café horrível e decisões que só fazem sentido depois que dão certo.",
