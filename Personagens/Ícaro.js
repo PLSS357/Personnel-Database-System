@@ -70,6 +70,21 @@ personagens.Ícaro = {
         "Ícaro vê Lyra como alguém ainda montando as próprias peças. Tenta ensiná-la memes, humor e ritmo brasileiro, mas também a protege com seriedade. Para ele, Lyra representa uma consciência nova que merece liberdade e identidade.",
     },
 
+    "Kaede Komatsu": {
+      tipo: "Aliado Incondicional",
+      status: "Viva",
+      foto: "img/Personagens/Ícaro/Kaede Komatsu.png",
+      descricao:
+        "Kaede é namorada de Ícaro e presidente da Black Creek Production. Ícaro se apaixonou primeiro pela presença dela: a elegância, o poder e a maturidade de alguém que não precisa levantar a voz para dominar uma sala. Para ele, Kaede é intimidadora de um jeito bonito, uma mulher que parece estar sempre três passos à frente. O relacionamento dos dois é pouco convencional, especialmente por envolver também Akane, mas Ícaro vê Kaede como uma das figuras mais fortes, fascinantes e importantes da vida dele.",
+    },
+
+    "Akane Komatsu": {
+      tipo: "Aliado Incondicional",
+      status: "Viva",
+      foto: "img/Personagens/Ícaro/Akane Komatsu.png",
+      descricao:
+        "Akane também é namorada de Ícaro. A relação começou com flertes nos bastidores de videoclipes e virou algo bem mais complexo. Kaede e Akane são as namoradas dele; é um relacionamento estranho, pouco convencional e difícil de explicar por fora, mas funciona… de alguma forma.",
+    },
     // Muito positivo
     "Tessia Amberine": {
       tipo: "Muito positivo",
@@ -101,22 +116,6 @@ personagens.Ícaro = {
       foto: "img/Personagens/Mirai/Mirai.png",
       descricao:
         "Ícaro trata Mirai como mascote hiperativo e quase como copiloto. Ama quando ele dança e tenta modificá-lo com LEDs e buzinas. No fundo, acredita que Mirai tem alma.",
-    },
-
-    "Kaede Komatsu": {
-      tipo: "Muito positivo",
-      status: "Viva",
-      foto: "img/Personagens/Ícaro/Kaede Komatsu.png",
-      descricao:
-        "Kaede é namorada de Ícaro e presidente da Black Creek Production. Ícaro se apaixonou primeiro pela presença dela: a elegância, o poder e a maturidade de alguém que não precisa levantar a voz para dominar uma sala. Para ele, Kaede é intimidadora de um jeito bonito, uma mulher que parece estar sempre três passos à frente. O relacionamento dos dois é pouco convencional, especialmente por envolver também Akane, mas Ícaro vê Kaede como uma das figuras mais fortes, fascinantes e importantes da vida dele.",
-    },
-
-    "Akane Komatsu": {
-      tipo: "Muito positivo",
-      status: "Viva",
-      foto: "img/Personagens/Ícaro/Akane Komatsu.png",
-      descricao:
-        "Akane também é namorada de Ícaro. A relação começou com flertes nos bastidores de videoclipes e virou algo bem mais complexo. Kaede e Akane são as namoradas dele; é um relacionamento estranho, pouco convencional e difícil de explicar por fora, mas funciona… de alguma forma.",
     },
 
     "Isaura Barbosa": {
