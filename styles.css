@@ -1250,3 +1250,513 @@ main {
   font-size: 0.9rem;
   padding: 7px 16px;
 }
+
+/* =========================
+   CORREÇÃO MOBILE DOS MODAIS
+   Cole no FINAL do styles.css
+   ========================= */
+
+.modal {
+  padding: 0.75rem;
+}
+
+.modal-content,
+.item-modal-content,
+.image-modal-content {
+  box-sizing: border-box;
+  margin: auto;
+  max-width: 100%;
+}
+
+@media (max-width: 640px) {
+  .modal {
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem;
+  }
+
+  .modal-content,
+  .item-modal-content {
+    width: 100%;
+    max-width: calc(100vw - 1.5rem);
+    max-height: calc(100dvh - 1.5rem);
+    padding: 1rem;
+    padding-top: 3.25rem;
+    overflow-y: auto;
+  }
+
+  .modal-title {
+    font-size: clamp(1rem, 4.5vw, 1.25rem);
+    letter-spacing: 0.1em;
+    text-align: center;
+  }
+
+  /* Relações: troca flex por grid simétrico */
+  .relation-avatars {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    align-items: start;
+    justify-items: center;
+    justify-content: normal;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .relation-avatar-block {
+    width: 100%;
+    min-width: 0;
+    flex: none;
+    align-items: center;
+  }
+
+  .relation-avatar {
+    width: clamp(76px, 24vw, 92px);
+    height: clamp(76px, 24vw, 92px);
+  }
+
+  .relation-icon {
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
+    align-self: center;
+  }
+
+  .relation-avatar-name {
+    max-width: 100%;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    line-height: 1.25;
+    text-align: center;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .relation-type-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .relation-type-label {
+    font-size: 0.85rem;
+  }
+
+  .relation-type-value {
+    font-size: 0.95rem;
+    letter-spacing: 0.1em;
+    overflow-wrap: anywhere;
+  }
+
+  .relation-description {
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  /* Item modal: força uma coluna real no mobile */
+  .item-modal-body {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .item-modal-image-wrapper {
+    width: 100%;
+    justify-content: center;
+  }
+
+  #item-modal-img {
+    display: block;
+    margin-inline: auto;
+    max-width: min(100%, 280px);
+    max-height: 260px;
+    object-fit: contain;
+  }
+
+  .item-modal-description {
+    width: 100%;
+    text-align: left;
+  }
+
+  /* Modal de imagem ampliada */
+  .image-modal-content {
+    width: 100%;
+    max-width: calc(100vw - 1.5rem);
+    max-height: calc(100dvh - 1.5rem);
+    padding: 1rem;
+    padding-top: 3.25rem;
+  }
+
+  #image-modal-img {
+    display: block;
+    margin-inline: auto;
+    max-width: 100%;
+    max-height: calc(100dvh - 7rem);
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 380px) {
+  .modal-content,
+  .item-modal-content,
+  .image-modal-content {
+    padding-inline: 0.75rem;
+    padding-top: 3rem;
+  }
+
+  .relation-avatar {
+    width: 72px;
+    height: 72px;
+  }
+
+  .relation-icon {
+    font-size: 1.7rem;
+  }
+
+  .relation-avatar-name {
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+  }
+}
+
+/* =========================================================
+   AJUSTES FINAIS DE RESPONSIVIDADE E CENTRALIZAÇÃO
+   Mantidos no fim do arquivo para sobrescrever regras antigas.
+   ========================================================= */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+}
+
+img,
+svg,
+canvas,
+video {
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Evita que textos com letter-spacing ou nomes longos forcem overflow lateral */
+.card-identity,
+.profile-main-info,
+.section-title-block,
+.relation-avatar-block,
+.relation-type-row,
+.item-modal-description,
+.relation-description {
+  min-width: 0;
+}
+
+.card-name,
+.card-role,
+.card-meta,
+.profile-name,
+.profile-role,
+.section-title,
+.section-subtitle,
+.modal-title,
+.modal-subtitle,
+.relation-type-value,
+.relation-avatar-name {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+/* O ::before existia sem content; isso não quebra o CSS, mas também não renderiza nada. */
+.life-goal-highlight::before {
+  content: "OBJETIVO";
+}
+
+/* Modal base: centralizado pelo container, não por cálculo interno do conteúdo. */
+.modal {
+  width: 100%;
+  min-height: 100dvh;
+  padding: 0.75rem;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.modal.open {
+  display: flex;
+}
+
+.modal-content,
+.item-modal-content,
+.image-modal-content {
+  box-sizing: border-box;
+  width: min(780px, calc(100vw - 1.5rem));
+  max-width: calc(100vw - 1.5rem);
+  max-height: calc(100dvh - 1.5rem);
+  margin: auto;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.image-modal-content {
+  width: min(1000px, calc(100vw - 1.5rem));
+  align-items: center;
+}
+
+/* Relações: estrutura simétrica também no desktop/tablet. */
+.relation-avatars {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: start;
+  justify-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.relation-avatar-block {
+  width: 100%;
+  min-width: 0;
+  align-items: center;
+  text-align: center;
+}
+
+.relation-icon {
+  min-width: 2.5rem;
+  text-align: center;
+}
+
+.relation-avatar {
+  display: block;
+  margin-inline: auto;
+  background-position: center center;
+  background-size: cover;
+}
+
+.relation-avatar-name {
+  width: 100%;
+  max-width: 100%;
+  margin-inline: auto;
+}
+
+/* Imagens dentro de modais: sempre centralizadas. */
+.item-modal-image-wrapper,
+.image-modal-content {
+  justify-content: center;
+}
+
+#item-modal-img,
+#image-modal-img {
+  display: block;
+  margin-inline: auto;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+#image-modal-img {
+  max-height: calc(100dvh - 8rem);
+}
+
+/* Telas médias: evita que o modal de item fique apertado. */
+@media (max-width: 760px) {
+  .item-modal-body {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .item-modal-description {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 16px;
+  }
+
+  .app-shell {
+    padding: 0.8rem 0.5rem;
+  }
+
+  main {
+    padding: 1rem 0.75rem 1.2rem;
+  }
+
+  header {
+    padding: 0.9rem;
+  }
+
+  .header-left {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .logo-mark {
+    width: 56px;
+    height: 56px;
+  }
+
+  .corp-name,
+  .system-name,
+  .section-label,
+  .section-title,
+  .profile-name,
+  .card-name {
+    letter-spacing: 0.1em;
+  }
+
+  .section-title {
+    font-size: clamp(1.1rem, 6vw, 1.35rem);
+  }
+
+  .profile-container {
+    padding: 1rem;
+  }
+
+  .profile-header {
+    justify-items: center;
+    text-align: center;
+  }
+
+  .profile-id-row {
+    justify-content: center;
+  }
+
+  .profile-avatar {
+    margin-inline: auto;
+  }
+
+  .modal {
+    padding: 0.75rem;
+  }
+
+  .modal-content,
+  .item-modal-content,
+  .image-modal-content {
+    width: calc(100vw - 1.5rem);
+    max-width: calc(100vw - 1.5rem);
+    max-height: calc(100dvh - 1.5rem);
+    padding: 1rem;
+    padding-top: 3.25rem;
+    border-radius: 6px;
+  }
+
+  .modal-title {
+    font-size: clamp(1rem, 4.8vw, 1.25rem);
+    letter-spacing: 0.08em;
+    text-align: center;
+  }
+
+  .modal-subtitle {
+    font-size: clamp(0.85rem, 3.8vw, 1rem);
+    letter-spacing: 0.06em;
+    text-align: center;
+  }
+
+  /* Grade realmente simétrica: avatar esquerdo e direito têm a mesma largura. */
+  .relation-avatars {
+    grid-template-columns: minmax(0, 1fr) clamp(24px, 8vw, 38px) minmax(0, 1fr);
+    gap: clamp(0.25rem, 2vw, 0.6rem);
+    align-items: start;
+    justify-items: center;
+  }
+
+  .relation-avatar {
+    width: clamp(72px, 23vw, 92px);
+    height: clamp(72px, 23vw, 92px);
+  }
+
+  .relation-icon {
+    width: 100%;
+    min-width: 0;
+    font-size: clamp(1.6rem, 7vw, 2.25rem);
+    line-height: 1;
+    align-self: center;
+  }
+
+  .relation-avatar-name {
+    max-width: min(34vw, 130px);
+    font-size: clamp(0.68rem, 3.1vw, 0.78rem);
+    letter-spacing: 0.055em;
+    line-height: 1.25;
+  }
+
+  .relation-type-row {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: left;
+  }
+
+  .relation-type-label {
+    font-size: 0.82rem;
+    letter-spacing: 0.1em;
+  }
+
+  .relation-type-value {
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+  }
+
+  .relation-description,
+  .item-modal-description {
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  .item-modal-body {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .item-modal-image-wrapper {
+    width: 100%;
+  }
+
+  #item-modal-img {
+    max-width: min(100%, 280px);
+    max-height: 260px;
+  }
+
+  #image-modal-img {
+    max-width: 100%;
+    max-height: calc(100dvh - 7rem);
+  }
+}
+
+@media (max-width: 380px) {
+  .modal-content,
+  .item-modal-content,
+  .image-modal-content {
+    width: calc(100vw - 1rem);
+    max-width: calc(100vw - 1rem);
+    max-height: calc(100dvh - 1rem);
+    padding-inline: 0.75rem;
+    padding-top: 3rem;
+  }
+
+  .relation-avatars {
+    grid-template-columns: minmax(0, 1fr) 24px minmax(0, 1fr);
+    gap: 0.25rem;
+  }
+
+  .relation-avatar {
+    width: 68px;
+    height: 68px;
+  }
+
+  .relation-icon {
+    font-size: 1.45rem;
+  }
+
+  .relation-avatar-name {
+    max-width: 31vw;
+    font-size: 0.66rem;
+    letter-spacing: 0.04em;
+  }
+}
