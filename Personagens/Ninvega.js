@@ -11,7 +11,7 @@ personagens.Ninvega = {
 
   // Dados vitais
   localNascimento: "Milwaukee, Wisconsin, NEUA",
-  dataNascimento: "30/11/2086",
+  dataNascimento: "30/NOV/2086",
   idade: 6,
   altura: "1,85 m",
   peso: "105 kg",
