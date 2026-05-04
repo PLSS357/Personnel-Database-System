@@ -578,16 +578,6 @@ main {
   overflow: hidden;
 }
 
-.life-goal-highlight::before {
-  position: absolute;
-  top: 0.4rem;
-  right: 0.7rem;
-  font-size: 0.8rem;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  color: rgba(255, 220, 220, 0.5);
-}
-
 .life-goal-title {
   font-size: 1.05rem;
   text-transform: uppercase;
@@ -1466,11 +1456,6 @@ select {
 .relation-avatar-name {
   overflow-wrap: anywhere;
   word-break: normal;
-}
-
-/* O ::before existia sem content; isso não quebra o CSS, mas também não renderiza nada. */
-.life-goal-highlight::before {
-  content: "OBJETIVO";
 }
 
 /* Modal base: centralizado pelo container, não por cálculo interno do conteúdo. */
