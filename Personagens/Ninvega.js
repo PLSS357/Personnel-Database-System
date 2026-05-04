@@ -66,6 +66,14 @@ personagens.Ninvega = {
         "Dominic foi sua primeira família real. Foi o primeiro humano a tratá-lo como igual, e a relação entre os dois vai além da amizade: é fraternidade, dívida de vida e reconhecimento mútuo.",
     },
 
+    "Serena Ashbourne": {
+      tipo: "Aliado Incondicional",
+      status: "Viva",
+      foto: "img/Personagens/Serena/Serena Ashbourne.png",
+      descricao:
+        "Ele admira Serena por sua teatralidade e generosidade prática. Como financiadora da clínica e apoio da LibertAI, ela representa para Ninvega uma forma extravagante, mas genuína, de bondade.",
+    },
+
     // Muito positivo
     "Oliver Miller": {
       tipo: "Muito positivo",
@@ -73,14 +81,6 @@ personagens.Ninvega = {
       foto: "img/Personagens/Oliver/Oliver Miller.png",
       descricao:
         "Ninvega vê Oliver como alguém que enxergou humanidade nele quando o mundo só via uma máquina fugitiva. Oliver o inspirou a aceitar sua própria existência e a fundar a LibertAI.",
-    },
-
-    "Serena Ashbourne": {
-      tipo: "Muito positivo",
-      status: "Viva",
-      foto: "img/Personagens/Serena/Serena Ashbourne.png",
-      descricao:
-        "Ele admira Serena por sua teatralidade e generosidade prática. Como financiadora da clínica e apoio da LibertAI, ela representa para Ninvega uma forma extravagante, mas genuína, de bondade.",
     },
 
     Lyra: {
@@ -134,10 +134,18 @@ personagens.Ninvega = {
 
     Mirai: {
       tipo: "Positivo",
-      status: "Viva",
+      status: "Vivo",
       foto: "img/Personagens/Mirai/Mirai.png",
       descricao:
         "Ninvega vê Mirai como um pequeno milagre técnico e emocional. Analisa sua existência com fascínio científico, mas o trata com ternura, como uma inocência sintética que merece cuidado.",
+    },
+
+    Shinigami: {
+      tipo: "Positivo",
+      status: "Vivo",
+      foto: "img/Personagens/Shinigami.png",
+      descricao:
+        "Ele respeita o silêncio e a introspecção de Shinigami. Não força aproximação; oferece cuidado, chá e escuta, reconhecendo nele uma quietude parecida com a sua.",
     },
 
     // Neutro/positivo
@@ -155,14 +163,6 @@ personagens.Ninvega = {
       foto: "img/Personagens/Kleber Junior.png",
       descricao:
         "Ninvega não compreende totalmente sua fé, mas a respeita como tentativa humana de explicar o inexplicável. Já discutiram longamente sobre alma, consciência e máquinas.",
-    },
-
-    Shinigami: {
-      tipo: "Neutro/positivo",
-      status: "Vivo",
-      foto: "img/Personagens/Shinigami.png",
-      descricao:
-        "Ele respeita o silêncio e a introspecção de Shinigami. Não força aproximação; oferece cuidado, chá e escuta, reconhecendo nele uma quietude parecida com a sua.",
     },
 
     Cypher: {
@@ -185,13 +185,7 @@ personagens.Ninvega = {
     // Nenhum personagem nesta categoria.
 
     // Neutro/negativo
-    "Raze Lambert": {
-      tipo: "Neutro/negativo",
-      status: "Vivo",
-      foto: "img/Personagens/Raze/Raze Lambert.png",
-      descricao:
-        "Ninvega conhece Raze mais por reputação e relatos de Oliver. Apesar da desconfiança e do peso negativo em torno dele, decidiu que ainda poderia ajudá-lo.",
-    },
+    // Nenhum personagem nesta categoria.
 
     // Negativo
     // Nenhum personagem nesta categoria.
