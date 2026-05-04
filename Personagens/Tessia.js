@@ -73,7 +73,7 @@ personagens.tessia = {
 
     "Seraphine Volkov": {
       tipo: "Aliado Incondicional",
-      status: "Viva",
+      status: "Morta",
       foto: "img/Personagens/Tessia/Seraphine Volkov.png",
       descricao:
         "Seraphine foi uma das primeiras pessoas em quem Tessia confiou após fugir da vida corporativa. Tessia a vê quase como irmã, uma presença ligada à liberdade, à sobrevivência e a uma dívida emocional que nunca desapareceu.",
@@ -98,7 +98,7 @@ personagens.tessia = {
 
     Mirai: {
       tipo: "Muito positivo",
-      status: "Viva",
+      status: "Vivo",
       foto: "img/Personagens/Mirai/Mirai.png",
       descricao:
         "No começo, a relação foi de estranhamento, mas Tessia passou a gostar de Mirai por ele ser ligado ao bem-estar de Oliver. Para ela, Mirai é uma presença pequena, estranha e afetiva; quase uma prova de que Oliver ainda consegue criar laços.",
@@ -156,7 +156,7 @@ personagens.tessia = {
     // Neutro/positivo
     "Dominic Don Von Chier": {
       tipo: "Neutro/positivo",
-      status: "Vivo",
+      status: "Morto",
       foto: "img/Personagens/Dominic Don Von Chier.png",
       descricao:
         "Dominic confunde Tessia. Ela o vê como alguém tão absurdo que às vezes não sabe se está em uma missão ou numa comédia, mas reconhece que ele tem bom coração e pode ser confiável quando importa.",
@@ -164,7 +164,7 @@ personagens.tessia = {
 
     Cypher: {
       tipo: "Neutro/positivo",
-      status: "Vivo",
+      status: "Morto",
       foto: "img/Personagens/Cypher.png",
       descricao:
         "Tessia o via como teatral, brilhante e imprevisível. Ele tentava arrancar reações dela, mas geralmente só conseguia um olhar confuso; ainda assim, ela reconhecia sua criatividade e presença única.",
@@ -173,7 +173,7 @@ personagens.tessia = {
     // Neutro
     Nyx: {
       tipo: "Neutro",
-      status: "Viva",
+      status: "Morta",
       foto: "img/Personagens/Nyx.png",
       descricao:
         "Tessia enxerga Nyx como uma presença quieta, firme e profissional. Não parece haver intimidade profunda, mas há respeito pela independência e pela postura dela.",
@@ -243,13 +243,13 @@ personagens.tessia = {
     "Arquivos da Operação Orquídea Branca": {
       imagem: "img/itens/Tessia/Arquivos da Operação Orquídea Branca.png",
       descricao:
-        "Um conjunto de arquivos sigilosos ligados à Operação Orquídea Branca, contendo dados sobre experimentos, operações corporativas e segredos enterrados no passado de Tessia com a Arasaka. São perigosos porque provam aquilo que pessoas poderosas tentaram esconder. Para Tessia, cada página é uma arma silenciosa contra o pai, contra a corporação e contra o sistema que tentou moldá-la.",
+        "Um conjunto de arquivos sigilosos ligados à Operação Orquídea Branca, contendo dados sobre o assassinato de sua mãe, tudo planejado por seu próprio pai.",
     },
 
     "Caixinha de Música": {
       imagem: "img/itens/Tessia/Caixinha de Música.png",
       descricao:
-        "Uma pequena caixinha de música ligada às memórias da mãe de Tessia. Delicada, antiga e quase frágil demais para o mundo em que ela vive, carrega uma melodia suave que sobreviveu ao tempo, à violência e às mentiras da família Amberine. Para Tessia, seu som funciona como uma âncora emocional, lembrando-a de quem ela era antes da Arasaka, da Phantom e da guerra particular contra o próprio sangue.",
+        "Uma pequena caixinha de música dada de presente à ela por Oliver. Delicada, antiga e quase frágil demais para o mundo em que ela vive, carrega uma melodia suave que sobreviveu ao tempo, à violência e às mentiras de Night City. Para Tessia, seu som funciona como uma âncora emocional, lembrando-a de quem ela é, acima de sua guerra contra o próprio sangue.",
     },
 
     "Pistola “Phantom”": {
