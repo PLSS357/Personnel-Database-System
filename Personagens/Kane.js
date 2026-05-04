@@ -151,7 +151,7 @@ personagens.kane = {
 
     Rider: {
       tipo: "Muito positivo",
-      status: "Morto",
+      status: "Morto(a)",
       foto: "img/Personagens/Kane/XIII/Rider.png",
       descricao:
         "Ninguém sabia quem Rider era. Kane também não parecia saber tudo, mas era um dos poucos que entendia alguns de seus sinais. Rider surgiu um dia, em seu skate flutuante, ajudou Kane em uma operação, e desde então se associou a gangue. Para Kane, Rider era a prova de que confiança nem sempre precisava de identidade.",
