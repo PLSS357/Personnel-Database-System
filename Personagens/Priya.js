@@ -107,7 +107,7 @@ personagens.Priya = {
 
     Mirai: {
       tipo: "Muito positivo",
-      status: "Viva",
+      status: "Vivo",
       foto: "img/Personagens/Mirai/Mirai.png",
       descricao:
         "Priya gosta bastante de Mirai, mas dificilmente admitiria. Chama-o de “coisa”, mas o protege por instinto e brinca com ele quando ninguém está olhando.",
@@ -225,7 +225,7 @@ personagens.Priya = {
 
     "Forças Armadas dos NEUA": {
       tipo: "Muito negativo",
-      status: "Ativas",
+      status: "Ativa",
       foto: "img/Personagens/Priya/Forças Armadas dos NEUA.png",
       descricao:
         "Priya já tentou acreditar no uniforme, mas passou a ver as Forças Armadas como uma corporação armada disfarçada de patriotismo. Sua deserção nasceu dessa quebra moral.",
@@ -258,7 +258,7 @@ personagens.Priya = {
     "Rifle de Precisão": {
       imagem: "img/itens/Priya/Rifle de Precisão.png",
       descricao:
-        "Um rifle de precisão personalizado, ajustado milimetricamente ao estilo de tiro de Priya. Combina alcance extremo, estabilidade e confiabilidade absoluta, sendo tratado por ela não como uma arma de glória, mas como uma responsabilidade carregada sem margem para erro. Cada disparo precisa ter motivo, peso e consequência.",
+        "Um rifle antimaterial personalizado, modelo PGM Ultima Ratio Hecate V, ajustado milimetricamente ao estilo de tiro de Priya. Combina alcance extremo, estabilidade e confiabilidade absoluta, sendo tratado por ela não como uma arma de glória, mas como uma responsabilidade carregada sem margem para erro. Cada disparo precisa ter motivo, peso e consequência.",
     },
 
     "Relógio Tático": {
