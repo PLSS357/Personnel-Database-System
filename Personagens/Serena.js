@@ -202,7 +202,7 @@ personagens.serena = {
       status: "Morto",
       foto: "img/Personagens/Kane/Kane Graves.png",
       descricao:
-        "Uma relação intensa e silenciosa, nunca totalmente confirmada. A morte de Kane a marcou o bastante para ela comparecer ao funeral disfarçada.",
+        "Uma relação intensa e silenciosa, mas de apenas uma noite. A morte de Kane a marcou o bastante para ela comparecer ao funeral disfarçada.",
     },
 
     "Taria Navarro": {
@@ -210,7 +210,7 @@ personagens.serena = {
       status: "Viva",
       foto: "img/Personagens/Serena/Taria Navarro.png",
       descricao:
-        "Serena a considerava uma igual. O caso foi breve, intenso e marcado por conspiração, sedução e respeito entre duas mulheres perigosas.",
+        "Serena a considerava uma igual. Foi um caso breve, intenso e marcado por conspiração, sedução e respeito entre duas mulheres perigosas.",
     },
 
     // Neutro/positivo
@@ -235,7 +235,7 @@ personagens.serena = {
       status: "Viva",
       foto: "img/Personagens/Serena/Natsumi Kimura.png",
       descricao:
-        "Relação pública, estratégica e elegante. O término foi amigável; Serena parece vê-la com carinho distante e sem ressentimento.",
+        "Relação amorosa pública, estratégica e elegante. O término foi amigável; Serena parece vê-la com carinho distante e sem ressentimento.",
     },
 
     "Marcus Holloway": {
@@ -243,23 +243,23 @@ personagens.serena = {
       status: "Vivo",
       foto: "img/Personagens/Serena/Marcus Holloway.png",
       descricao:
-        "Relação ligada ao idealismo político e aos círculos de poder. Serena provavelmente o via como útil, interessante e simbolicamente alinhado a causas públicas.",
+        "Antiga relação amorosa, muito ligada ao idealismo político e aos círculos de poder. Serena provavelmente o via como útil, interessante e simbolicamente alinhado a causas públicas.",
     },
 
     // Neutro
     // Nenhum personagem nesta categoria.
 
     // Neutro/negativo
+    // Nenhum personagem nesta categoria.
+
+    // Negativo
     "Lucien Morane": {
-      tipo: "Neutro/negativo",
+      tipo: "Negativo",
       status: "Vivo",
       foto: "img/Personagens/Serena/Lucien Morane.png",
       descricao:
         "Um ex ligado ao mundo corporativo. Serena terminou com ele do jeito mais Serena possível: comprando sua empresa e o demitindo com elegância cruel.",
     },
-
-    // Negativo
-    // Nenhum personagem nesta categoria.
 
     // Muito negativo
     "Dr. Adrian Voss": {
