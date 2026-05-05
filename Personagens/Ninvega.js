@@ -197,7 +197,7 @@ personagens.Ninvega = {
     "APX Corporation": {
       tipo: "Inimigo jurado",
       status: "Ativa",
-      foto: "img/Personagens/Ninvega/APX Corporation.png",
+      foto: "img/Personagens/Ninvega/APX.png",
       descricao:
         "Representa a prisão corporativa de Ninvega. Para ele, a APX é a força que tentou reduzi-lo a propriedade e negar sua liberdade de escolha.",
     },
@@ -205,7 +205,7 @@ personagens.Ninvega = {
     "Helix Dynamics Corporation": {
       tipo: "Inimigo jurado",
       status: "Ativa",
-      foto: "img/Personagens/Ninvega/Helix Dynamics Corporation.png",
+      foto: "img/Personagens/Ninvega/Helix Dynamics.png",
       descricao:
         "Como fabricante, Helix simboliza sua origem controlada e a lógica de obediência que ele rejeitou. Ninvega a vê como ameaça direta à autonomia sintética.",
     },
