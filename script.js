@@ -1,4 +1,5 @@
 let currentPersonagemKey = null;
+let modalScrollY = 0;
 
 // Helpers para evitar problemas com aspas / caracteres especiais em atributos HTML
 function encodeData(v) {
@@ -25,8 +26,30 @@ function escapeHtml(str) {
 
 function atualizarTravamentoModal() {
   const existeModalAberto = Boolean(document.querySelector(".modal.open"));
-  document.documentElement.classList.toggle("modal-locked", existeModalAberto);
-  document.body.classList.toggle("modal-locked", existeModalAberto);
+  const html = document.documentElement;
+  const body = document.body;
+  const jaEstaTravado = body.classList.contains("modal-locked");
+
+  // Ao abrir o primeiro modal, guarda a posição atual da página.
+  // Isso impede que o CSS de travamento jogue o perfil para o topo.
+  if (existeModalAberto && !jaEstaTravado) {
+    modalScrollY = window.scrollY || window.pageYOffset || html.scrollTop || 0;
+    html.classList.add("modal-locked");
+    body.classList.add("modal-locked");
+    body.style.top = `-${modalScrollY}px`;
+    return;
+  }
+
+  // Se um modal fecha mas outro continua aberto, mantém o travamento sem recalcular scroll.
+  if (existeModalAberto) return;
+
+  // Ao fechar o último modal, destrava e volta exatamente para onde o usuário estava.
+  if (jaEstaTravado) {
+    html.classList.remove("modal-locked");
+    body.classList.remove("modal-locked");
+    body.style.top = "";
+    window.scrollTo(0, modalScrollY);
+  }
 }
 
 function abrirModal(modal) {
@@ -413,7 +436,7 @@ function renderRelacoesChips(personagemKey, relacoesObj = {}) {
       const tipoDados = obterDadosRelacao(tipoRaw);
 
       // usa data-attributes + event delegation (sem onclick inline)
-      return `<button class="relation-chip ${tipoDados.className}"
+      return `<button type="button" class="relation-chip ${tipoDados.className}"
         data-personagem="${pk}"
         data-pessoa="${encodeData(nome)}">${escapeHtml(nome)}</button>`;
     })
@@ -433,7 +456,7 @@ function renderPertences(personagemKey, pertences) {
           .map((item, idx) => {
             const nome = item?.nome || `ITEM ${idx + 1}`;
             return `
-              <button class="item-chip"
+              <button type="button" class="item-chip"
                 data-action="item"
                 data-personagem="${pk}"
                 data-ref="${idx}">
@@ -455,7 +478,7 @@ function renderPertences(personagemKey, pertences) {
         ${nomes
           .map((nome) => {
             return `
-              <button class="item-chip"
+              <button type="button" class="item-chip"
                 data-action="item"
                 data-personagem="${pk}"
                 data-ref="${encodeData(nome)}">
@@ -498,7 +521,7 @@ function renderImplantes(personagemKey, implantes) {
         ${nomes
           .map((nome) => {
             return `
-            <button class="item-chip"
+            <button type="button" class="item-chip"
               data-action="implant"
               data-personagem="${pk}"
               data-ref="${encodeData(nome)}">
@@ -520,7 +543,7 @@ function renderImplantes(personagemKey, implantes) {
           .map((item, idx) => {
             const nome = item?.nome || `Implante ${idx + 1}`;
             return `
-            <button class="item-chip"
+            <button type="button" class="item-chip"
               data-action="implant"
               data-personagem="${pk}"
               data-ref="${idx}">
@@ -822,6 +845,9 @@ if (__item_modal) {
 document.addEventListener("click", (e) => {
   const relBtn = e.target.closest && e.target.closest(".relation-chip");
   if (relBtn && relBtn.dataset) {
+    e.preventDefault();
+    e.stopPropagation();
+
     const personagemKey = decodeData(relBtn.dataset.personagem);
     const pessoa = decodeData(relBtn.dataset.pessoa);
     mostrarRelacao(personagemKey, pessoa);
@@ -831,6 +857,9 @@ document.addEventListener("click", (e) => {
   const actionBtn =
     e.target.closest && e.target.closest(".item-chip[data-action]");
   if (actionBtn && actionBtn.dataset) {
+    e.preventDefault();
+    e.stopPropagation();
+
     const personagemKey = decodeData(actionBtn.dataset.personagem);
     const refRaw = actionBtn.dataset.ref;
     const action = actionBtn.dataset.action;
