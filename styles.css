@@ -79,7 +79,9 @@ body {
   max-width: 1280px;
   margin: 0 auto;
   border: 1px solid rgba(230, 0, 0, 0.4);
-  box-shadow: 0 0 0 1px rgba(230, 0, 0, 0.35), 0 0 24px rgba(230, 0, 0, 0.45);
+  box-shadow:
+    0 0 0 1px rgba(230, 0, 0, 0.35),
+    0 0 24px rgba(230, 0, 0, 0.45);
   background: linear-gradient(135deg, #101010, #050308);
   position: relative;
   overflow: hidden;
@@ -198,15 +200,24 @@ header {
 }
 
 .datetime-display {
-  font-family: "Orbitron", sans-serif;
+  font-family: "Orbitron", monospace;
   font-size: 0.85rem;
-  opacity: 0.85;
   color: #ffd0d0;
-  min-width: 160px;
+  opacity: 0.85;
+
+  /* Impede o texto de mudar de largura quando os números mudam */
+  width: 21ch;
+  min-width: 21ch;
+  flex: 0 0 21ch;
+
+  /* Força números com largura fixa, quando a fonte suporta */
+  font-variant-numeric: tabular-nums;
+  font-feature-settings:
+    "tnum" 1,
+    "lnum" 1;
+
   text-align: right;
   white-space: nowrap;
-  margin-right: 0;
-  flex: 1 1 auto;
   font-variant-numeric: tabular-nums;
 }
 
@@ -298,7 +309,9 @@ main {
   flex-direction: column;
   gap: 0.7rem;
   cursor: pointer;
-  transition: transform 0.15s ease, box-shadow 0.15s ease,
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
     border-color 0.15s ease;
   overflow: hidden;
   border-radius: 6px;
@@ -683,8 +696,11 @@ main {
   letter-spacing: 0.16em;
   text-transform: uppercase;
   cursor: pointer;
-  transition: background 0.2s ease, border-color 0.2s ease,
-    box-shadow 0.2s ease, transform 0.15s ease;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.15s ease;
 }
 
 .relation-chip:hover {
@@ -870,7 +886,10 @@ main {
   cursor: pointer;
   border: 1px solid rgba(230, 0, 0, 0.8);
   background: rgba(40, 10, 10, 0.96);
-  transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .item-chip:hover {
@@ -1027,12 +1046,19 @@ main {
   }
 
   .datetime-display {
-    order: 3; /* garante que venha depois dos pills */
-    width: 100%; /* ocupa a linha inteira */
-    text-align: left; /* mais legível em telas pequenas */
-    white-space: normal; /* pode quebrar linha se precisar */
+    order: 3;
+    width: 21ch;
+    min-width: 21ch;
+    flex: 0 0 21ch;
+    text-align: left;
+    white-space: nowrap;
     margin-top: 0.25rem;
     font-size: 0.8rem;
+
+    font-variant-numeric: tabular-nums;
+    font-feature-settings:
+      "tnum" 1,
+      "lnum" 1;
   }
 
   .profile-header {
@@ -1130,11 +1156,13 @@ main {
 
 /* sobrescreve só o modal de imagem (sem afetar outros modais) */
 #image-modal {
-  display: flex;               /* mantém no layout pra poder animar */
+  display: flex; /* mantém no layout pra poder animar */
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 180ms ease, visibility 0s linear 180ms;
+  transition:
+    opacity 180ms ease,
+    visibility 0s linear 180ms;
 }
 
 /* quando abre */
@@ -1142,14 +1170,18 @@ main {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  transition: opacity 180ms ease, visibility 0s linear 0s;
+  transition:
+    opacity 180ms ease,
+    visibility 0s linear 0s;
 }
 
 /* anima o "cartão" do modal (zoom + leve subida) */
 #image-modal .image-modal-content {
   opacity: 0;
   transform: translateY(10px) scale(0.96);
-  transition: transform 180ms ease, opacity 180ms ease;
+  transition:
+    transform 180ms ease,
+    opacity 180ms ease;
 }
 
 #image-modal.open .image-modal-content {
@@ -1745,7 +1777,6 @@ select {
     letter-spacing: 0.04em;
   }
 }
-
 
 /* =========================================================
    CORREÇÃO FINAL: MODAL DE IMAGEM SEM SCROLLBAR LATERAL
