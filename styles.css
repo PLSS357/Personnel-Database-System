@@ -1783,11 +1783,18 @@ select {
    Mantido no fim para sobrescrever todos os blocos anteriores.
    ========================================================= */
 
-/* Trava a rolagem do documento enquanto qualquer modal estiver aberto. */
-html.modal-locked,
-body.modal-locked {
+/* Trava a rolagem do documento enquanto qualquer modal estiver aberto
+   sem jogar a página para o topo. A posição é restaurada via script.js. */
+html.modal-locked {
   overflow: hidden;
-  height: 100%;
+}
+
+body.modal-locked {
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  overflow: hidden;
 }
 
 /* O overlay do zoom não deve criar barra de rolagem própria. */
