@@ -22,6 +22,25 @@ function escapeHtml(str) {
     .replace(/'/g, "&#39;");
 }
 
+
+function atualizarTravamentoModal() {
+  const existeModalAberto = Boolean(document.querySelector(".modal.open"));
+  document.documentElement.classList.toggle("modal-locked", existeModalAberto);
+  document.body.classList.toggle("modal-locked", existeModalAberto);
+}
+
+function abrirModal(modal) {
+  if (!modal) return;
+  modal.classList.add("open");
+  atualizarTravamentoModal();
+}
+
+function fecharModal(modal) {
+  if (!modal) return;
+  modal.classList.remove("open");
+  atualizarTravamentoModal();
+}
+
 // ======= ESCALA DE RELAÇÃO =======
 const RELACOES_ESCALA = {
   "aliado-incondicional": {
@@ -635,11 +654,11 @@ function mostrarRelacao(personagemKey, pessoa) {
     text.innerHTML = descricaoParaHtmlParagrafos(descricao);
   }
 
-  modal.classList.add("open");
+  abrirModal(modal);
 }
 
 function fecharRelacao() {
-  document.getElementById("relation-modal").classList.remove("open");
+  fecharModal(document.getElementById("relation-modal"));
 }
 
 // fechar modal clicando fora
@@ -671,13 +690,13 @@ function abrirImagemPerfil(src, nome) {
     caption.textContent = nome || "";
   }
 
-  modal.classList.add("open");
+  abrirModal(modal);
 }
 
 function fecharImagemPerfil() {
   const modal = document.getElementById("image-modal");
   if (!modal) return;
-  modal.classList.remove("open");
+  fecharModal(modal);
 }
 
 // fechar modal clicando fora
@@ -734,7 +753,7 @@ function mostrarItem(personagemKey, itemRef) {
     imgEl.style.display = "none";
   }
 
-  modal.classList.add("open");
+  abrirModal(modal);
 }
 
 function mostrarImplante(personagemKey, implanteRef) {
@@ -765,11 +784,11 @@ function mostrarImplante(personagemKey, implanteRef) {
   nomeEl.textContent = nome;
   descEl.textContent = typeof item === "string" ? item : item.descricao || "-";
 
-  modal.classList.add("open");
+  abrirModal(modal);
 }
 
 function fecharImplante() {
-  document.getElementById("implant-modal").classList.remove("open");
+  fecharModal(document.getElementById("implant-modal"));
 }
 
 // fechar modal clicando fora
@@ -785,7 +804,7 @@ if (__implant_modal) {
 function fecharItem() {
   const modal = document.getElementById("item-modal");
   if (!modal) return;
-  modal.classList.remove("open");
+  fecharModal(modal);
 }
 
 // fechar modal clicando fora
@@ -867,3 +886,6 @@ document.addEventListener("click", (e) => {
 
   abrirImagemPerfil(src, nome);
 });
+
+
+window.addEventListener("load", atualizarTravamentoModal);
