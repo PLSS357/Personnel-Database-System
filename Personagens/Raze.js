@@ -61,7 +61,7 @@ personagens.raze = {
     Arasaka: {
       tipo: "Positivo",
       status: "Ativa",
-      foto: "img/Arasaka/Arasaka.png",
+      foto: "img/arasaka/Arasaka.png",
       descricao:
         "Raze vê a Arasaka como uma ferramenta de ascensão, proteção e influência. Não a trata como “mestre”, mas como estrutura útil para chegar ao topo. Trabalha para ela porque a corporação dá acesso a poder, redes, recursos e segurança.",
     },
